@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auditoria de Visibilidade em IA + SEO Técnico | Orbitando no Marketing</title>
+<meta name="description" content="Diagnóstico completo de como sua marca aparece no Google e nas IAs generativas. Para empresas B2B SaaS.">
+<meta name="author" content="Jacqueline Alves">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://orbitandonomarketing.com.br/auditoria-visibilidade-ia">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://orbitandonomarketing.com.br/auditoria-visibilidade-ia">
+<meta property="og:title" content="Auditoria de Visibilidade em IA + SEO Técnico | Orbitando no Marketing">
+<meta property="og:description" content="Diagnóstico completo de como sua marca aparece no Google e nas IAs generativas. Para empresas B2B SaaS.">
+<meta property="og:image" content="https://orbitandonomarketing.com.br/favicon-512.png">
+<link rel="icon" type="image/png" href="/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#191970;--navy-dark:#141459;--slate-dark:#483D8B;
+  --slate:#6A5ACD;--lilac:#836FFF;--ghost:#F8F8FF;
+  --light:#f0eeff;--light2:#f8f7ff;--border:#e8e6f8;
+  --muted:#9896CC;--text:#191970;--white:#FFFFFF;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--ghost);color:var(--text);line-height:1.6}
+
+/* NAV */
+nav{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.nav-logo svg{width:36px;height:36px;flex-shrink:0}
+.nav-logo-name{display:block;font-size:.95rem;font-weight:700;color:var(--ghost);line-height:1.2}
+.nav-logo-tag{display:block;font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
+.nav-links a,.nav-links span{font-size:.88rem;font-weight:500;color:var(--ghost);opacity:.85;text-decoration:none;cursor:pointer;transition:opacity .15s}
+.nav-links a:hover,.nav-links span:hover{opacity:1}
+.nav-cta{background:var(--lilac)!important;color:var(--navy)!important;opacity:1!important;padding:.45rem 1.1rem;border-radius:6px;font-weight:700!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--ghost);border-radius:2px}
+
+/* MEGA MENU */
+.has-mega{position:static}
+.mega-menu{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy-dark);border-top:2px solid var(--lilac);box-shadow:0 16px 48px rgba(0,0,0,.45);z-index:300;padding:2rem}
+.has-mega.open .mega-menu{display:block}
+.mega-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.mega-col-title{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid rgba(131,111,255,.3)}
+.mega-item{display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.06);text-decoration:none;transition:opacity .15s}
+.mega-item:last-child{border-bottom:none}
+.mega-item:hover{opacity:.8}
+.mega-item-icon{width:38px;height:38px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.mega-item-text strong{display:block;font-size:.88rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem;line-height:1.3}
+.mega-item-text span{font-size:.78rem;color:var(--muted);line-height:1.4}
+.mega-badge{display:inline-block;font-size:.6rem;font-weight:700;text-transform:uppercase;padding:.15rem .45rem;border-radius:4px;background:rgba(131,111,255,.25);color:var(--lilac);vertical-align:middle;margin-left:.3rem}
+
+/* DROPDOWN NEWSLETTERS */
+.has-dropdown{position:static}
+.dropdown-menu{display:none;position:absolute;top:72px;background:var(--navy-dark);border-top:2px solid var(--lilac);box-shadow:0 16px 48px rgba(0,0,0,.45);z-index:300;padding:1rem 1.5rem;min-width:220px;border-radius:0 0 10px 10px}
+.has-dropdown.open .dropdown-menu{display:block}
+.dropdown-menu a{display:block;padding:.6rem 0;font-size:.88rem;color:#C8C5F0;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06);transition:color .15s}
+.dropdown-menu a:last-child{border-bottom:none}
+.dropdown-menu a:hover{color:var(--lilac)}
+
+/* HERO */
+.hero{background:var(--navy);padding:6rem 2rem 5rem}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.hero-tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--lilac);border:1px solid var(--lilac);padding:.3rem 1rem;border-radius:999px;margin-bottom:1.5rem}
+.hero h1{font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:700;color:var(--ghost);line-height:1.12;margin-bottom:1.1rem}
+.hero-lead{font-size:1rem;line-height:1.75;color:#C8C5F0;margin-bottom:1.75rem}
+.hero-orbit{display:flex;justify-content:center;align-items:center}
+
+/* PAGE HERO */
+.page-hero{background:var(--navy);padding:5rem 2rem 4rem}
+.page-hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.page-hero h1{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:700;color:var(--ghost);line-height:1.15;margin-bottom:1rem}
+.page-hero p{font-size:1rem;line-height:1.75;color:#C8C5F0}
+.detail-cards{display:flex;flex-direction:column;gap:.85rem;margin-top:1.5rem}
+.detail-card{display:flex;gap:1rem;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:1rem 1.25rem}
+.detail-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.detail-card h4{font-size:.85rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.detail-card p{font-size:.78rem;color:var(--muted);line-height:1.5;margin:0}
+
+/* STATS */
+.stats{background:var(--slate-dark);padding:1.5rem 2rem}
+.stats-inner{max-width:1200px;margin:0 auto;display:flex;gap:3rem;justify-content:center;flex-wrap:wrap}
+.stats-inner div{text-align:center}
+.stats-inner strong{display:block;font-size:1.1rem;font-weight:700;color:var(--ghost)}
+.stats-inner span{font-size:.8rem;color:#C8C5F0}
+
+/* SECTIONS */
+.section{padding:5rem 2rem}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-white{background:var(--white)}
+.section-ghost{background:var(--ghost)}
+.section-navy{background:var(--navy)}
+.section-light{background:var(--light)}
+.section-gradient{background:linear-gradient(135deg,var(--slate-dark),var(--slate))}
+.section-header{text-align:center;margin-bottom:3rem}
+.section-header h2{font-size:clamp(1.5rem,2.5vw,2rem);font-weight:700;color:var(--navy);margin-bottom:.75rem}
+.section-header p{font-size:1rem;color:var(--muted);max-width:560px;margin:0 auto}
+
+/* BOTÕES */
+.btn{display:inline-block;background:var(--navy);color:var(--ghost);padding:.75rem 1.75rem;border-radius:8px;font-weight:600;font-size:.92rem;text-decoration:none;transition:opacity .15s;cursor:pointer;border:none;font-family:inherit}
+.btn:hover{opacity:.88}
+.btn-lilac{background:var(--lilac);color:var(--navy)}
+.btn-outline{background:rgba(131,111,255,.18);color:var(--ghost);border:1.5px solid var(--lilac)}
+.btn-ghost{background:var(--ghost);color:var(--navy)}
+
+/* CARDS */
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.cards-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.75rem}
+.card-navy{background:var(--navy);color:var(--ghost)}
+.card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.65rem;line-height:1.35}
+.card-navy h3{color:var(--ghost)}
+.card p{font-size:.88rem;color:var(--text);line-height:1.65;margin-bottom:1.1rem}
+.card-navy p{color:#C8C5F0}
+.card-link{font-size:.85rem;font-weight:700;color:var(--slate);text-decoration:none}
+.card-navy .card-link{color:var(--lilac)}
+.badge{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .75rem;border-radius:6px;margin-bottom:.85rem}
+.badge-lilac{background:rgba(131,111,255,.2);color:var(--lilac)}
+.badge-light{background:var(--light2);color:var(--muted)}
+
+/* CHECK LIST */
+.check-list{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+.check-list li{font-size:.92rem;color:var(--text);line-height:1.55;padding-left:1.5rem;position:relative}
+.check-list li::before{content:"✓";position:absolute;left:0;color:var(--slate);font-weight:700}
+
+/* DEPOIMENTOS */
+.depo-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.depo-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:1.75rem}
+.depo-card p{font-size:.9rem;color:#E0DDFF;line-height:1.7;margin-bottom:1rem;font-style:italic}
+.depo-name{font-size:.8rem;font-weight:700;color:var(--lilac)}
+
+/* FORMULÁRIO */
+.form-wrap{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:2rem;box-shadow:0 4px 24px rgba(25,25,112,.07)}
+.form-group{margin-bottom:1.1rem}
+.form-group label{display:block;font-size:.82rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:.8rem 1rem;border:1.5px solid var(--border);border-radius:8px;font-size:.92rem;font-family:inherit;color:var(--navy);outline:none;background:var(--white);transition:border-color .15s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--slate)}
+.form-note{font-size:.78rem;color:var(--muted);line-height:1.55;margin-bottom:1.1rem}
+#form-success{display:none;background:#e8f5e9;border-radius:8px;padding:1rem;text-align:center;margin-top:1rem;color:#2e7d32;font-weight:600}
+
+/* PRODUCT BUY CARD */
+.buy-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:2rem}
+.buy-card h3{font-size:.85rem;font-weight:700;color:var(--ghost);margin-bottom:1.25rem;text-transform:uppercase;letter-spacing:.08em}
+.buy-row{display:flex;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:.88rem}
+.buy-row:last-of-type{border:none}
+.buy-row span:first-child{color:var(--muted)}
+.buy-row span:last-child{color:var(--ghost);font-weight:600}
+.trust-item{font-size:.82rem;color:#C8C5F0;padding:.3rem 0;display:flex;align-items:center;gap:.4rem}
+
+/* FOOTER */
+footer{background:var(--navy-dark);color:var(--ghost);padding:4rem 2rem 2rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+footer h4{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem}
+footer ul{list-style:none}
+footer ul li{margin-bottom:.6rem}
+footer ul a{font-size:.88rem;color:#C8C5F0;text-decoration:none;transition:color .15s}
+footer ul a:hover{color:var(--lilac)}
+.footer-logo-name{font-size:1rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.footer-logo-tag{font-size:.65rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.85rem}
+footer p{font-size:.85rem;color:var(--muted);line-height:1.6}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:.8rem;color:var(--muted)}
+
+/* SOBRE */
+.timeline{display:flex;flex-direction:column;gap:1rem;max-width:860px;margin:0 auto}
+.timeline-item{display:grid;grid-template-columns:130px 1fr;gap:1.5rem;padding:1.25rem 1.5rem;background:var(--white);border-radius:12px;border:1px solid var(--border)}
+.timeline-year{text-align:right;font-size:.78rem;font-weight:700;color:var(--lilac);padding-top:.1rem}
+.timeline-item strong{display:block;color:var(--navy);margin-bottom:.25rem;font-size:.95rem}
+.timeline-item p{font-size:.88rem;color:var(--text);line-height:1.6;margin:0}
+
+/* GRID UTIL */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.grid-content{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:start}
+
+/* CASES */
+.case-card{background:var(--white);border-radius:16px;overflow:hidden;border:1px solid var(--border)}
+.case-header{background:linear-gradient(135deg,var(--navy),var(--slate-dark));padding:2rem;min-height:110px;display:flex;flex-direction:column;justify-content:flex-end}
+.case-header-tag{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--lilac);margin-bottom:.4rem}
+.case-header h3{font-size:1.2rem;font-weight:700;color:var(--ghost);margin:0}
+.case-body{padding:1.5rem}
+.case-body p{font-size:.88rem;color:var(--text);line-height:1.6;margin-bottom:1rem}
+.case-stats{display:grid;grid-template-columns:1fr 1fr;gap:.65rem}
+.case-stat{background:var(--ghost);border-radius:10px;padding:.85rem;text-align:center}
+.case-stat strong{display:block;font-size:1.4rem;font-weight:700;color:var(--navy);line-height:1.1}
+.case-stat span{font-size:.72rem;color:var(--muted);line-height:1.3}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .hero-inner,.page-hero-inner,.grid-2,.grid-content,.cards-grid,.depo-grid{grid-template-columns:1fr}
+  .mega-grid,.footer-inner{grid-template-columns:1fr 1fr}
+  .nav-links{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--navy);padding:1rem 2rem;gap:1rem;align-items:flex-start}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  .mega-menu,.dropdown-menu{position:static;border-top:none;box-shadow:none;padding:.75rem 0}
+  .mega-grid{grid-template-columns:1fr;gap:1rem}
+  .has-mega,.has-dropdown{position:static}
+}
+@media(max-width:600px){
+  .footer-inner,.depo-grid,.cards-grid,.cards-grid-2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="16" fill="none" stroke="#F8F8FF" stroke-width="2.5"/>
+        <circle cx="34" cy="12" r="7" fill="#6A5ACD"/>
+        <circle cx="11" cy="33" r="5" fill="#836FFF"/>
+        <circle cx="22" cy="22" r="5" fill="#F8F8FF"/>
+      </svg>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">Orbitando no Marketing</span>
+        <span class="nav-logo-tag">SEO · GEO · AEO</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/sobre-mim">Sobre mim</a></li>
+      <li class="has-mega" id="megaItem">
+        <span onclick="toggleMega(event)" style="color:var(--ghost);opacity:.85;font-size:.88rem;font-weight:500;cursor:pointer">Soluções &#9662;</span>
+        <div class="mega-menu">
+          <div class="mega-grid">
+            <div>
+              <div class="mega-col-title">Para profissionais de marketing</div>
+              <a class="mega-item" href="/guia-marketing-digital">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128218;</div>
+                <div class="mega-item-text"><strong>Guia para Entrar no Mercado de Marketing Digital</strong><span>PDF completo com 15 capítulos para iniciantes e júniors</span></div>
+              </a>
+              <a class="mega-item" href="/modelo-curriculo">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128196;</div>
+                <div class="mega-item-text"><strong>Modelo de Currículo para Marketing Digital <span class="mega-badge">Grátis</span></strong><span>Template editável com guia de preenchimento</span></div>
+              </a>
+            </div>
+            <div>
+              <div class="mega-col-title">Para empresas B2B</div>
+              <a class="mega-item" href="/auditoria-visibilidade-ia">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128269;</div>
+                <div class="mega-item-text"><strong>Auditoria de Visibilidade em IA + SEO Técnico</strong><span>Diagnóstico completo de como sua marca aparece no Google e nas IAs</span></div>
+              </a>
+              <a class="mega-item" href="/consultoria-b2b-saas">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128200;</div>
+                <div class="mega-item-text"><strong>Consultoria Contínua para B2B SaaS</strong><span>Parceria recorrente para conteúdo, SEO e GEO/AEO</span></div>
+              </a>
+              <a class="mega-item" href="/desenvolvimento-sites">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128187;</div>
+                <div class="mega-item-text"><strong>Desenvolvimento de Sites para B2B</strong><span>Site institucional do zero, com alinhamento e entrega completa</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="/cases-de-sucesso">Cases</a></li>
+      <li><a href="/insights/">Insights</a></li>
+      <li><a href="https://orbitandonomarketing.substack.com/" target="_blank">Newsletter</a></li>
+      <li><a href="/contato" class="nav-cta">Contato</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <span class="hero-tag">Para empresas B2B</span>
+        <h1>Auditoria de Visibilidade em IA + SEO Técnico</h1>
+        <p>Diagnóstico completo de como sua marca aparece hoje no Google e nas principais IAs generativas, comparada à concorrência. Entrego relatório e plano de ação priorizado.</p>
+        <a class="btn btn-lilac" href="#formulario" style="margin-top:1.5rem">Solicitar Auditoria</a>
+      </div>
+      <div class="detail-cards">
+        <div class="detail-card"><div class="detail-icon" style="background:rgba(131,111,255,.2)">&#9201;</div><div><h4>Prazo de 2 a 3 semanas</h4><p>Entrega com relatório completo e sessão de apresentação</p></div></div>
+        <div class="detail-card"><div class="detail-icon" style="background:rgba(106,90,205,.2)">&#128200;</div><div><h4>Plano de ação priorizado</h4><p>Impacto e esforço mapeados</p></div></div>
+        <div class="detail-card"><div class="detail-icon" style="background:rgba(131,111,255,.2)">&#128161;</div><div><h4>Google + 4 IAs testadas</h4><p>ChatGPT, Gemini, Perplexity e Copilot</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-ghost">
+    <div class="section-inner">
+      <div class="grid-content">
+        <div>
+          <h2 style="font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:700;color:var(--navy);margin-bottom:1rem">O que inclui</h2>
+          <ul class="check-list" style="margin-bottom:1.75rem">
+            <li>Auditoria técnica de SEO com Semrush, Ahrefs, GSC e GA4</li>
+            <li>Testes de visibilidade em ChatGPT, Gemini, Perplexity e Copilot</li>
+            <li>Análise de concorrência e mapa de oportunidades</li>
+            <li>Diagnóstico de conteúdo: o que falta para as IAs citarem sua marca</li>
+            <li>Plano de ação priorizado por impacto e esforço</li>
+            <li>Sessão de apresentação e alinhamento com o time</li>
+          </ul>
+          <h2 style="font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:700;color:var(--navy);margin-bottom:1rem">Para quem é</h2>
+          <p style="font-size:1rem;line-height:1.75;margin-bottom:1rem">Empresas B2B SaaS que já investem em conteúdo e SEO mas não sabem se estão aparecendo nas respostas das IAs generativas — ou que querem entender o que precisam mudar para aparecer.</p>
+          <div style="background:var(--light);border-left:4px solid var(--lilac);border-radius:0 10px 10px 0;padding:1.25rem 1.5rem">
+            <p style="font-size:.9rem;margin:0;line-height:1.65">Formato: projeto fechado · Prazo: 2 a 3 semanas · Investimento: sob consulta · Ideal para: B2B SaaS</p>
+          </div>
+        </div>
+        <div id="formulario">
+          <h2 style="font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:1.5rem">Solicite sua Auditoria</h2>
+          <div class="form-wrap">
+            <form action="https://formspree.io/f/mnjyllda" method="POST" onsubmit="handleSubmit(event)">
+      <input type="hidden" name="assunto" value="Auditoria de Visibilidade em IA + SEO Técnico">
+      <div class="form-group"><label>Nome</label><input type="text" name="nome" placeholder="Seu nome" required></div>
+      <div class="form-group"><label>E-mail profissional</label><input type="email" name="email" placeholder="seu@empresa.com.br" required></div>
+      <div class="form-group"><label>Empresa</label><input type="text" name="empresa" placeholder="Nome da empresa"></div>
+      
+      <div class="form-group"><label>Mensagem</label><textarea rows="5" name="mensagem" placeholder="Descreva o cenário atual da empresa em SEO/conteúdo e o que você espera entender com a auditoria." required></textarea></div>
+      <p class="form-note">Retorno em até 1 dia útil.</p>
+      <button type="submit" class="btn" style="width:100%;background:var(--navy)">Enviar mensagem</button>
+      <div id="form-success">&#10003; Mensagem enviada! Retorno em até 1 dia útil.</div>
+    </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-gradient" style="text-align:center">
+    <div class="section-inner">
+      <h2 style="font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:700;color:var(--ghost);margin-bottom:.75rem">Não sabe se a Auditoria é o certo para você?</h2>
+      <p style="color:#E0DDFF;margin-bottom:2rem">Fale comigo antes de qualquer compromisso.</p>
+      <a class="btn btn-ghost" href="/contato">Fale comigo</a>
+    </div>
+  </section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-name">Orbitando no Marketing</div>
+      <div class="footer-logo-tag">SEO · GEO · AEO</div>
+      <p>Consultoria estratégica de marketing digital para empresas B2B que querem aparecer no Google e nas IAs generativas. Por Jacqueline Alves.</p>
+    </div>
+    <div>
+      <h4>Para profissionais</h4>
+      <ul>
+        <li><a href="/guia-marketing-digital">Guia para Iniciantes</a></li>
+        <li><a href="/modelo-curriculo">Modelo de Currículo</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Para empresas B2B</h4>
+      <ul>
+        <li><a href="/auditoria-visibilidade-ia">Auditoria de Visibilidade em IA</a></li>
+        <li><a href="/consultoria-b2b-saas">Consultoria Contínua B2B SaaS</a></li>
+        <li><a href="/desenvolvimento-sites">Desenvolvimento de Sites</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Me conheça</h4>
+      <ul>
+        <li><a href="/sobre-mim">Sobre mim</a></li>
+        <li><a href="/cases-de-sucesso">Cases de sucesso</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Newsletter</h4>
+      <ul>
+        <li><a href="https://orbitandonomarketing.substack.com/" target="_blank">Orbitando no Marketing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Fale comigo</h4>
+      <ul>
+        <li><a href="/contato">Contato</a></li>
+        <li><a href="https://www.linkedin.com/in/jacquelinealvesoliveira" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Orbitando no Marketing. Todos os direitos reservados.</p>
+    <p><a href="/politica-privacidade" style="color:var(--muted);text-decoration:none;transition:color .15s" onmouseover="this.style.color='#836FFF'" onmouseout="this.style.color='var(--muted)'">Política de Privacidade</a></p>
+  </div>
+</footer>
+<script>
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
+function toggleMega(e){e.stopPropagation();var m=document.getElementById('megaItem');var n=document.getElementById('newsItem');if(n)n.classList.remove('open');m.classList.toggle('open');}
+function toggleNews(e){e.stopPropagation();var n=document.getElementById('newsItem');var m=document.getElementById('megaItem');if(m)m.classList.remove('open');n.classList.toggle('open');}
+document.addEventListener('click',function(){var m=document.getElementById('megaItem');var n=document.getElementById('newsItem');if(m)m.classList.remove('open');if(n)n.classList.remove('open');});
+async function handleSubmit(e){
+  e.preventDefault();
+  var btn=e.target.querySelector('button[type="submit"]');
+  btn.textContent='Enviando...';btn.disabled=true;
+  try{
+    var res=await fetch(e.target.action,{method:'POST',body:new FormData(e.target),headers:{'Accept':'application/json'}});
+    if(res.ok){e.target.reset();document.getElementById('form-success').style.display='block';btn.style.display='none';}
+    else{btn.textContent='Erro. Tente novamente.';btn.disabled=false;}
+  }catch(err){btn.textContent='Erro. Tente novamente.';btn.disabled=false;}
+}
+</script>
+<script src="https://cdn-reach.hostinger.com/js/embed.js"></script>
+</body>
+</html>

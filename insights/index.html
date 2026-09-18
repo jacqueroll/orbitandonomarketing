@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insights | Orbitando no Marketing</title>
+<meta name="description" content="Artigos técnicos sobre SEO, GEO, AEO e visibilidade em IA. Conteúdo para profissionais de marketing e empresas B2B que querem ser encontrados — em buscadores e nas respostas das IAs.">
+<meta name="author" content="Jacqueline Alves">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://orbitandonomarketing.com.br/insights/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://orbitandonomarketing.com.br/insights/">
+<meta property="og:title" content="Insights | Orbitando no Marketing">
+<meta property="og:description" content="Artigos técnicos sobre SEO, GEO, AEO e visibilidade em IA para profissionais e empresas B2B.">
+<link rel="icon" type="image/png" href="/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#191970;--navy-dark:#141459;--slate-dark:#483D8B;
+  --slate:#6A5ACD;--lilac:#836FFF;--ghost:#F8F8FF;
+  --light:#f0eeff;--light2:#f8f7ff;--border:#e8e6f8;
+  --muted:#9896CC;--text:#191970;--white:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--ghost);line-height:1.75}
+a{color:var(--slate);text-decoration:none}
+a:hover{color:var(--slate-dark)}
+img{max-width:100%;display:block}
+
+/* NAV */
+nav{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.nav-logo svg{width:36px;height:36px;flex-shrink:0}
+.nav-logo-name{display:block;font-size:.95rem;font-weight:700;color:var(--ghost);line-height:1.2}
+.nav-logo-tag{display:block;font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
+.nav-links a,.nav-links span{font-size:.88rem;font-weight:500;color:var(--ghost);opacity:.85;text-decoration:none;cursor:pointer;transition:opacity .15s}
+.nav-links a:hover,.nav-links span:hover{opacity:1}
+.nav-cta{background:var(--lilac)!important;color:var(--navy)!important;opacity:1!important;padding:.45rem 1.1rem;border-radius:6px;font-weight:700!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--ghost);border-radius:2px}
+
+/* MEGA MENU */
+.has-mega{position:static}
+.mega-menu{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy-dark);border-top:2px solid var(--lilac);box-shadow:0 16px 48px rgba(0,0,0,.45);z-index:300;padding:2rem}
+.has-mega.open .mega-menu{display:block}
+.mega-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.mega-col-title{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid rgba(131,111,255,.3)}
+.mega-item{display:flex;align-items:flex-start;gap:.75rem;padding:.75rem;border-radius:8px;text-decoration:none;transition:background .15s;margin-bottom:.25rem}
+.mega-item:hover{background:rgba(131,111,255,.12)}
+.mega-item-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.mega-item-text strong{display:block;font-size:.88rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.mega-item-text span{font-size:.78rem;color:var(--muted);line-height:1.4}
+.mega-badge{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(131,111,255,.25);color:var(--lilac);padding:.15rem .45rem;border-radius:4px;vertical-align:middle}
+
+/* HERO INSIGHTS */
+.insights-hero{background:var(--navy);padding:4rem 2rem 3rem;text-align:center}
+.insights-hero .hero-tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--lilac);border:1px solid var(--lilac);padding:.3rem 1rem;border-radius:999px;margin-bottom:1.5rem}
+.insights-hero h1{font-size:clamp(1.9rem,3.5vw,2.6rem);font-weight:700;color:#F8F8FF;line-height:1.15;margin-bottom:1rem;max-width:640px;margin-left:auto;margin-right:auto}
+.insights-hero p{font-size:1.05rem;color:var(--muted);max-width:520px;margin:0 auto 2rem}
+
+/* SEARCH */
+.search-bar-wrap{max-width:560px;margin:0 auto}
+.search-bar{display:flex;gap:.5rem;background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:.5rem .5rem .5rem 1rem;align-items:center}
+.search-bar input{flex:1;border:none;outline:none;font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;color:var(--text);background:transparent}
+.search-bar input::placeholder{color:var(--muted)}
+.search-bar button{background:var(--navy);color:#F8F8FF;border:none;border-radius:7px;padding:.55rem 1.1rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer;transition:opacity .15s;white-space:nowrap}
+.search-bar button:hover{opacity:.85}
+
+/* CATEGORIES */
+.categories-section{background:var(--white);border-bottom:1px solid var(--border);padding:1.25rem 2rem}
+.categories-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}
+.cat-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-right:.25rem;white-space:nowrap}
+.cat-btn{display:inline-block;font-size:.78rem;font-weight:600;padding:.35rem .9rem;border-radius:999px;border:1.5px solid var(--border);color:var(--text);background:transparent;cursor:pointer;transition:all .15s;white-space:nowrap}
+.cat-btn:hover,.cat-btn.active{background:var(--navy);color:#F8F8FF;border-color:var(--navy)}
+.cat-btn-all{background:var(--navy);color:#F8F8FF;border-color:var(--navy)}
+.cat-spacer{flex:1}
+.cat-count{font-size:.78rem;color:var(--muted);white-space:nowrap}
+
+/* INSIGHTS GRID */
+.section{padding:3rem 2rem}
+.section-inner{max-width:1100px;margin:0 auto}
+.insights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:0}
+.insights-empty{text-align:center;padding:3rem;color:var(--muted);display:none}
+
+/* ARTICLE CARD */
+.article-card{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
+.article-card:hover{box-shadow:0 8px 32px rgba(25,25,112,.1);transform:translateY(-2px)}
+.article-card-icon{height:140px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.article-card-body{padding:1.4rem;flex:1;display:flex;flex-direction:column}
+.article-cat{display:inline-block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--lilac);background:var(--light);padding:.25rem .7rem;border-radius:6px;margin-bottom:.8rem}
+.article-card-body h3{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.6rem}
+.article-card-body h3 a{color:var(--navy);display:block}
+.article-card-body h3 a:hover{color:var(--slate)}
+.article-card-body p{font-size:.85rem;color:var(--muted);line-height:1.6;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:1rem}
+.article-meta{display:flex;align-items:center;gap:.75rem;font-size:.75rem;color:var(--muted);margin-bottom:.9rem;flex-wrap:wrap}
+.article-meta span{display:flex;align-items:center;gap:.25rem}
+.article-author{font-size:.78rem;font-weight:600;color:var(--text);margin-bottom:.9rem}
+.read-more{display:inline-flex;align-items:center;gap:.35rem;font-size:.82rem;font-weight:700;color:var(--slate);margin-top:auto}
+.read-more:hover{color:var(--slate-dark)}
+.read-more svg{transition:transform .15s}
+.read-more:hover svg{transform:translateX(3px)}
+
+/* LOAD MORE */
+.load-more-wrap{text-align:center;margin-top:2.5rem}
+.btn-outline{display:inline-block;background:transparent;color:var(--navy);border:1.5px solid var(--navy);padding:.7rem 1.75rem;border-radius:8px;font-weight:700;font-size:.9rem;cursor:pointer;transition:all .15s}
+.btn-outline:hover{background:var(--navy);color:#F8F8FF}
+
+/* NEWSLETTER BAND */
+.newsletter-band{background:linear-gradient(135deg,var(--slate-dark),var(--slate));padding:2.5rem 2rem;text-align:center}
+.newsletter-form-wrap{max-width:480px;margin:0 auto}
+
+/* FOOTER */
+footer{background:var(--navy-dark);color:var(--ghost);padding:4rem 2rem 2rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+footer h4{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem}
+footer ul{list-style:none}
+footer ul li{margin-bottom:.5rem}
+footer ul a{font-size:.88rem;color:#C8C5F0;text-decoration:none;transition:color .15s}
+footer ul a:hover{color:var(--lilac)}
+.footer-logo-name{font-size:1rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.footer-logo-tag{font-size:.65rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.85rem}
+footer p{font-size:.85rem;color:var(--muted);line-height:1.6}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:.8rem;color:var(--muted)}
+
+/* MOBILE */
+@media(max-width:960px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--navy);padding:1rem 2rem;gap:1rem;align-items:flex-start}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  .mega-menu,.dropdown-menu{position:static;border-top:none;box-shadow:none;padding:.75rem 0}
+  .insights-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .nav-inner{padding:0 1rem}
+  .nav-logo-tag{display:none}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .categories-inner{gap:.5rem}
+}
+@media(min-width:600px) and (max-width:960px){
+  .insights-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="16" fill="none" stroke="#F8F8FF" stroke-width="2.5"/>
+        <circle cx="34" cy="12" r="7" fill="#6A5ACD"/>
+        <circle cx="11" cy="33" r="5" fill="#836FFF"/>
+        <circle cx="22" cy="22" r="5" fill="#F8F8FF"/>
+      </svg>
+      <div>
+        <span class="nav-logo-name">Orbitando no Marketing</span>
+        <span class="nav-logo-tag">SEO · GEO · AEO</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/sobre-mim">Sobre mim</a></li>
+      <li class="has-mega" id="megaItem">
+        <span onclick="toggleMega(event)">Soluções &#9662;</span>
+        <div class="mega-menu">
+          <div class="mega-grid">
+            <div>
+              <div class="mega-col-title">Para profissionais de marketing</div>
+              <a class="mega-item" href="/guia-marketing-digital">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128218;</div>
+                <div class="mega-item-text"><strong>Guia para Entrar no Mercado de Marketing Digital</strong><span>PDF completo com 15 capítulos para iniciantes e júniors</span></div>
+              </a>
+              <a class="mega-item" href="/modelo-curriculo">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128196;</div>
+                <div class="mega-item-text"><strong>Modelo de Currículo para Marketing Digital <span class="mega-badge">Grátis</span></strong><span>Template editável com guia de preenchimento</span></div>
+              </a>
+            </div>
+            <div>
+              <div class="mega-col-title">Para empresas B2B</div>
+              <a class="mega-item" href="/auditoria-visibilidade-ia">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128269;</div>
+                <div class="mega-item-text"><strong>Auditoria de Visibilidade em IA + SEO Técnico</strong><span>Diagnóstico completo de como sua marca aparece no Google e nas IAs</span></div>
+              </a>
+              <a class="mega-item" href="/consultoria-b2b-saas">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128200;</div>
+                <div class="mega-item-text"><strong>Consultoria Contínua para B2B SaaS</strong><span>Parceria recorrente para conteúdo, SEO e GEO/AEO</span></div>
+              </a>
+              <a class="mega-item" href="/desenvolvimento-sites">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128187;</div>
+                <div class="mega-item-text"><strong>Desenvolvimento de Sites para B2B</strong><span>Site institucional do zero, com alinhamento e entrega completa</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="/cases-de-sucesso">Cases</a></li>
+      <li><a href="/insights/" class="active">Insights</a></li>
+      <li><a href="https://orbitandonomarketing.substack.com/" target="_blank">Newsletter</a></li>
+      <li><a href="/contato" class="nav-cta">Contato</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="insights-hero">
+  <span class="hero-tag">Insights</span>
+  <h1>Artigos sobre SEO, GEO, AEO e visibilidade em IA</h1>
+  <p>Conteúdo técnico para quem quer ser encontrado, seja por um buscador, seja pela resposta de uma IA.</p>
+  <div class="search-bar-wrap">
+    <div class="search-bar">
+      <svg width="17" height="17" fill="none" stroke="#9896CC" stroke-width="2" viewBox="0 0 24 24" style="flex-shrink:0"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="searchInput" placeholder="Buscar artigos..." autocomplete="off">
+      <button onclick="filterArticles()">Buscar</button>
+    </div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<div class="categories-section">
+  <div class="categories-inner">
+    <span class="cat-label">Categoria:</span>
+    <button class="cat-btn cat-btn-all active" data-cat="all" onclick="setCat(this)">Todos</button>
+    <button class="cat-btn" data-cat="seo" onclick="setCat(this)">SEO</button>
+    <button class="cat-btn" data-cat="geo" onclick="setCat(this)">GEO</button>
+    <button class="cat-btn" data-cat="aeo" onclick="setCat(this)">AEO</button>
+    <button class="cat-btn" data-cat="estrategia" onclick="setCat(this)">Estratégia</button>
+    <button class="cat-btn" data-cat="ia" onclick="setCat(this)">IA Generativa</button>
+    <button class="cat-btn" data-cat="conteudo" onclick="setCat(this)">Conteúdo</button>
+    <div class="cat-spacer"></div>
+    <span class="cat-count" id="articleCount">1 artigo</span>
+  </div>
+</div>
+
+<!-- ARTICLES GRID -->
+<section class="section">
+  <div class="section-inner">
+    <div class="insights-grid" id="articlesGrid">
+
+      <!-- Artigo 1: SEO GEO AEO IA -->
+      <div class="article-card" data-cat="geo aeo ia seo" data-title="como melhorar a visibilidade da marca em respostas de ia o que seo geo e aeo tem a ver com isso">
+        <div class="article-card-icon" style="background:linear-gradient(135deg,#141459,#483D8B)">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="28" cy="28" r="20" fill="none" stroke="rgba(248,248,255,.22)" stroke-width="2"/>
+            <circle cx="28" cy="28" r="12" fill="none" stroke="rgba(131,111,255,.5)" stroke-width="1.5"/>
+            <circle cx="42" cy="16" r="7" fill="#6A5ACD"/>
+            <circle cx="16" cy="42" r="5" fill="#836FFF"/>
+            <circle cx="28" cy="28" r="5" fill="#F8F8FF"/>
+            <circle cx="28" cy="8" r="2.5" fill="rgba(131,111,255,.7)"/>
+            <circle cx="48" cy="28" r="2" fill="rgba(106,90,205,.6)"/>
+          </svg>
+        </div>
+        <div class="article-card-body">
+          <span class="article-cat">GEO · AEO</span>
+          <h3><a href="/insights/visibilidade-marca-respostas-ia-seo-geo-aeo">Como melhorar a visibilidade da marca em respostas de IA: o que SEO, GEO e AEO têm a ver com isso</a></h3>
+          <p>SEO, GEO e AEO descrevem o mesmo objetivo visto de ângulos diferentes: fazer a sua marca aparecer onde as pessoas procuram respostas. Com as IAs generativas mudando o comportamento de busca, entender como cada disciplina contribui para a visibilidade é o ponto de partida.</p>
+          <div class="article-meta">
+            <span>
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              17 set. 2026
+            </span>
+            <span>
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              14 min de leitura
+            </span>
+          </div>
+          <p class="article-author">Jacqueline Alves</p>
+          <a href="/insights/visibilidade-marca-respostas-ia-seo-geo-aeo" class="read-more">
+            Ler artigo
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="insights-empty" id="emptyState">
+      <svg width="40" height="40" fill="none" stroke="#9896CC" stroke-width="1.5" viewBox="0 0 24 24" style="margin:0 auto 1rem"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <p>Nenhum artigo encontrado para essa busca.</p>
+    </div>
+    <div class="load-more-wrap" id="loadMoreWrap" style="display:none">
+      <button class="btn-outline" onclick="loadMore()">Ver mais artigos</button>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<div class="newsletter-band">
+  <div class="newsletter-form-wrap">
+    <div data-reach-form="22c061ca-1ddf-4b0a-a9a9-52e1021274ab"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-name">Orbitando no Marketing</div>
+      <div class="footer-logo-tag">SEO · GEO · AEO</div>
+      <p>Consultoria estratégica de marketing digital para empresas B2B que querem aparecer no Google e nas IAs generativas. Por Jacqueline Alves.</p>
+    </div>
+    <div>
+      <h4>Para profissionais</h4>
+      <ul>
+        <li><a href="/guia-marketing-digital">Guia para Iniciantes</a></li>
+        <li><a href="/modelo-curriculo">Modelo de Currículo</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Para empresas B2B</h4>
+      <ul>
+        <li><a href="/auditoria-visibilidade-ia">Auditoria de Visibilidade em IA</a></li>
+        <li><a href="/consultoria-b2b-saas">Consultoria Contínua B2B SaaS</a></li>
+        <li><a href="/desenvolvimento-sites">Desenvolvimento de Sites</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Me conheça</h4>
+      <ul>
+        <li><a href="/sobre-mim">Sobre mim</a></li>
+        <li><a href="/cases-de-sucesso">Cases de sucesso</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Newsletter</h4>
+      <ul>
+        <li><a href="https://orbitandonomarketing.substack.com/" target="_blank">Orbitando no Marketing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Fale comigo</h4>
+      <ul>
+        <li><a href="/contato">Contato</a></li>
+        <li><a href="https://www.linkedin.com/in/jacquelinealvesoliveira" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Orbitando no Marketing. Todos os direitos reservados.</p>
+    <p><a href="/politica-privacidade" style="color:var(--muted);text-decoration:none;transition:color .15s" onmouseover="this.style.color='#836FFF'" onmouseout="this.style.color='var(--muted)'">Política de Privacidade</a></p>
+  </div>
+</footer>
+
+<script>
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
+function toggleMega(e){
+  e.stopPropagation();
+  var m=document.getElementById('megaItem');
+  m.classList.toggle('open');
+}
+document.addEventListener('click',function(){
+  var m=document.getElementById('megaItem');
+  if(m)m.classList.remove('open');
+});
+
+let activeCat='all';
+
+function setCat(btn){
+  document.querySelectorAll('.cat-btn').forEach(b=>{b.classList.remove('active','cat-btn-all')});
+  btn.classList.add('active');
+  if(btn.dataset.cat==='all') btn.classList.add('cat-btn-all');
+  activeCat=btn.dataset.cat;
+  filterArticles();
+}
+
+function filterArticles(){
+  const q=document.getElementById('searchInput').value.toLowerCase().trim();
+  const cards=document.querySelectorAll('.article-card');
+  let visible=0;
+  cards.forEach(card=>{
+    const cats=card.dataset.cat||'';
+    const title=card.dataset.title||'';
+    const body=card.querySelector('p')?card.querySelector('p').textContent.toLowerCase():'';
+    const matchCat=activeCat==='all'||cats.includes(activeCat);
+    const matchQ=!q||(title.includes(q)||body.includes(q));
+    const show=matchCat&&matchQ;
+    card.style.display=show?'':'none';
+    if(show) visible++;
+  });
+  const countEl=document.getElementById('articleCount');
+  countEl.textContent=visible+(visible===1?' artigo':' artigos');
+  document.getElementById('emptyState').style.display=visible===0?'block':'none';
+}
+</script>
+<script>
+(function(){
+  var MAX_TRIES=3, RETRY_MS=3000, tries=0;
+  function checkAndInit(){
+    if(window.__reachEmbed && typeof window.__reachEmbed.init==='function'){
+      window.__reachEmbed.init();
+    }
+  }
+  function loadReach(){
+    var old=document.querySelector('script[data-reach-script]');
+    if(old) old.parentNode.removeChild(old);
+    var s=document.createElement('script');
+    s.setAttribute('data-reach-script','1');
+    s.src='https://cdn-reach.hostinger.com/js/embed.js?_='+Date.now();
+    s.onload=function(){
+      setTimeout(function(){
+        checkAndInit();
+        var el=document.querySelector('[data-reach-form]');
+        if(el && !el.querySelector('iframe') && tries<MAX_TRIES){
+          tries++;
+          setTimeout(loadReach, RETRY_MS);
+        }
+      }, 800);
+    };
+    s.onerror=function(){
+      if(tries<MAX_TRIES){ tries++; setTimeout(loadReach, RETRY_MS); }
+    };
+    document.body.appendChild(s);
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded', loadReach);
+  } else {
+    loadReach();
+  }
+})();
+</script>
+</body>
+</html>

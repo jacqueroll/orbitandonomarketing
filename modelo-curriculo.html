@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modelo de Currículo para Marketing Digital | Orbitando no Marketing</title>
+<meta name="description" content="Template gratuito de currículo para marketing digital, editável em Google Docs e Word, com guia de preenchimento e palavras-chave para ATS.">
+<meta name="author" content="Jacqueline Alves">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://orbitandonomarketing.com.br/modelo-curriculo">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://orbitandonomarketing.com.br/modelo-curriculo">
+<meta property="og:title" content="Modelo de Currículo para Marketing Digital | Orbitando no Marketing">
+<meta property="og:description" content="Template gratuito de currículo para marketing digital, editável em Google Docs e Word, com guia de preenchimento e palavras-chave para ATS.">
+<meta property="og:image" content="https://orbitandonomarketing.com.br/favicon-512.png">
+<link rel="icon" type="image/png" href="/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#191970;--navy-dark:#141459;--slate-dark:#483D8B;
+  --slate:#6A5ACD;--lilac:#836FFF;--ghost:#F8F8FF;
+  --light:#f0eeff;--light2:#f8f7ff;--border:#e8e6f8;
+  --muted:#9896CC;--text:#191970;--white:#FFFFFF;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--ghost);color:var(--text);line-height:1.6}
+
+/* NAV */
+nav{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.nav-logo svg{width:36px;height:36px;flex-shrink:0}
+.nav-logo-name{display:block;font-size:.95rem;font-weight:700;color:var(--ghost);line-height:1.2}
+.nav-logo-tag{display:block;font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
+.nav-links a,.nav-links span{font-size:.88rem;font-weight:500;color:var(--ghost);opacity:.85;text-decoration:none;cursor:pointer;transition:opacity .15s}
+.nav-links a:hover,.nav-links span:hover{opacity:1}
+.nav-cta{background:var(--lilac)!important;color:var(--navy)!important;opacity:1!important;padding:.45rem 1.1rem;border-radius:6px;font-weight:700!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--ghost);border-radius:2px}
+
+/* MEGA MENU */
+.has-mega{position:static}
+.mega-menu{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy-dark);border-top:2px solid var(--lilac);box-shadow:0 16px 48px rgba(0,0,0,.45);z-index:300;padding:2rem}
+.has-mega.open .mega-menu{display:block}
+.mega-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.mega-col-title{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid rgba(131,111,255,.3)}
+.mega-item{display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.06);text-decoration:none;transition:opacity .15s}
+.mega-item:last-child{border-bottom:none}
+.mega-item:hover{opacity:.8}
+.mega-item-icon{width:38px;height:38px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.mega-item-text strong{display:block;font-size:.88rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem;line-height:1.3}
+.mega-item-text span{font-size:.78rem;color:var(--muted);line-height:1.4}
+.mega-badge{display:inline-block;font-size:.6rem;font-weight:700;text-transform:uppercase;padding:.15rem .45rem;border-radius:4px;background:rgba(131,111,255,.25);color:var(--lilac);vertical-align:middle;margin-left:.3rem}
+
+/* PAGE HERO */
+.page-hero{background:var(--navy);padding:5rem 2rem 4rem}
+.page-hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.page-hero h1{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:700;color:var(--ghost);line-height:1.15;margin-bottom:1rem}
+.page-hero p{font-size:1rem;line-height:1.75;color:#C8C5F0}
+.detail-cards{display:flex;flex-direction:column;gap:.85rem;margin-top:1.5rem}
+.detail-card{display:flex;gap:1rem;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:1rem 1.25rem}
+.detail-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.detail-card h4{font-size:.85rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.detail-card p{font-size:.78rem;color:var(--muted);line-height:1.5;margin:0}
+.hero-tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--lilac);border:1px solid var(--lilac);padding:.3rem 1rem;border-radius:999px;margin-bottom:1.5rem}
+
+/* SECTIONS */
+.section{padding:5rem 2rem}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-white{background:var(--white)}
+.section-ghost{background:var(--ghost)}
+.section-navy{background:var(--navy)}
+.section-light{background:var(--light)}
+.section-gradient{background:linear-gradient(135deg,var(--slate-dark),var(--slate))}
+.section-header{text-align:center;margin-bottom:3rem}
+.section-header h2{font-size:clamp(1.5rem,2.5vw,2rem);font-weight:700;color:var(--navy);margin-bottom:.75rem}
+.section-header p{font-size:1rem;color:var(--muted);max-width:620px;margin:0 auto}
+
+/* BOTÕES */
+.btn{display:inline-block;background:var(--navy);color:var(--ghost);padding:.75rem 1.75rem;border-radius:8px;font-weight:600;font-size:.92rem;text-decoration:none;transition:opacity .15s;cursor:pointer;border:none;font-family:inherit}
+.btn:hover{opacity:.88}
+.btn-lilac{background:var(--lilac);color:var(--navy)}
+.btn-outline{background:rgba(131,111,255,.18);color:var(--ghost);border:1.5px solid var(--lilac)}
+.btn-ghost{background:var(--ghost);color:var(--navy)}
+
+/* CARDS */
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.cards-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.75rem}
+.card-navy{background:var(--navy);color:var(--ghost)}
+.card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.65rem;line-height:1.35}
+.card-navy h3{color:var(--ghost)}
+.card p{font-size:.88rem;color:var(--text);line-height:1.65;margin-bottom:1.1rem}
+.card-navy p{color:#C8C5F0}
+.badge{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .75rem;border-radius:6px;margin-bottom:.85rem}
+.badge-lilac{background:rgba(131,111,255,.2);color:var(--lilac)}
+.badge-light{background:var(--light2);color:var(--muted)}
+.badge-green{background:#e8f5e9;color:#2e7d32}
+
+/* CHECK LIST */
+.check-list{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+.check-list li{font-size:.92rem;color:var(--text);line-height:1.55;padding-left:1.5rem;position:relative}
+.check-list li::before{content:"✓";position:absolute;left:0;color:var(--slate);font-weight:700}
+.x-list{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+.x-list li{font-size:.92rem;color:var(--text);line-height:1.55;padding-left:1.5rem;position:relative}
+.x-list li::before{content:"×";position:absolute;left:0;color:#b23b3b;font-weight:700}
+
+/* FORMULÁRIO */
+.form-wrap{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:2rem;box-shadow:0 4px 24px rgba(25,25,112,.07)}
+.form-group{margin-bottom:1.1rem}
+.form-group label{display:block;font-size:.82rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:.8rem 1rem;border:1.5px solid var(--border);border-radius:8px;font-size:.92rem;font-family:inherit;color:var(--navy);outline:none;background:var(--white);transition:border-color .15s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--slate)}
+.form-note{font-size:.78rem;color:var(--muted);line-height:1.55;margin-bottom:1.1rem}
+#form-success{display:none;background:#e8f5e9;border-radius:8px;padding:1rem;text-align:center;margin-top:1rem;color:#2e7d32;font-weight:600}
+
+/* TABELA */
+table{width:100%;border-collapse:collapse;margin-top:.5rem;font-size:.88rem}
+th{text-align:left;background:var(--navy);color:var(--ghost);padding:.7rem 1rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em}
+td{padding:.7rem 1rem;border-bottom:1px solid var(--border);vertical-align:top}
+tr:nth-child(even) td{background:var(--light2)}
+
+/* COMPARAÇÃO ANTES/DEPOIS */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.2rem}
+.compare-box{border-radius:10px;padding:1.1rem 1.3rem;font-size:.88rem;line-height:1.6}
+.compare-bad{background:#fff4f4;border:1px solid #f3d9d9;color:var(--text)}
+.compare-good{background:var(--light2);border:1px solid var(--border);color:var(--text)}
+.compare-label{font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;display:block}
+.compare-bad .compare-label{color:#b23b3b}
+.compare-good .compare-label{color:var(--slate)}
+
+/* STEPS */
+.step-list{display:flex;flex-direction:column}
+.step{display:flex;gap:1.1rem;padding:1.1rem 0;border-bottom:1px solid var(--border)}
+.step:last-child{border-bottom:none}
+.step-num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:var(--navy);color:var(--ghost);font-weight:700;font-size:.9rem;display:flex;align-items:center;justify-content:center}
+.step-body h4{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
+.step-body p{font-size:.88rem;color:var(--text);margin:0;line-height:1.6}
+
+/* FOOTER */
+footer{background:var(--navy-dark);color:var(--ghost);padding:4rem 2rem 2rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+footer h4{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem}
+footer ul{list-style:none}
+footer ul li{margin-bottom:.6rem}
+footer ul a{font-size:.88rem;color:#C8C5F0;text-decoration:none;transition:color .15s}
+footer ul a:hover{color:var(--lilac)}
+.footer-logo-name{font-size:1rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.footer-logo-tag{font-size:.65rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.85rem}
+footer p{font-size:.85rem;color:var(--muted);line-height:1.6}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:.8rem;color:var(--muted)}
+
+/* GRID UTIL */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.grid-content{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:start}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .page-hero-inner,.grid-2,.grid-content,.cards-grid,.cards-grid-2,.compare{grid-template-columns:1fr}
+  .next-step-card{grid-template-columns:1fr!important;text-align:center}
+  .next-step-card a{margin-top:.5rem;display:inline-block}
+  .mega-grid,.footer-inner{grid-template-columns:1fr 1fr}
+  .nav-links{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--navy);padding:1rem 2rem;gap:1rem;align-items:flex-start}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  .mega-menu{position:static;border-top:none;box-shadow:none;padding:.75rem 0}
+  .mega-grid{grid-template-columns:1fr;gap:1rem}
+  .has-mega{position:static}
+}
+@media(max-width:600px){
+  .footer-inner,.cards-grid,.cards-grid-2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="16" fill="none" stroke="#F8F8FF" stroke-width="2.5"></circle>
+        <circle cx="34" cy="12" r="7" fill="#6A5ACD"></circle>
+        <circle cx="11" cy="33" r="5" fill="#836FFF"></circle>
+        <circle cx="22" cy="22" r="5" fill="#F8F8FF"></circle>
+      </svg>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">Orbitando no Marketing</span>
+        <span class="nav-logo-tag">SEO · GEO · AEO</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/sobre-mim">Sobre mim</a></li>
+      <li class="has-mega" id="megaItem">
+        <span onclick="toggleMega(event)" style="color:var(--ghost);opacity:.85;font-size:.88rem;font-weight:500;cursor:pointer">Soluções ▾</span>
+        <div class="mega-menu">
+          <div class="mega-grid">
+            <div>
+              <div class="mega-col-title">Para profissionais de marketing</div>
+              <a class="mega-item" href="/guia-marketing-digital">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">📚</div>
+                <div class="mega-item-text"><strong>Guia para Entrar no Mercado de Marketing Digital</strong><span>PDF completo com 15 capítulos para iniciantes e júniors</span></div>
+              </a>
+              <a class="mega-item" href="/modelo-curriculo">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">📄</div>
+                <div class="mega-item-text"><strong>Modelo de Currículo para Marketing Digital <span class="mega-badge">Grátis</span></strong><span>Template editável com guia de preenchimento</span></div>
+              </a>
+            </div>
+            <div>
+              <div class="mega-col-title">Para empresas B2B</div>
+              <a class="mega-item" href="/auditoria-visibilidade-ia">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">🔍</div>
+                <div class="mega-item-text"><strong>Auditoria de Visibilidade em IA + SEO Técnico</strong><span>Diagnóstico completo de como sua marca aparece no Google e nas IAs</span></div>
+              </a>
+              <a class="mega-item" href="/consultoria-b2b-saas">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">📈</div>
+                <div class="mega-item-text"><strong>Consultoria Contínua para B2B SaaS</strong><span>Parceria recorrente para conteúdo, SEO e GEO/AEO</span></div>
+              </a>
+              <a class="mega-item" href="/desenvolvimento-sites">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">💻</div>
+                <div class="mega-item-text"><strong>Desenvolvimento de Sites para B2B</strong><span>Site institucional do zero, com alinhamento e entrega completa</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="/cases-de-sucesso">Cases</a></li>
+      <li><a href="/insights/">Insights</a></li>
+      <li><a href="https://orbitandonomarketing.substack.com/" target="_blank">Newsletter</a></li>
+      <li><a href="/contato" class="nav-cta">Contato</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <span class="hero-tag">Para profissionais de marketing</span>
+      <h1>Modelo de Currículo para Marketing Digital</h1>
+      <p>Template editável em Google Docs e Word, com guia de preenchimento campo a campo, palavras-chave para passar pela triagem automática e exemplos reais de marketing digital, SEO, conteúdo e mídias sociais.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem">
+        <span style="background:rgba(131,111,255,.18);color:#C8C5F0;font-size:.8rem;padding:.35rem .85rem;border-radius:6px">Grátis</span>
+        <span style="background:rgba(131,111,255,.18);color:#C8C5F0;font-size:.8rem;padding:.35rem .85rem;border-radius:6px">Google Docs e Word</span>
+        <span style="background:rgba(131,111,255,.18);color:#C8C5F0;font-size:.8rem;padding:.35rem .85rem;border-radius:6px">Guia de preenchimento</span>
+        <span style="background:rgba(131,111,255,.18);color:#C8C5F0;font-size:.8rem;padding:.35rem .85rem;border-radius:6px">2 versões incluídas</span>
+      </div>
+      <a href="#download" class="btn btn-lilac" style="margin-top:2rem">Baixar gratuitamente</a>
+    </div>
+    <div class="detail-cards">
+      <div class="detail-card">
+        <div class="detail-icon" style="background:rgba(131,111,255,.2)">🎯</div>
+        <div><h4>Feito para marketing digital</h4><p>Campos e exemplos pensados para conteúdo, SEO, mídias sociais, performance e dados, não um modelo genérico.</p></div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-icon" style="background:rgba(106,90,205,.2)">🤖</div>
+        <div><h4>Pronto para ATS e recrutamento com IA</h4><p>Formato limpo e palavras-chave por área, testado para triagem automática.</p></div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-icon" style="background:rgba(131,111,255,.2)">📥</div>
+        <div><h4>Download imediato por e-mail</h4><p>Preencha o formulário abaixo e receba o link do template na hora.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-ghost" id="download">
+  <div class="section-inner">
+    <div class="grid-content">
+      <div>
+        <span class="badge badge-lilac">Material gratuito</span>
+        <h2 style="font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:700;color:var(--navy);margin-bottom:1.25rem">O que você recebe</h2>
+        <p style="font-size:.95rem;color:var(--text);margin-bottom:1.5rem;line-height:1.7">A maioria dos modelos de currículo disponíveis online foi feita para qualquer vaga, em qualquer área. Este foi construído para marketing digital: os campos, os exemplos e as palavras-chave consideram como recrutadores e sistemas de triagem avaliam esse perfil especificamente.</p>
+        <ul class="check-list">
+          <li>Template editável em Google Docs e em Word (.docx)</li>
+          <li>Guia de preenchimento campo a campo</li>
+          <li>Versão para primeiro emprego ou estágio</li>
+          <li>Versão para reposicionamento de carreira</li>
+          <li>Palavras-chave por área para passar pelo ATS</li>
+          <li>Exemplos reais de como descrever experiências</li>
+        </ul>
+      </div>
+      <div class="form-wrap">
+        <div data-reach-form="61b11108-e6a5-48f4-a4f6-0046ace40a74"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Guia de preenchimento</h2>
+      <p>Campo a campo, sem achismo. Cada seção do template existe por um motivo.</p>
+    </div>
+    <div class="step-list">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Cabeçalho</h4>
+          <p>Nome completo, cargo ou área de interesse (ex: "Analista de Marketing Digital", "Estagiário de Conteúdo e SEO"), cidade e estado, telefone, e-mail profissional e link do LinkedIn. Nada de e-mail com apelido de adolescência: crie um com nome e sobrenome.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Resumo profissional</h4>
+          <p>Três a quatro linhas. Diga quem você é, sua área de foco e um resultado ou diferencial concreto. Evite frases como "profissional dinâmico e proativo": isso não diz nada sobre você e não passa por nenhuma triagem.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>Experiência profissional</h4>
+          <p>Cargo, empresa, período e de três a cinco linhas descrevendo o que você fez, com verbos de ação e, sempre que possível, um número que mostre o resultado. Ordem cronológica reversa, a experiência mais recente primeiro.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>Projetos e portfólio</h4>
+          <p>Se você não tem experiência formal, esta seção substitui a anterior. Blog próprio, análise de SEO de um site real, gestão de uma rede social, um case de e-mail marketing. Inclua o link.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h4>Formação e certificações</h4>
+          <p>Curso, instituição e ano de conclusão (ou previsão). Liste certificações relevantes: Google Analytics 4, HubSpot Inbound Marketing, Meta Blueprint, entre outras. Certificação recente pesa mais do que diploma parado.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-body">
+          <h4>Ferramentas e habilidades técnicas</h4>
+          <p>Liste apenas o que você realmente usa: Google Analytics, Google Ads, Meta Ads, SEMrush, RD Station, HubSpot, WordPress, Canva. Ferramentas específicas são o que o ATS busca primeiro.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">7</div>
+        <div class="step-body">
+          <h4>Idiomas</h4>
+          <p>Idioma e nível real (básico, intermediário, avançado, fluente). Se você usa inglês para ler documentação de ferramentas ou acompanhar tendências do mercado, mencione isso no resumo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-ghost">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Palavras-chave certas para passar pelo ATS</h2>
+      <p>A maioria das empresas de médio e grande porte usa um ATS (Applicant Tracking System) para filtrar currículos antes que um humano os veja. Sem os termos certos, o currículo pode nem chegar ao recrutador.</p>
+    </div>
+    <table>
+      <tr><th>Área</th><th>Termos que o ATS busca</th></tr>
+      <tr><td>Marketing de conteúdo</td><td>marketing de conteúdo, produção de conteúdo, redação SEO, planejamento editorial, calendário editorial, copywriting</td></tr>
+      <tr><td>SEO</td><td>SEO on-page, SEO técnico, pesquisa de palavras-chave, link building, Google Search Console, SEMrush, Ahrefs</td></tr>
+      <tr><td>Mídias sociais</td><td>gestão de redes sociais, planejamento de conteúdo, Meta Business Suite, engajamento, métricas de audiência</td></tr>
+      <tr><td>Performance e mídia paga</td><td>Google Ads, Meta Ads, ROI, ROAS, CPA, CTR, otimização de campanhas</td></tr>
+      <tr><td>E-mail marketing e automação</td><td>automação de marketing, fluxos de nutrição, RD Station, HubSpot, Mailchimp, taxa de abertura, taxa de conversão</td></tr>
+      <tr><td>Analytics e dados</td><td>Google Analytics 4, Looker Studio, análise de dados, relatórios de performance, KPIs</td></tr>
+    </table>
+    <div class="card" style="margin-top:1.75rem;border-left:4px solid var(--lilac)">
+      <p style="margin:0"><strong>Como aplicar:</strong> abra a descrição da vaga, copie os termos que se repetem e verifique se eles aparecem no seu currículo, na sua linguagem, de forma natural. O objetivo é usar o vocabulário certo para descrever o que você de fato fez ou sabe fazer, não encher o texto de termos soltos.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Como preparar o currículo para empresas que recrutam com IA</h2>
+      <p>Além do ATS tradicional, um número crescente de empresas usa ferramentas de IA generativa para uma primeira leitura dos currículos. Isso muda o que funciona.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <h3>Formato limpo</h3>
+        <p>Sem tabelas complexas, colunas múltiplas, caixas de texto ou imagens no lugar do texto. Ferramentas de IA e sistemas de ATS leem melhor um layout linear, de cima para baixo.</p>
+      </div>
+      <div class="card">
+        <h3>Frases completas</h3>
+        <p>Descreva experiências em frases com sujeito e ação clara, não em fragmentos soltos. Um modelo de IA interpreta contexto melhor do que abreviações.</p>
+      </div>
+      <div class="card">
+        <h3>PDF com texto selecionável</h3>
+        <p>Exporte sempre como PDF gerado a partir de texto, nunca como imagem escaneada. Se o texto não pode ser selecionado e copiado, nenhum sistema automático consegue lê-lo.</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:1.75rem;border-left:4px solid var(--lilac)">
+      <p style="margin:0"><strong>Teste rápido:</strong> abra seu currículo em PDF e tente selecionar o texto com o mouse. Se conseguir selecionar e copiar cada palavra, o arquivo está em um formato que ATS e IA conseguem processar. Se não conseguir, refaça a exportação.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-ghost">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Como descrever experiências (antes e depois)</h2>
+      <p>A diferença entre um currículo genérico e um currículo forte geralmente está na forma como a experiência é descrita, não na experiência em si.</p>
+    </div>
+
+    <div class="compare">
+      <div class="compare-box compare-bad"><span class="compare-label">Genérico</span>Responsável pelas redes sociais da empresa, criando conteúdo e interagindo com os seguidores.</div>
+      <div class="compare-box compare-good"><span class="compare-label">Com resultado</span>Planejei e produzi conteúdo para Instagram e TikTok, aumentando o engajamento médio das publicações em 38% em quatro meses e o número de seguidores de 2 mil para 5,4 mil.</div>
+    </div>
+    <div class="compare">
+      <div class="compare-box compare-bad"><span class="compare-label">Genérico</span>Ajudei na área de SEO do site da empresa.</div>
+      <div class="compare-box compare-good"><span class="compare-label">Com resultado</span>Realizei pesquisa de palavras-chave e otimização on-page de 40 páginas do blog, levando 12 delas à primeira página do Google em até três meses.</div>
+    </div>
+    <div class="compare">
+      <div class="compare-box compare-bad"><span class="compare-label">Genérico</span>Participei de um projeto de e-mail marketing na faculdade.</div>
+      <div class="compare-box compare-good"><span class="compare-label">Com resultado</span>Criei, como projeto pessoal, um fluxo de três e-mails de boas-vindas para uma loja fictícia de e-commerce, com taxa de abertura simulada de 42% (documentado no portfólio, link disponível).</div>
+    </div>
+
+    <div class="card" style="border-left:4px solid var(--lilac)">
+      <p style="margin:0"><strong>Sem número para mostrar ainda?</strong> Use o resultado qualitativo: o que mudou, o que foi entregue, o que aprendeu. "Criei um calendário editorial que organizou a produção de conteúdo da equipe" também comunica capacidade, mesmo sem métrica.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Duas versões, um objetivo</h2>
+      <p>Para cada momento de carreira.</p>
+    </div>
+    <div class="cards-grid-2">
+      <div class="card">
+        <span class="badge badge-lilac">Versão 1</span>
+        <h3>Primeiro emprego ou estágio</h3>
+        <p>Estrutura pensada para quem ainda não tem experiência formal na área e precisa mostrar potencial com o que já tem: projetos, cursos e formação.</p>
+        <ul class="check-list">
+          <li>Resumo focado em interesse de carreira e habilidades demonstráveis</li>
+          <li>Projetos e portfólio em destaque, antes da experiência</li>
+          <li>Espaço estruturado para cursos livres e certificações</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="badge badge-lilac">Versão 2</span>
+        <h3>Reposicionamento de carreira</h3>
+        <p>Estrutura para quem já tem experiência, seja em marketing digital ou em outra área, e quer se posicionar para um novo cargo, uma nova especialização ou um novo setor.</p>
+        <ul class="check-list">
+          <li>Resumo que conecta a experiência anterior ao novo objetivo</li>
+          <li>Experiência organizada por relevância, não apenas por data</li>
+          <li>Espaço para explicar a transição de carreira</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-ghost">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>O que não pode faltar e o que evitar</h2>
+    </div>
+    <div class="cards-grid-2">
+      <div class="card">
+        <h3>Não pode faltar</h3>
+        <ul class="check-list">
+          <li>E-mail profissional e link do LinkedIn atualizado</li>
+          <li>Resumo profissional com foco e objetivo claros</li>
+          <li>Pelo menos uma experiência ou projeto descrito com resultado</li>
+          <li>Ferramentas específicas que você domina</li>
+          <li>Formato PDF com texto selecionável</li>
+          <li>Nome do arquivo com seu nome (ex: nome-sobrenome-curriculo.pdf)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>O que evitar</h3>
+        <ul class="x-list">
+          <li>Foto, se a vaga não pedir explicitamente</li>
+          <li>Objetivo genérico do tipo "busco crescimento profissional"</li>
+          <li>Adjetivos sem prova: "proativo", "dinâmico", "comunicativo"</li>
+          <li>Currículo com mais de duas páginas para quem está começando</li>
+          <li>Erros de português e inconsistência de tempo verbal</li>
+          <li>Informações desatualizadas ou sem relação com a vaga</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Como ajustar o currículo para cada candidatura</h2>
+      <p>Um currículo adaptado tem mais chance de passar pela triagem do que um currículo genérico enviado para todas as vagas.</p>
+    </div>
+    <div class="step-list">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body"><h4>Leia a descrição da vaga com atenção</h4><p>Identifique os termos, ferramentas e responsabilidades que mais se repetem no anúncio.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body"><h4>Ajuste o resumo profissional</h4><p>Aproxime a primeira linha do resumo do título e do foco da vaga específica.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body"><h4>Reordene as experiências por relevância</h4><p>Coloque em destaque o que mais se conecta com a vaga, mesmo que não seja a experiência mais recente.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body"><h4>Confira as palavras-chave</h4><p>Verifique se os termos da descrição aparecem no seu currículo, de forma natural e verdadeira.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Currículo pronto. E agora?</h2>
+      <p>Um currículo bem escrito abre a porta. O que você faz antes e depois da candidatura é o que decide se ela se abre de verdade.</p>
+    </div>
+    <div class="card card-navy next-step-card" style="display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center">
+      <div>
+        <span class="badge badge-lilac">Próximo passo</span>
+        <h3 style="color:var(--ghost);font-size:1.2rem;margin-bottom:.6rem">Guia para Entrar no Mercado de Marketing Digital</h3>
+        <p style="margin-bottom:0">15 capítulos em PDF sobre o que o mercado espera de um iniciante, como montar portfólio do zero, LinkedIn otimizado, onde procurar vagas com estratégia, networking e um plano de ação completo, com direcionais específicos para quem busca estágio ou a primeira vaga júnior.</p>
+      </div>
+      <div>
+        <a href="https://orbitandonomarketing.com.br/guia-marketing-digital" class="btn btn-lilac" style="white-space:nowrap">Conhecer o guia</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-gradient" style="text-align:center">
+  <div class="section-inner">
+    <h2 style="color:var(--ghost);font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:700;margin-bottom:1rem">Baixe o template gratuitamente</h2>
+    <p style="color:var(--ghost);opacity:.92;max-width:560px;margin:0 auto 2rem">Preencha o formulário e receba o template em Google Docs e Word, com as duas versões e o guia de preenchimento completo.</p>
+    <a href="#download" class="btn btn-ghost">Quero baixar o template</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-name">Orbitando no Marketing</div>
+      <div class="footer-logo-tag">SEO · GEO · AEO</div>
+      <p>Consultoria estratégica de marketing digital para empresas B2B que querem aparecer no Google e nas IAs generativas. Por Jacqueline Alves.</p>
+    </div>
+    <div>
+      <h4>Para profissionais</h4>
+      <ul>
+        <li><a href="/guia-marketing-digital">Guia para Iniciantes</a></li>
+        <li><a href="/modelo-curriculo">Modelo de Currículo</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Para empresas B2B</h4>
+      <ul>
+        <li><a href="/auditoria-visibilidade-ia">Auditoria de Visibilidade em IA</a></li>
+        <li><a href="/consultoria-b2b-saas">Consultoria Contínua B2B SaaS</a></li>
+        <li><a href="/desenvolvimento-sites">Desenvolvimento de Sites</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Me conheça</h4>
+      <ul>
+        <li><a href="/sobre-mim">Sobre mim</a></li>
+        <li><a href="/cases-de-sucesso">Cases de sucesso</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Newsletter</h4>
+      <ul>
+        <li><a href="https://orbitandonomarketing.substack.com/" target="_blank">Orbitando no Marketing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Fale comigo</h4>
+      <ul>
+        <li><a href="/contato">Contato</a></li>
+        <li><a href="https://www.linkedin.com/in/jacquelinealvesoliveira" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Orbitando no Marketing. Todos os direitos reservados.</p>
+    <p><a href="/politica-privacidade" style="color:var(--muted);text-decoration:none;transition:color .15s" onmouseover="this.style.color='#836FFF'" onmouseout="this.style.color='var(--muted)'">Política de Privacidade</a></p>
+  </div>
+</footer>
+<script>
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
+function toggleMega(e){
+  e.stopPropagation();
+  var m=document.getElementById('megaItem');
+  m.classList.toggle('open');
+}
+document.addEventListener('click',function(){
+  var m=document.getElementById('megaItem');
+  if(m)m.classList.remove('open');
+});
+</script>
+<script src="https://cdn-reach.hostinger.com/js/embed.js"></script>
+</body>
+</html>

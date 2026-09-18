@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visibilidade da marca em IA: SEO, GEO e AEO na prática</title>
+<meta name="description" content="SEO, GEO e AEO descrevem o mesmo objetivo visto de ângulos diferentes. Entenda como cada disciplina contribui para a sua marca aparecer nas respostas das IAs generativas.">
+<meta name="author" content="Jacqueline Alves">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://orbitandonomarketing.com.br/insights/visibilidade-marca-respostas-ia-seo-geo-aeo">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://orbitandonomarketing.com.br/insights/visibilidade-marca-respostas-ia-seo-geo-aeo">
+<meta property="og:title" content="Visibilidade da marca em IA: SEO, GEO e AEO na prática">
+<meta property="og:description" content="SEO, GEO e AEO descrevem o mesmo objetivo visto de ângulos diferentes. Entenda como cada disciplina contribui para a sua marca aparecer nas respostas das IAs generativas.">
+<link rel="icon" type="image/png" href="/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#191970;--navy-dark:#141459;--slate-dark:#483D8B;
+  --slate:#6A5ACD;--lilac:#836FFF;--ghost:#F8F8FF;
+  --light:#f0eeff;--light2:#f8f7ff;--border:#e8e6f8;
+  --muted:#9896CC;--text:#191970;--white:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--ghost);line-height:1.75}
+a{color:var(--slate);text-decoration:none}
+a:hover{color:var(--slate-dark)}
+img{max-width:100%;display:block}
+
+/* NAV */
+nav{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.nav-logo svg{width:36px;height:36px;flex-shrink:0}
+.nav-logo-name{display:block;font-size:.95rem;font-weight:700;color:var(--ghost);line-height:1.2}
+.nav-logo-tag{display:block;font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
+.nav-links a,.nav-links span{font-size:.88rem;font-weight:500;color:var(--ghost);opacity:.85;text-decoration:none;cursor:pointer;transition:opacity .15s}
+.nav-links a:hover,.nav-links span:hover{opacity:1}
+.nav-cta{background:var(--lilac)!important;color:var(--navy)!important;opacity:1!important;padding:.45rem 1.1rem;border-radius:6px;font-weight:700!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--ghost);border-radius:2px}
+
+/* MEGA MENU */
+.has-mega{position:static}
+.mega-menu{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy-dark);border-top:2px solid var(--lilac);box-shadow:0 16px 48px rgba(0,0,0,.45);z-index:300;padding:2rem}
+.has-mega.open .mega-menu{display:block}
+.mega-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.mega-col-title{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid rgba(131,111,255,.3)}
+.mega-item{display:flex;align-items:flex-start;gap:.75rem;padding:.75rem;border-radius:8px;text-decoration:none;transition:background .15s;margin-bottom:.25rem}
+.mega-item:hover{background:rgba(131,111,255,.12)}
+.mega-item-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.mega-item-text strong{display:block;font-size:.88rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.mega-item-text span{font-size:.78rem;color:var(--muted);line-height:1.4}
+.mega-badge{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(131,111,255,.25);color:var(--lilac);padding:.15rem .45rem;border-radius:4px;vertical-align:middle}
+
+/* ARTICLE LAYOUT */
+.article-header{background:var(--navy);padding:3.5rem 2rem 3rem;text-align:center}
+.back-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:600;color:var(--muted);margin-bottom:1.5rem;transition:color .15s}
+.back-link:hover{color:#F8F8FF}
+.back-link svg{transition:transform .15s}
+.back-link:hover svg{transform:translateX(-3px)}
+.article-cat-badge{display:inline-block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--lilac);background:rgba(131,111,255,.15);border:1px solid rgba(131,111,255,.35);padding:.28rem .8rem;border-radius:6px;margin-bottom:1rem}
+.article-header h1{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:700;color:#F8F8FF;line-height:1.15;max-width:760px;margin:0 auto 1.25rem}
+.article-meta-bar{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;font-size:.82rem;color:var(--muted);margin-bottom:1.5rem}
+.article-meta-bar span{display:flex;align-items:center;gap:.35rem}
+.article-meta-bar .author-name{font-weight:700;color:rgba(248,248,255,.88)}
+
+/* SHARE BUTTONS */
+.share-bar{display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap;margin-bottom:.5rem}
+.share-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.share-btn{display:inline-flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:600;padding:.35rem .9rem;border-radius:7px;border:1px solid rgba(131,111,255,.35);background:rgba(131,111,255,.1);transition:all .15s;cursor:pointer;text-decoration:none;font-family:'Plus Jakarta Sans',sans-serif}
+button.share-btn{color:rgba(248,248,255,.82)!important;-webkit-appearance:none;appearance:none;background:rgba(131,111,255,.12);border:1px solid rgba(131,111,255,.4)}
+.share-btn:not(button){color:rgba(248,248,255,.75)}
+.share-btn:hover{color:#F8F8FF!important;background:rgba(131,111,255,.28);border-color:var(--lilac)}
+button.share-btn:hover{color:#F8F8FF!important;background:rgba(131,111,255,.28);border-color:var(--lilac)}
+.article-body button.share-btn{color:var(--slate)!important;background:rgba(106,90,205,.08);border-color:rgba(106,90,205,.3)}
+.article-body button.share-btn:hover{color:var(--slate-dark)!important;background:rgba(106,90,205,.18);border-color:var(--slate)}
+
+/* ARTICLE OUTER: sidebar TOC + content */
+.article-outer{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:240px 1fr;gap:3rem;align-items:start}
+
+/* TABLE OF CONTENTS — sidebar */
+.toc{position:sticky;top:88px;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem}
+.toc-title{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:.9rem}
+.toc ol{padding-left:1.1rem}
+.toc li{font-size:.82rem;line-height:1.45;margin-bottom:.55rem}
+.toc li a{color:var(--slate);font-weight:500}
+.toc li a:hover{color:var(--slate-dark)}
+
+/* ARTICLE BODY */
+.article-body h2{font-size:clamp(1.25rem,2.2vw,1.7rem);font-weight:700;color:var(--navy);margin:2.75rem 0 1rem;line-height:1.22}
+.article-body h3{font-size:1.1rem;font-weight:700;color:var(--slate);margin:1.75rem 0 .65rem;line-height:1.4}
+.article-body p{font-size:1rem;line-height:1.8;color:var(--text);margin-bottom:1.25rem}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.25rem}
+.article-body li{font-size:1rem;line-height:1.75;color:var(--text);margin-bottom:.4rem}
+.article-body strong{font-weight:700}
+.article-body em{font-style:italic}
+.article-body a{color:var(--slate);font-weight:600}
+.article-body a:hover{color:var(--slate-dark)}
+
+/* TABLES */
+.article-body table{width:100%;border-collapse:collapse;margin:1.5rem 0 2rem;font-size:.9rem}
+.article-body th{background:var(--navy);color:#F8F8FF;padding:.75rem 1rem;text-align:left;font-weight:700}
+.article-body td{padding:.7rem 1rem;border-bottom:1px solid var(--border)}
+.article-body tr:nth-child(even) td{background:var(--light2)}
+.article-body th:first-child{border-radius:8px 0 0 0}
+.article-body th:last-child{border-radius:0 8px 0 0}
+
+/* ACCENT BAR (callout) */
+.accent-bar{border-left:4px solid var(--lilac);background:var(--light);border-radius:0 8px 8px 0;padding:1rem 1.5rem;margin:1.5rem 0}
+.accent-bar p{margin-bottom:0;font-size:.95rem}
+
+/* CTA SECTION */
+.cta-section{background:linear-gradient(135deg,var(--slate-dark),var(--slate));border-radius:14px;padding:2.25rem 2rem;margin:3rem 0;text-align:center}
+.cta-section h2{color:#F8F8FF;font-size:1.5rem;margin-bottom:.75rem}
+.cta-section p{color:rgba(248,248,255,.78);max-width:480px;margin:0 auto 1.5rem;font-size:.95rem}
+.btn-cta{display:inline-block;background:#F8F8FF;color:var(--navy);padding:.75rem 2rem;border-radius:8px;font-weight:700;font-size:.92rem}
+.btn-cta:hover{opacity:.9;color:var(--navy)}
+
+/* FAQ */
+.faq-section{margin:2.5rem 0}
+.faq-title{font-size:clamp(1.25rem,2vw,1.6rem);font-weight:700;color:var(--navy);margin-bottom:1.25rem}
+details{border:1px solid var(--border);border-radius:10px;margin-bottom:.75rem;overflow:hidden}
+details[open]{border-color:var(--lilac)}
+summary{padding:1rem 1.25rem;font-size:.95rem;font-weight:700;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:var(--white)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'';width:18px;height:18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%236A5ACD' stroke-width='2.5' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-size:contain;background-repeat:no-repeat;flex-shrink:0;transition:transform .2s}
+details[open] summary::after{transform:rotate(180deg)}
+.faq-answer{padding:1rem 1.25rem 1.25rem;background:var(--light2);font-size:.92rem;line-height:1.7;color:var(--text);border-top:1px solid var(--border)}
+.faq-answer p{margin-bottom:.75rem}
+.faq-answer p:last-child{margin-bottom:0}
+
+/* RELATED ARTICLES */
+.related-section{background:var(--white);border-top:1px solid var(--border);padding:2.5rem 2rem}
+.related-inner{max-width:760px;margin:0 auto}
+.related-title{font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:1.25rem}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.related-card{background:var(--ghost);border:1px solid var(--border);border-radius:10px;padding:1.1rem;transition:box-shadow .15s}
+.related-card:hover{box-shadow:0 4px 16px rgba(25,25,112,.08)}
+.related-card .rc-cat{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--lilac);margin-bottom:.4rem}
+.related-card h4{font-size:.88rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem}
+.related-card h4 a{color:var(--navy)}
+.related-card h4 a:hover{color:var(--slate)}
+.related-card .rc-read{font-size:.78rem;font-weight:600;color:var(--slate)}
+
+/* NEWSLETTER BAND */
+.newsletter-band{background:linear-gradient(135deg,var(--slate-dark),var(--slate));padding:2.5rem 2rem;text-align:center}
+.newsletter-form-wrap{max-width:480px;margin:0 auto}
+
+/* FOOTER */
+footer{background:var(--navy-dark);color:var(--ghost);padding:4rem 2rem 2rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+footer h4{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem}
+footer ul{list-style:none}
+footer ul li{margin-bottom:.5rem}
+footer ul a{font-size:.88rem;color:#C8C5F0;text-decoration:none;transition:color .15s}
+footer ul a:hover{color:var(--lilac)}
+.footer-logo-name{font-size:1rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.footer-logo-tag{font-size:.65rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.85rem}
+footer p{font-size:.85rem;color:var(--muted);line-height:1.6}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:.8rem;color:var(--muted)}
+
+/* MOBILE */
+@media(max-width:960px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--navy);padding:1rem 2rem;gap:1rem;align-items:flex-start}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  .mega-menu,.dropdown-menu{position:static;border-top:none;box-shadow:none;padding:.75rem 0}
+  .article-outer{grid-template-columns:1fr;gap:0;padding:2rem 1.25rem}
+  .toc{position:static;margin-bottom:2rem}
+  .related-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .nav-inner{padding:0 1rem}
+  .nav-logo-tag{display:none}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="16" fill="none" stroke="#F8F8FF" stroke-width="2.5"/>
+        <circle cx="34" cy="12" r="7" fill="#6A5ACD"/>
+        <circle cx="11" cy="33" r="5" fill="#836FFF"/>
+        <circle cx="22" cy="22" r="5" fill="#F8F8FF"/>
+      </svg>
+      <div>
+        <span class="nav-logo-name">Orbitando no Marketing</span>
+        <span class="nav-logo-tag">SEO · GEO · AEO</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/sobre-mim">Sobre mim</a></li>
+      <li class="has-mega" id="megaItem">
+        <span onclick="toggleMega(event)">Soluções &#9662;</span>
+        <div class="mega-menu">
+          <div class="mega-grid">
+            <div>
+              <div class="mega-col-title">Para profissionais de marketing</div>
+              <a class="mega-item" href="/guia-marketing-digital">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128218;</div>
+                <div class="mega-item-text"><strong>Guia para Entrar no Mercado de Marketing Digital</strong><span>PDF completo com 15 capítulos para iniciantes e júniors</span></div>
+              </a>
+              <a class="mega-item" href="/modelo-curriculo">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128196;</div>
+                <div class="mega-item-text"><strong>Modelo de Currículo para Marketing Digital <span class="mega-badge">Grátis</span></strong><span>Template editável com guia de preenchimento</span></div>
+              </a>
+            </div>
+            <div>
+              <div class="mega-col-title">Para empresas B2B</div>
+              <a class="mega-item" href="/auditoria-visibilidade-ia">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128269;</div>
+                <div class="mega-item-text"><strong>Auditoria de Visibilidade em IA + SEO Técnico</strong><span>Diagnóstico completo de como sua marca aparece no Google e nas IAs</span></div>
+              </a>
+              <a class="mega-item" href="/consultoria-b2b-saas">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128200;</div>
+                <div class="mega-item-text"><strong>Consultoria Contínua para B2B SaaS</strong><span>Parceria recorrente para conteúdo, SEO e GEO/AEO</span></div>
+              </a>
+              <a class="mega-item" href="/desenvolvimento-sites">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128187;</div>
+                <div class="mega-item-text"><strong>Desenvolvimento de Sites para B2B</strong><span>Site institucional do zero, com alinhamento e entrega completa</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="/cases-de-sucesso">Cases</a></li>
+      <li><a href="/insights/" class="active">Insights</a></li>
+      <li><a href="https://orbitandonomarketing.substack.com/" target="_blank">Newsletter</a></li>
+      <li><a href="/contato" class="nav-cta">Contato</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ARTICLE HEADER -->
+<div class="article-header">
+  <a href="/insights/" class="back-link">
+    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Ver todos os artigos
+  </a>
+  <div>
+    <span class="article-cat-badge">GEO · AEO · SEO</span>
+  </div>
+  <h1>Como melhorar a visibilidade da marca em respostas de IA: o que SEO, GEO e AEO têm a ver com isso</h1>
+  <div class="article-meta-bar">
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span class="author-name">Jacqueline Alves</span>
+    </span>
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      17 de setembro de 2026
+    </span>
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      14 min de leitura
+    </span>
+  </div>
+  <div class="share-bar">
+    <span class="share-label">Compartilhar:</span>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://orbitandonomarketing.com.br/insights/visibilidade-marca-respostas-ia-seo-geo-aeo" target="_blank" class="share-btn">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://orbitandonomarketing.com.br/insights/visibilidade-marca-respostas-ia-seo-geo-aeo&text=Como+melhorar+a+visibilidade+da+marca+em+respostas+de+IA" target="_blank" class="share-btn">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      X / Twitter
+    </a>
+    <a href="mailto:?subject=Artigo: Visibilidade da marca em respostas de IA&body=Achei esse artigo interessante: https://orbitandonomarketing.com.br/insights/visibilidade-marca-respostas-ia-seo-geo-aeo" class="share-btn">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      E-mail
+    </a>
+    <button class="share-btn" onclick="copyLink()">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      Copiar link
+    </button>
+  </div>
+</div>
+
+<!-- ARTICLE OUTER: sidebar TOC + content -->
+<div class="article-outer">
+
+  <!-- TABLE OF CONTENTS — sidebar esquerda -->
+  <nav class="toc" aria-label="Índice do artigo">
+    <p class="toc-title">Neste artigo</p>
+    <ol>
+      <li><a href="#comportamento-busca">Como o comportamento de busca mudou</a></li>
+      <li><a href="#seo-ainda-importa">Por que o SEO ainda importa</a></li>
+      <li><a href="#o-que-e-geo">O que é GEO</a></li>
+      <li><a href="#o-que-e-aeo">O que é AEO</a></li>
+      <li><a href="#diferencas-praticas">Diferenças práticas entre SEO, GEO e AEO</a></li>
+      <li><a href="#sinais-de-autoridade">O que as IAs usam para recomendar marcas</a></li>
+      <li><a href="#erros-comuns">Erros mais comuns</a></li>
+      <li><a href="#por-onde-comecar">Por onde começar</a></li>
+      <li><a href="#auditoria">Diagnóstico antes de estratégia</a></li>
+    </ol>
+  </nav>
+
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <p>Nos últimos dois anos, o comportamento de busca mudou de forma concreta: uma parcela crescente dos usuários está recebendo respostas diretamente de sistemas de IA, sem precisar clicar em nenhum resultado. O Google AI Overviews, o ChatGPT Search, o Perplexity e o Copilot estão servindo respostas sintetizadas com base no conteúdo que indexaram.</p>
+
+    <p>Para marcas B2B, isso significa uma coisa simples: se a IA não conhece a sua empresa, ela não vai recomendá-la.</p>
+
+    <p>SEO, GEO e AEO são as três disciplinas que respondem a esse problema, cada uma por um ângulo diferente. ☕️</p>
+
+    <h2 id="comportamento-busca">Como o comportamento de busca mudou e o que isso significa para marcas</h2>
+
+    <p>A mudança não é gradual. O Google reportou que o AI Overviews, seu sistema de respostas geradas por IA, já estava ativo para mais de um bilhão de usuários mensais em maio de 2024, quando o recurso foi anunciado na Google I/O. Em paralelo, o Perplexity AI atingiu 15 milhões de usuários ativos mensais no início de 2024, segundo dados divulgados pela própria empresa, e cresceu a uma taxa que poucos players de busca alcançaram nesse prazo.</p>
+
+    <p>O que acontece nesses sistemas é diferente do que acontecia no Google tradicional. Antes, o usuário pesquisava "melhor software de gestão financeira para SaaS B2B", recebia uma lista de dez resultados orgânicos e clicava em dois ou três. Hoje, em muitas pesquisas, ele recebe uma resposta já sintetizada que cita três ou quatro ferramentas por nome. Se a sua não está entre elas, o usuário segue em frente sem nunca ter visto o seu site.</p>
+
+    <p>Isso cria um problema específico para empresas B2B: a janela em que você pode influenciar a percepção do comprador está encolhendo. O comprador B2B típico completa entre 57% e 70% do processo de decisão antes de entrar em contato com um vendedor, segundo o Corporate Executive Board (hoje Gartner). Com as IAs sintetizando listas de fornecedores e comparativos, esse percentual tende a crescer ainda mais. A marca que não aparece nas respostas da IA está sendo descartada numa etapa do funil que ela sequer consegue monitorar.</p>
+
+    <p>SEO, GEO e AEO são as três disciplinas que constroem presença nesses canais. Elas compartilham fundamentos, mas cada uma resolve um problema diferente.</p>
+
+    <h2 id="seo-ainda-importa">Por que o SEO ainda importa, e por que ele mudou</h2>
+
+    <p>O SEO clássico otimiza páginas para ranquear nos resultados orgânicos dos buscadores. Ele continua sendo a base de qualquer estratégia de visibilidade digital por uma razão objetiva: os sistemas de IA generativa indexam e processam conteúdo a partir da web aberta. Uma marca com autoridade consolidada em SEO já fornece aos sistemas de IA exatamente o tipo de sinal que eles precisam: conteúdo indexado, consistente, citado por terceiros e estruturado de forma que permite extração.</p>
+
+    <p>Mas o SEO mudou em pelo menos três dimensões nos últimos dois anos.</p>
+
+    <p>A primeira é o papel das palavras-chave. O Google consolidou sua capacidade de interpretar intenção de busca com o BERT (2019) e o MUM (2021), e os modelos atuais conseguem compreender contexto semântico com precisão muito maior do que os sistemas de dez anos atrás. Isso significa que otimizar para a palavra exata "software gestão financeira SaaS" é menos importante do que produzir conteúdo que cubra o tema com profundidade e precisão. <strong>Conteúdo que responde bem a um cluster de intenções relacionadas performa melhor do que uma página construída em torno de uma única palavra-chave.</strong></p>
+
+    <p>A segunda é E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness), o conjunto de sinais que o Google usa para avaliar a qualidade de um conteúdo. Esses sinais são particularmente relevantes em categorias onde uma informação errada causa dano real: saúde, finanças, direito, e qualquer tomada de decisão de negócio de alto valor. Marcas B2B que querem aparecer em resultados de busca relacionados a software corporativo, consultorias ou serviços financeiros precisam investir em construir autoridade demonstrável, com autores identificados, histórico publicado e referências verificáveis.</p>
+
+    <p>A terceira é a estrutura técnica. Core Web Vitals, velocidade de carregamento, estrutura de dados (schema markup) e rastreabilidade continuam sendo fatores de ranqueamento. Mas ganharam um papel adicional: <strong>estrutura técnica adequada é o que permite que sistemas de IA extraiam e atribuam informação corretamente ao seu site.</strong> Uma página sem schema markup é uma página que depende de o sistema de IA inferir o que está ali, em vez de ler explicitamente.</p>
+
+    <h2 id="o-que-e-geo">GEO: o que é Generative Engine Optimization e o que ele exige</h2>
+
+    <p>GEO é o conjunto de práticas que aumentam a probabilidade de o conteúdo de uma marca ser usado, citado ou recomendado por sistemas de IA generativa, especialmente LLMs como GPT-4, Claude, Gemini e os motores de busca baseados neles.</p>
+
+    <p>O termo foi formalizado em um paper acadêmico publicado em agosto de 2023 por pesquisadores da Princeton, Georgia Tech, IIT Delhi e Allen AI Institute, intitulado "GEO: Generative Engine Optimization." O estudo analisou como diferentes técnicas de produção de conteúdo afetavam a visibilidade nas respostas de sistemas generativos e concluiu que algumas abordagens aumentavam a frequência de citação em até 40% dependendo do setor. Entre as técnicas mais eficazes estavam: incluir dados e estatísticas verificáveis, citar fontes explicitamente, estruturar o conteúdo com linguagem de autoridade e formatar o texto de modo que permita extração direta de trechos.</p>
+
+    <p>Três pontos práticos do GEO que vale destacar:</p>
+
+    <p><strong>Citabilidade do conteúdo.</strong> Sistemas de IA tendem a extrair e citar trechos que funcionam como unidades de resposta independentes. Um parágrafo que define claramente um conceito, ou que apresenta um dado com sua fonte, tem mais chance de aparecer numa resposta de IA do que um parágrafo que desenvolve um argumento distribuído ao longo de cinco frases interdependentes.</p>
+
+    <p><strong>Presença em fontes de alta confiança.</strong> Os LLMs foram treinados com dados de toda a web, mas com pesos diferentes dependendo da reputação da fonte. Ser citado ou mencionado em publicações de referência do setor, em perfis verificados no LinkedIn e em estudos de caso distribuídos em veículos reconhecidos aumenta o peso que a marca recebe nos modelos. Isso não é muito diferente de link building tradicional, mas o canal de impacto é distinto.</p>
+
+    <p><strong>Consistência de informações entre fontes.</strong> Se o site da sua empresa descreve o produto de um jeito, o LinkedIn descreve de outro e o Google Business traz informações diferentes, o modelo de linguagem vai ter dificuldade em construir uma representação coerente da sua marca. Inconsistência entre fontes é um dos fatores que reduz a probabilidade de citação.</p>
+
+    <h2 id="o-que-e-aeo">AEO: Answer Engine Optimization e a lógica das respostas diretas</h2>
+
+    <p>AEO é o conjunto de práticas focadas em fazer o conteúdo de uma marca aparecer diretamente nas respostas dos sistemas de pergunta-resposta, como o Google Featured Snippets, o Google AI Overviews, o Bing Copilot e assistentes por voz como Alexa e Siri.</p>
+
+    <p>A diferença entre GEO e AEO é sutil mas real. O GEO se preocupa com a presença da marca nos sistemas de IA em geral, incluindo LLMs que funcionam como ferramentas de consulta aberta. O AEO é mais específico: foca na estrutura do conteúdo para responder perguntas diretas de forma que os sistemas possam extrair e apresentar a resposta sem que o usuário precise clicar.</p>
+
+    <p>A lógica do AEO parte de uma observação simples: quando alguém digita "o que é GEO em marketing" ou "como aumentar visibilidade em IA", o sistema quer servir uma resposta direta, curta, precisa. O conteúdo que tem mais chance de ser selecionado é aquele que:</p>
+
+    <ul>
+      <li>Responde a pergunta na primeira frase ou no primeiro parágrafo</li>
+      <li>Usa estrutura de H2 e H3 com perguntas reais que usuários fariam</li>
+      <li>Tem schema markup de FAQ, HowTo ou Article implementado corretamente</li>
+      <li>Apresenta linguagem direta, sem rodeios e sem jargão desnecessário</li>
+      <li>Cobre variações da mesma pergunta dentro do mesmo conteúdo</li>
+    </ul>
+
+    <p>Para empresas B2B, o AEO tem implicações diretas no topo do funil. Compradores B2B pesquisam ativamente sobre as categorias de problema antes de pesquisar sobre fornecedores específicos. Uma empresa que aparece respondendo "o que é auditoria de visibilidade em IA" ou "como funciona consultoria de SEO para SaaS" está construindo autoridade na fase em que o comprador ainda está formando sua percepção sobre o mercado.</p>
+
+    <h2 id="diferencas-praticas">As diferenças práticas entre SEO, GEO e AEO em uma estratégia</h2>
+
+    <p>As três disciplinas se sobrepõem em muitos pontos, mas cada uma tem ênfases distintas. A tabela abaixo resume as diferenças de foco:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Disciplina</th>
+          <th>Canal principal</th>
+          <th>Objetivo central</th>
+          <th>Fator mais crítico</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>SEO</strong></td>
+          <td>Resultados orgânicos (Google, Bing)</td>
+          <td>Ranquear nas primeiras posições para termos relevantes</td>
+          <td>Autoridade de domínio, estrutura técnica, conteúdo aprofundado</td>
+        </tr>
+        <tr>
+          <td><strong>GEO</strong></td>
+          <td>LLMs e motores de busca com IA (ChatGPT, Perplexity, Gemini)</td>
+          <td>Ser citado ou recomendado nas respostas geradas por IA</td>
+          <td>Citabilidade do conteúdo, consistência entre fontes, presença em veículos de referência</td>
+        </tr>
+        <tr>
+          <td><strong>AEO</strong></td>
+          <td>Featured Snippets, AI Overviews, assistentes de voz</td>
+          <td>Ser selecionado como resposta direta a perguntas específicas</td>
+          <td>Estrutura de perguntas e respostas, schema markup, linguagem direta</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Na prática, uma estratégia de visibilidade digital para B2B trabalha as três em paralelo porque elas se alimentam mutuamente. Um conteúdo bem feito em SEO serve como base para GEO e AEO. Um schema markup implementado corretamente melhora tanto a chance de Featured Snippet (AEO) quanto a qualidade da extração de dados por LLMs (GEO). Autoridade de domínio construída via SEO aumenta o peso que um modelo de linguagem atribui à fonte.</p>
+
+    <h2 id="sinais-de-autoridade">O que os sistemas de IA usam para decidir qual marca recomendar</h2>
+
+    <p>Essa é a pergunta que mais recebo de empresas B2B que querem aparecer em respostas de IA. A resposta honesta é: os sistemas não são totalmente transparentes sobre seus mecanismos de seleção, e os LLMs mudam conforme são atualizados. Mas os sinais que pesquisadores e profissionais de SEO identificaram até agora convergem em alguns pontos.</p>
+
+    <p><strong>Volume e qualidade das menções externas.</strong> Assim como o PageRank do Google original contava links de outros sites, os modelos de linguagem aprenderam que marcas citadas frequentemente por fontes diversas e confiáveis têm mais probabilidade de ser relevantes. Isso significa que PR digital, artigos em veículos do setor, menções em podcasts com transcrição publicada e participações em estudos de caso de terceiros têm valor direto para GEO.</p>
+
+    <p><strong>Clareza da proposta de valor.</strong> Os modelos precisam entender o que a sua empresa faz para poder recomendá-la no contexto certo. Uma homepage que usa frases como "transformamos o futuro dos negócios com soluções inovadoras" não fornece informação suficiente para o modelo saber quando recomendar aquela empresa. Uma homepage que diz "auditoria de visibilidade em IA para empresas B2B de tecnologia com mais de 50 funcionários" é indexável de forma muito mais precisa.</p>
+
+    <p><strong>Coerência entre canais.</strong> O modelo constrói uma representação da sua marca a partir de múltiplas fontes: site, LinkedIn, Crunchbase, G2, Capterra, artigos de imprensa, entrevistas. Quando essas fontes são coerentes entre si, o modelo tem mais confiança para usar a marca como referência. Quando são contraditórias ou incompletas, o modelo prefere fontes que ele consegue interpretar com mais segurança.</p>
+
+    <p><strong>Atualidade do conteúdo.</strong> Modelos treinados com dados até uma determinada data vão refletir o estado da web até aquele ponto. Mas os sistemas de busca com IA (como o Perplexity e o Google AI Overviews) indexam conteúdo em tempo real ou quase real. Conteúdo atualizado regularmente tem mais chance de ser incluído nas respostas desses sistemas.</p>
+
+    <div class="accent-bar">
+      <p><strong>Ponto prático:</strong> a combinação mais eficiente para empresas B2B é conteúdo técnico aprofundado publicado com regularidade + schema markup correto + menções ativas em veículos do setor. Cada um desses elementos resolve uma camada diferente do problema de visibilidade em IA.</p>
+    </div>
+
+    <h2 id="erros-comuns">Os erros mais comuns de quem tenta aparecer nas respostas de IA</h2>
+
+    <p>Depois de trabalhar com SEO e GEO em empresas como B3, PicPay e SAP Concur, e depois de acompanhar dezenas de empresas B2B tentando melhorar sua visibilidade em IA, alguns erros aparecem com regularidade desconfortável.</p>
+
+    <p><strong>Produzir conteúdo em volume sem profundidade.</strong> Uma estratégia comum é publicar muitos artigos curtos cobrindo palavras-chave diferentes. Para SEO clássico, essa abordagem tinha alguma validade em 2015. Para GEO e AEO, ela é contraproducente. Os sistemas de IA preferem conteúdo que cobre um tema com completude. Um artigo longo que responde cinco perguntas relacionadas performa melhor do que cinco artigos curtos que respondem uma cada.</p>
+
+    <p><strong>Ignorar schema markup.</strong> Schema.org fornece um vocabulário padrão para estruturar dados de forma que sistemas automatizados consigam interpretar. Um artigo com schema de <code>Article</code>, <code>FAQPage</code> e <code>BreadcrumbList</code> implementados diz explicitamente aos sistemas de IA quem escreveu o conteúdo, quando foi publicado, quais perguntas ele responde e onde ele está na hierarquia do site. Ignorar isso significa depender de inferência, o que reduz precisão.</p>
+
+    <p><strong>Otimizar só para o próprio site.</strong> Presença em IA depende de presença na web em geral. Uma empresa que só publica no próprio site e não tem menções externas, perfil de LinkedIn completo, listagens em diretórios do setor ou aparições em publicações de referência está construindo autoridade em câmara fechada. O modelo de linguagem só vai recomendá-la se tiver evidências suficientes de que ela existe e é relevante.</p>
+
+    <p><strong>Usar linguagem de branding em vez de linguagem de busca.</strong> "Soluções inovadoras de gestão" é um conjunto de palavras que nenhum comprador digita em nenhum motor de busca. "Software de gestão financeira para SaaS B2B" é um conjunto de palavras que compradores reais usam. A linguagem do site precisa mapear a linguagem das buscas reais, não a linguagem que o time de marketing acha bonita.</p>
+
+    <p><strong>Tratar GEO como se fosse uma tarefa separada de SEO.</strong> GEO não substitui SEO, e AEO não é uma alternativa a GEO. Os três trabalham juntos. Uma empresa que abandona SEO técnico porque "agora é tudo sobre IA" vai perder a base que alimenta as outras duas disciplinas.</p>
+
+    <h2 id="por-onde-comecar">Por onde começar: uma ordem de prioridade para empresas B2B</h2>
+
+    <p>Para empresas B2B que estão começando a trabalhar visibilidade em IA de forma estruturada, a sequência abaixo reflete o que tem mais impacto no menor prazo, sem ignorar o trabalho de médio prazo que sustenta o resultado.</p>
+
+    <p><strong>Primeiro: diagnóstico de presença atual.</strong> Antes de qualquer ação, é necessário entender como a sua marca está sendo representada (ou não representada) nos principais sistemas de IA. Isso inclui testar como ChatGPT, Perplexity, Gemini e Google AI Overviews respondem a perguntas da sua categoria, verificar se o site tem problemas técnicos básicos de SEO e mapear onde existem inconsistências nas informações da marca entre canais.</p>
+
+    <p><strong>Segundo: estrutura técnica do site.</strong> Antes de produzir mais conteúdo, vale resolver a base. Schema markup implementado, velocidade de carregamento dentro dos padrões do Core Web Vitals, hierarquia de títulos correta e URLs organizadas são pré-requisitos que amplificam qualquer conteúdo produzido depois.</p>
+
+    <p><strong>Terceiro: conteúdo de autoridade por cluster temático.</strong> Definir os clusters de tema que são centrais para o negócio e produzir conteúdo aprofundado para cada um. Para uma empresa de consultoria B2B SaaS, os clusters podem ser "auditoria de SEO para SaaS", "GEO para software B2B", "como aparecer em respostas de IA" e assim por diante. Cada cluster precisa de um conteúdo pilar longo e de conteúdos de suporte que cobrem subtópicos relacionados.</p>
+
+    <p><strong>Quarto: presença externa.</strong> Artigos em publicações do setor, participações em podcasts com transcrição, menções em estudos de caso de clientes, perfis atualizados em diretórios relevantes (G2, Capterra, LinkedIn). Essas ações constroem as menções externas que os sistemas de IA usam para validar autoridade.</p>
+
+    <p><strong>Quinto: FAQ e schema de perguntas e respostas.</strong> Mapear as perguntas reais que compradores fazem na sua categoria e garantir que o site as responde com clareza, com schema de FAQPage implementado. Essa é a ação com mais impacto direto em AEO e em Featured Snippets.</p>
+
+    <p>Essa sequência não é rígida. Dependendo do estado atual do site, algumas etapas vão ser mais urgentes do que outras. Mas a ordem reflete a lógica de construir uma base sólida antes de investir em táticas de topo.</p>
+
+    <h2 id="auditoria">Se você quer diagnóstico antes de estratégia</h2>
+
+    <p>Toda estratégia de visibilidade em IA começa com um diagnóstico honesto: onde a marca está hoje nos principais sistemas de IA, quais são os gaps de conteúdo e estrutura, e quais ações têm mais impacto dado o contexto específico da empresa.</p>
+
+    <p>A Auditoria de Visibilidade em IA da Orbitando no Marketing foi desenvolvida para empresas B2B que querem entender sua presença atual antes de investir em ações. O diagnóstico mapeia como sua marca aparece (ou não aparece) no ChatGPT, Perplexity, Gemini e Google AI Overviews, identifica inconsistências entre fontes e entrega um plano de ação priorizado. Sem achismo, sem promessa de "dominar a IA": diagnóstico técnico com recomendações que fazem sentido para o tamanho e o contexto da sua empresa.</p>
+
+    <p>Se preferir começar com consultoria contínua, a <a href="/consultoria-b2b-saas">Consultoria B2B SaaS</a> cobre SEO, GEO e AEO com acompanhamento mensal e entregáveis claros.</p>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <h2 class="faq-title">Perguntas frequentes</h2>
+
+      <details>
+        <summary>Qual é a diferença entre SEO, GEO e AEO?</summary>
+        <div class="faq-answer">
+          <p>SEO (Search Engine Optimization) otimiza páginas para ranquear nos resultados orgânicos de buscadores tradicionais como Google e Bing. GEO (Generative Engine Optimization) é o conjunto de práticas que aumentam a probabilidade de uma marca ser citada ou recomendada por LLMs e motores de busca com IA, como ChatGPT, Perplexity e Gemini. AEO (Answer Engine Optimization) foca em estruturar o conteúdo para aparecer como resposta direta em Featured Snippets, AI Overviews e assistentes de voz.</p>
+          <p>As três disciplinas se complementam: SEO constrói a base, GEO amplia a presença nos sistemas de IA em geral, e AEO maximiza a visibilidade nas respostas diretas.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Minha empresa já aparece no Google. Preciso me preocupar com GEO e AEO?</summary>
+        <div class="faq-answer">
+          <p>Aparecer no Google orgânico e aparecer nas respostas de IA são dois resultados diferentes. O Google AI Overviews, por exemplo, frequentemente cita fontes que não estão nas primeiras posições orgânicas para a mesma consulta. O Perplexity indexa e cita fontes de forma independente do ranqueamento do Google. ChatGPT e Gemini usam dados de treinamento e, em alguns casos, acesso à web em tempo real para compor suas respostas.</p>
+          <p>Se a sua empresa depende de tráfego orgânico como canal de aquisição, ignorar GEO e AEO é um risco real. O comportamento de busca está mudando mais rápido do que as métricas de SEO conseguem capturar.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Como posso saber se minha marca aparece nas respostas de IA?</summary>
+        <div class="faq-answer">
+          <p>A forma mais direta é testar manualmente: acesse ChatGPT, Perplexity, Gemini e Google AI Overviews e faça perguntas que compradores da sua categoria fariam. "Quais são as melhores ferramentas de [sua categoria]?", "Quem oferece [seu serviço] para empresas B2B?" e variações similares vão mostrar se e como sua marca aparece.</p>
+          <p>Para um diagnóstico mais completo, a Auditoria de Visibilidade em IA da Orbitando inclui mapeamento sistemático da sua presença nos principais sistemas, comparativo com concorrentes e análise de gaps.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Schema markup realmente faz diferença para aparecer em IA?</summary>
+        <div class="faq-answer">
+          <p>Sim, com uma ressalva importante: o impacto varia por sistema. Para Google AI Overviews e Featured Snippets, schema markup de <code>FAQPage</code>, <code>Article</code> e <code>HowTo</code> tem impacto documentado. Para LLMs treinados offline (como versões mais antigas do GPT-4), o schema tem menos impacto direto porque o modelo já foi treinado, mas contribui para a qualidade de indexação do conteúdo em futuras atualizações.</p>
+          <p>Para sistemas de busca com IA que acessam a web em tempo real (Perplexity, ChatGPT Search, Bing Copilot), schema markup melhora a legibilidade do conteúdo pelos crawlers e aumenta a precisão da extração de informações.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Quanto tempo leva para ver resultados em GEO e AEO?</summary>
+        <div class="faq-answer">
+          <p>Depende do ponto de partida. Sites com SEO técnico em ordem e conteúdo de qualidade já publicado tendem a ver resultados em GEO e AEO em dois a quatro meses após implementar as melhorias específicas para esses canais. Sites que precisam construir autoridade do zero levam mais tempo.</p>
+          <p>AEO tende a ter resultados mais rápidos do que GEO, porque Featured Snippets e AI Overviews respondem a mudanças de conteúdo com mais velocidade do que a base de treinamento dos LLMs. Resultados em GEO dependem também do ciclo de atualização de cada modelo, que varia por plataforma.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>GEO e AEO funcionam para todos os setores B2B?</summary>
+        <div class="faq-answer">
+          <p>Sim, mas com intensidade diferente dependendo do volume de busca informacional na sua categoria. Setores onde compradores pesquisam ativamente sobre o problema antes de pesquisar fornecedores, como tecnologia, marketing, RH, financeiro e logística, têm mais oportunidade de capturar visibilidade em IA no topo do funil.</p>
+          <p>Setores com ciclos de venda muito relacionais, onde a maioria das oportunidades vem de indicação direta, têm menos impacto imediato, mas ainda se beneficiam de ter presença nos sistemas de IA para validação de credibilidade quando o comprador pesquisa a marca por nome.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- SHARE BOTTOM -->
+    <div style="margin-top:2.5rem;padding-top:1.75rem;border-top:1px solid var(--border)">
+      <p style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:.75rem">Compartilhar este artigo</p>
+      <div class="share-bar" style="justify-content:flex-start">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://orbitandonomarketing.com.br/insights/visibilidade-marca-respostas-ia-seo-geo-aeo" target="_blank" class="share-btn">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=https://orbitandonomarketing.com.br/insights/visibilidade-marca-respostas-ia-seo-geo-aeo" target="_blank" class="share-btn">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X / Twitter
+        </a>
+        <a href="mailto:?subject=Artigo: Visibilidade da marca em respostas de IA&body=https://orbitandonomarketing.com.br/insights/visibilidade-marca-respostas-ia-seo-geo-aeo" class="share-btn">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          E-mail
+        </a>
+        <button class="share-btn" onclick="copyLink()">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          Copiar link
+        </button>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<!-- RELATED ARTICLES -->
+<div class="related-section">
+  <div class="related-inner">
+    <h3 class="related-title">Artigos relacionados</h3>
+    <div class="related-grid">
+      <div class="related-card">
+        <p class="rc-cat">SEO Técnico</p>
+        <h4><a href="/insights/">Schema markup para B2B: como estruturar dados e aumentar visibilidade em IA</a></h4>
+        <span class="rc-read">Em breve</span>
+      </div>
+      <div class="related-card">
+        <p class="rc-cat">GEO</p>
+        <h4><a href="/insights/">Como criar conteúdo que sistemas de IA citam: guia prático de GEO</a></h4>
+        <span class="rc-read">Em breve</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER BAND -->
+<div class="newsletter-band">
+  <div class="newsletter-form-wrap">
+    <div data-reach-form="22c061ca-1ddf-4b0a-a9a9-52e1021274ab"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-name">Orbitando no Marketing</div>
+      <div class="footer-logo-tag">SEO · GEO · AEO</div>
+      <p>Consultoria estratégica de marketing digital para empresas B2B que querem aparecer no Google e nas IAs generativas. Por Jacqueline Alves.</p>
+    </div>
+    <div>
+      <h4>Para profissionais</h4>
+      <ul>
+        <li><a href="/guia-marketing-digital">Guia para Iniciantes</a></li>
+        <li><a href="/modelo-curriculo">Modelo de Currículo</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Para empresas B2B</h4>
+      <ul>
+        <li><a href="/auditoria-visibilidade-ia">Auditoria de Visibilidade em IA</a></li>
+        <li><a href="/consultoria-b2b-saas">Consultoria Contínua B2B SaaS</a></li>
+        <li><a href="/desenvolvimento-sites">Desenvolvimento de Sites</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Me conheça</h4>
+      <ul>
+        <li><a href="/sobre-mim">Sobre mim</a></li>
+        <li><a href="/cases-de-sucesso">Cases de sucesso</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Newsletter</h4>
+      <ul>
+        <li><a href="https://orbitandonomarketing.substack.com/" target="_blank">Orbitando no Marketing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Fale comigo</h4>
+      <ul>
+        <li><a href="/contato">Contato</a></li>
+        <li><a href="https://www.linkedin.com/in/jacquelinealvesoliveira" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Orbitando no Marketing. Todos os direitos reservados.</p>
+    <p><a href="/politica-privacidade" style="color:var(--muted);text-decoration:none;transition:color .15s" onmouseover="this.style.color='#836FFF'" onmouseout="this.style.color='var(--muted)'">Política de Privacidade</a></p>
+  </div>
+</footer>
+
+<script>
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
+function toggleMega(e){
+  e.stopPropagation();
+  var m=document.getElementById('megaItem');
+  m.classList.toggle('open');
+}
+document.addEventListener('click',function(){
+  var m=document.getElementById('megaItem');
+  if(m)m.classList.remove('open');
+});
+function copyLink(){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    const btns=document.querySelectorAll('.share-btn');
+    btns.forEach(b=>{if(b.textContent.includes('Copiar')){const orig=b.innerHTML;b.innerHTML='<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Copiado!';setTimeout(()=>{b.innerHTML=orig;},2000);}});
+  });
+}
+</script>
+<script>
+(function(){
+  var MAX_TRIES=3, RETRY_MS=3000, tries=0;
+  function checkAndInit(){
+    if(window.__reachEmbed && typeof window.__reachEmbed.init==='function'){
+      window.__reachEmbed.init();
+    }
+  }
+  function loadReach(){
+    var old=document.querySelector('script[data-reach-script]');
+    if(old) old.parentNode.removeChild(old);
+    var s=document.createElement('script');
+    s.setAttribute('data-reach-script','1');
+    s.src='https://cdn-reach.hostinger.com/js/embed.js?_='+Date.now();
+    s.onload=function(){
+      setTimeout(function(){
+        checkAndInit();
+        var el=document.querySelector('[data-reach-form]');
+        if(el && !el.querySelector('iframe') && tries<MAX_TRIES){
+          tries++;
+          setTimeout(loadReach, RETRY_MS);
+        }
+      }, 800);
+    };
+    s.onerror=function(){
+      if(tries<MAX_TRIES){ tries++; setTimeout(loadReach, RETRY_MS); }
+    };
+    document.body.appendChild(s);
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded', loadReach);
+  } else {
+    loadReach();
+  }
+})();
+</script>
+</body>
+</html>
