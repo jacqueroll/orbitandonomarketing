@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO e IA: o estudo que prova que são a mesma estratégia</title>
+<meta name="description" content="Semrush analisou 10.000 domínios e encontrou correlação de 0,87 entre palavras-chave ranqueadas e citações em IA. O que isso muda para empresas B2B.">
+<meta name="author" content="Jacqueline Alves">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://orbitandonomarketing.com.br/insights/seo-visibilidade-ia-estudo-semrush">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://orbitandonomarketing.com.br/insights/seo-visibilidade-ia-estudo-semrush">
+<meta property="og:title" content="SEO e IA: o estudo que prova que são a mesma estratégia">
+<meta property="og:description" content="Semrush analisou 10.000 domínios e encontrou correlação de 0,87 entre palavras-chave ranqueadas e citações em IA. O que isso muda para empresas B2B.">
+<link rel="icon" type="image/png" href="/Logo/favicon-512.png">
+<link rel="shortcut icon" href="/Logo/favicon-512.png">
+<link rel="apple-touch-icon" href="/Logo/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#191970;--navy-dark:#141459;--slate-dark:#483D8B;
+  --slate:#6A5ACD;--lilac:#836FFF;--ghost:#F8F8FF;
+  --light:#f0eeff;--light2:#f8f7ff;--border:#e8e6f8;
+  --muted:#9896CC;--text:#191970;--white:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--ghost);line-height:1.75}
+a{color:var(--slate);text-decoration:none}
+a:hover{color:var(--slate-dark)}
+img{max-width:100%;display:block}
+
+/* NAV */
+nav{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.nav-logo svg{width:36px;height:36px;flex-shrink:0}
+.nav-logo-name{display:block;font-size:.95rem;font-weight:700;color:var(--ghost);line-height:1.2}
+.nav-logo-tag{display:block;font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
+.nav-links a,.nav-links span{font-size:.88rem;font-weight:500;color:var(--ghost);opacity:.85;text-decoration:none;cursor:pointer;transition:opacity .15s}
+.nav-links a:hover,.nav-links span:hover{opacity:1}
+.nav-cta{background:var(--lilac)!important;color:var(--navy)!important;opacity:1!important;padding:.45rem 1.1rem;border-radius:6px;font-weight:700!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--ghost);border-radius:2px}
+
+/* MEGA MENU */
+.has-mega{position:static}
+.mega-menu{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy-dark);border-top:2px solid var(--lilac);box-shadow:0 16px 48px rgba(0,0,0,.45);z-index:300;padding:2rem}
+.has-mega.open .mega-menu{display:block}
+.mega-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.mega-col-title{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid rgba(131,111,255,.3)}
+.mega-item{display:flex;align-items:flex-start;gap:.75rem;padding:.75rem;border-radius:8px;text-decoration:none;transition:background .15s;margin-bottom:.25rem}
+.mega-item:hover{background:rgba(131,111,255,.12)}
+.mega-item-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.mega-item-text strong{display:block;font-size:.88rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.mega-item-text span{font-size:.78rem;color:var(--muted);line-height:1.4}
+.mega-badge{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(131,111,255,.25);color:var(--lilac);padding:.15rem .45rem;border-radius:4px;vertical-align:middle}
+
+/* ARTICLE LAYOUT */
+.article-header{background:var(--navy);padding:3.5rem 2rem 3rem;text-align:center}
+.back-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:600;color:var(--muted);margin-bottom:1.5rem;transition:color .15s}
+.back-link:hover{color:#F8F8FF}
+.back-link svg{transition:transform .15s}
+.back-link:hover svg{transform:translateX(-3px)}
+.article-cat-badge{display:inline-block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--lilac);background:rgba(131,111,255,.15);border:1px solid rgba(131,111,255,.35);padding:.28rem .8rem;border-radius:6px;margin-bottom:1rem}
+.article-header h1{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:700;color:#F8F8FF;line-height:1.15;max-width:760px;margin:0 auto 1.25rem}
+.article-meta-bar{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;font-size:.82rem;color:var(--muted);margin-bottom:1.5rem}
+.article-meta-bar span{display:flex;align-items:center;gap:.35rem}
+.article-meta-bar .author-name{font-weight:700;color:rgba(248,248,255,.88)}
+
+/* SHARE BUTTONS */
+.share-bar{display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap;margin-bottom:.5rem}
+.share-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.share-btn{display:inline-flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:600;padding:.35rem .9rem;border-radius:7px;border:1px solid rgba(131,111,255,.35);background:rgba(131,111,255,.1);transition:all .15s;cursor:pointer;text-decoration:none;font-family:'Plus Jakarta Sans',sans-serif}
+button.share-btn{color:rgba(248,248,255,.82)!important;-webkit-appearance:none;appearance:none;background:rgba(131,111,255,.12);border:1px solid rgba(131,111,255,.4)}
+.share-btn:not(button){color:rgba(248,248,255,.75)}
+.share-btn:hover{color:#F8F8FF!important;background:rgba(131,111,255,.28);border-color:var(--lilac)}
+button.share-btn:hover{color:#F8F8FF!important;background:rgba(131,111,255,.28);border-color:var(--lilac)}
+.article-body button.share-btn{color:var(--slate)!important;background:rgba(106,90,205,.08);border-color:rgba(106,90,205,.3)}
+.article-body button.share-btn:hover{color:var(--slate-dark)!important;background:rgba(106,90,205,.18);border-color:var(--slate)}
+
+/* ARTICLE OUTER: sidebar TOC + content */
+.article-outer{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:240px 1fr;gap:3rem;align-items:start}
+
+/* TABLE OF CONTENTS sidebar */
+.toc{position:sticky;top:88px;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem}
+.toc-title{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:.9rem}
+.toc ol{padding-left:1.1rem}
+.toc li{font-size:.82rem;line-height:1.45;margin-bottom:.55rem}
+.toc li a{color:var(--slate);font-weight:500}
+.toc li a:hover{color:var(--slate-dark)}
+
+/* ARTICLE BODY */
+.article-body h2{font-size:clamp(1.25rem,2.2vw,1.7rem);font-weight:700;color:var(--navy);margin:2.75rem 0 1rem;line-height:1.22}
+.article-body h3{font-size:1.1rem;font-weight:700;color:var(--slate);margin:1.75rem 0 .65rem;line-height:1.4}
+.article-body p{font-size:1rem;line-height:1.8;color:var(--text);margin-bottom:1.25rem}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.25rem}
+.article-body li{font-size:1rem;line-height:1.75;color:var(--text);margin-bottom:.4rem}
+.article-body strong{font-weight:700}
+.article-body em{font-style:italic}
+.article-body a{color:var(--slate);font-weight:600}
+.article-body a:hover{color:var(--slate-dark)}
+
+/* TABLES */
+.article-body table{width:100%;border-collapse:collapse;margin:1.5rem 0 2rem;font-size:.9rem}
+.article-body th{background:var(--navy);color:#F8F8FF;padding:.75rem 1rem;text-align:left;font-weight:700}
+.article-body td{padding:.7rem 1rem;border-bottom:1px solid var(--border)}
+.article-body tr:nth-child(even) td{background:var(--light2)}
+.article-body th:first-child{border-radius:8px 0 0 0}
+.article-body th:last-child{border-radius:0 8px 0 0}
+
+/* ACCENT BAR (callout) */
+.accent-bar{border-left:4px solid var(--lilac);background:var(--light);border-radius:0 8px 8px 0;padding:1rem 1.5rem;margin:1.5rem 0}
+.accent-bar p{margin-bottom:0;font-size:.95rem}
+
+/* CTA SECTION */
+.cta-section{background:linear-gradient(135deg,var(--slate-dark),var(--slate));border-radius:14px;padding:2.25rem 2rem;margin:3rem 0;text-align:center}
+.cta-section h2{color:#F8F8FF;font-size:1.5rem;margin-bottom:.75rem}
+.cta-section p{color:rgba(248,248,255,.78);max-width:480px;margin:0 auto 1.5rem;font-size:.95rem}
+.btn-cta{display:inline-block;background:#F8F8FF;color:var(--navy);padding:.75rem 2rem;border-radius:8px;font-weight:700;font-size:.92rem}
+.btn-cta:hover{opacity:.9;color:var(--navy)}
+
+/* FAQ */
+.faq-section{margin:2.5rem 0}
+.faq-title{font-size:clamp(1.25rem,2vw,1.6rem);font-weight:700;color:var(--navy);margin-bottom:1.25rem}
+details{border:1px solid var(--border);border-radius:10px;margin-bottom:.75rem;overflow:hidden}
+details[open]{border-color:var(--lilac)}
+summary{padding:1rem 1.25rem;font-size:.95rem;font-weight:700;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:var(--white)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'';width:18px;height:18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%236A5ACD' stroke-width='2.5' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-size:contain;background-repeat:no-repeat;flex-shrink:0;transition:transform .2s}
+details[open] summary::after{transform:rotate(180deg)}
+.faq-answer{padding:1rem 1.25rem 1.25rem;background:var(--light2);font-size:.92rem;line-height:1.7;color:var(--text);border-top:1px solid var(--border)}
+.faq-answer p{margin-bottom:.75rem}
+.faq-answer p:last-child{margin-bottom:0}
+
+/* RELATED ARTICLES */
+.related-section{background:var(--white);border-top:1px solid var(--border);padding:2.5rem 2rem}
+.related-inner{max-width:760px;margin:0 auto}
+.related-title{font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:1.25rem}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.related-card{background:var(--ghost);border:1px solid var(--border);border-radius:10px;padding:1.1rem;transition:box-shadow .15s}
+.related-card:hover{box-shadow:0 4px 16px rgba(25,25,112,.08)}
+.related-card .rc-cat{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--lilac);margin-bottom:.4rem}
+.related-card h4{font-size:.88rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem}
+.related-card h4 a{color:var(--navy)}
+.related-card h4 a:hover{color:var(--slate)}
+.related-card .rc-read{font-size:.78rem;font-weight:600;color:var(--slate)}
+
+/* NEWSLETTER BAND */
+.newsletter-band{background:linear-gradient(135deg,var(--slate-dark),var(--slate));padding:2.5rem 2rem;text-align:center}
+.newsletter-form-wrap{max-width:480px;margin:0 auto}
+
+/* FOOTER */
+footer{background:var(--navy-dark);color:var(--ghost);padding:4rem 2rem 2rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+footer h4{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem}
+footer ul{list-style:none}
+footer ul li{margin-bottom:.5rem}
+footer ul a{font-size:.88rem;color:#C8C5F0;text-decoration:none;transition:color .15s}
+footer ul a:hover{color:var(--lilac)}
+.footer-logo-name{font-size:1rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.footer-logo-tag{font-size:.65rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.85rem}
+footer p{font-size:.85rem;color:var(--muted);line-height:1.6}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:.8rem;color:var(--muted)}
+
+/* MOBILE */
+@media(max-width:960px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--navy);padding:1rem 2rem;gap:1rem;align-items:flex-start}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  .mega-menu,.dropdown-menu{position:static;border-top:none;box-shadow:none;padding:.75rem 0}
+  .article-outer{grid-template-columns:1fr;gap:0;padding:2rem 1.25rem}
+  .toc{position:static;margin-bottom:2rem}
+  .related-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .nav-inner{padding:0 1rem}
+  .nav-logo-tag{display:none}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="16" fill="none" stroke="#F8F8FF" stroke-width="2.5"/>
+        <circle cx="34" cy="12" r="7" fill="#6A5ACD"/>
+        <circle cx="11" cy="33" r="5" fill="#836FFF"/>
+        <circle cx="22" cy="22" r="5" fill="#F8F8FF"/>
+      </svg>
+      <div>
+        <span class="nav-logo-name">Orbitando no Marketing</span>
+        <span class="nav-logo-tag">SEO · GEO · AEO</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/sobre-mim">Sobre mim</a></li>
+      <li class="has-mega" id="megaItem">
+        <span onclick="toggleMega(event)">Soluções &#9662;</span>
+        <div class="mega-menu">
+          <div class="mega-grid">
+            <div>
+              <div class="mega-col-title">Para profissionais de marketing</div>
+              <a class="mega-item" href="/guia-marketing-digital">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128218;</div>
+                <div class="mega-item-text"><strong>Guia para Entrar no Mercado de Marketing Digital</strong><span>PDF completo com 15 capítulos para iniciantes e júniors</span></div>
+              </a>
+              <a class="mega-item" href="/modelo-curriculo">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128196;</div>
+                <div class="mega-item-text"><strong>Modelo de Currículo para Marketing Digital <span class="mega-badge">Grátis</span></strong><span>Template editável com guia de preenchimento</span></div>
+              </a>
+            </div>
+            <div>
+              <div class="mega-col-title">Para empresas B2B</div>
+              <a class="mega-item" href="/auditoria-visibilidade-ia">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128269;</div>
+                <div class="mega-item-text"><strong>Auditoria de Visibilidade em IA + SEO Técnico</strong><span>Diagnóstico completo de como sua marca aparece no Google e nas IAs</span></div>
+              </a>
+              <a class="mega-item" href="/consultoria-b2b-saas">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128200;</div>
+                <div class="mega-item-text"><strong>Consultoria Contínua para B2B SaaS</strong><span>Parceria recorrente para conteúdo, SEO e GEO/AEO</span></div>
+              </a>
+              <a class="mega-item" href="/desenvolvimento-sites">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128187;</div>
+                <div class="mega-item-text"><strong>Desenvolvimento de Sites para B2B</strong><span>Site institucional do zero, com alinhamento e entrega completa</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="/cases-de-sucesso">Cases</a></li>
+      <li><a href="/insights/" class="active">Insights</a></li>
+      <li><a href="https://orbitandonomarketing.substack.com" target="_blank">Newsletter</a></li>
+      <li><a href="/contato" class="nav-cta">Contato</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ARTICLE HEADER -->
+<div class="article-header">
+  <a href="/insights/" class="back-link">
+    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Ver todos os artigos
+  </a>
+  <div>
+    <span class="article-cat-badge">SEO · GEO · AEO</span>
+  </div>
+  <h1>SEO e visibilidade em IA: o estudo da Semrush que confirma o que muita gente ainda trata como hipótese</h1>
+  <div class="article-meta-bar">
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span class="author-name">Jacqueline Alves</span>
+    </span>
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      29 de setembro de 2026
+    </span>
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      16 min de leitura
+    </span>
+  </div>
+  <div class="share-bar">
+    <span class="share-label">Compartilhar:</span>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://orbitandonomarketing.com.br/insights/seo-visibilidade-ia-estudo-semrush" target="_blank" class="share-btn">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://orbitandonomarketing.com.br/insights/seo-visibilidade-ia-estudo-semrush&text=SEO+e+IA+s%C3%A3o+a+mesma+estrat%C3%A9gia%3A+estudo+Semrush+com+10.000+dom%C3%ADnios" target="_blank" class="share-btn">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      X / Twitter
+    </a>
+    <a href="mailto:?subject=Artigo: SEO e visibilidade em IA - estudo Semrush&body=Achei esse artigo interessante: https://orbitandonomarketing.com.br/insights/seo-visibilidade-ia-estudo-semrush" class="share-btn">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      E-mail
+    </a>
+    <button class="share-btn" onclick="copyLink()">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      Copiar link
+    </button>
+  </div>
+</div>
+
+<!-- ARTICLE OUTER: sidebar TOC + content -->
+<div class="article-outer">
+
+  <!-- TABLE OF CONTENTS sidebar -->
+  <nav class="toc" aria-label="Índice do artigo">
+    <p class="toc-title">Neste artigo</p>
+    <ol>
+      <li><a href="#o-estudo">O estudo da Semrush</a></li>
+      <li><a href="#correlacao">A correlação de 0,87</a></li>
+      <li><a href="#authority-score">Authority Score e citações em IA</a></li>
+      <li><a href="#query-fan-out">Query fan-out: o que é e por que importa</a></li>
+      <li><a href="#o-que-muda">O que muda na prática para B2B</a></li>
+      <li><a href="#seo-ia-comparativo">SEO para Google vs. SEO para IA</a></li>
+      <li><a href="#o-que-fazer">Por onde começar</a></li>
+      <li><a href="#auditoria">Hora de olhar para o seu site</a></li>
+      <li><a href="#faq">Perguntas frequentes</a></li>
+    </ol>
+  </nav>
+
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <p>Durante anos, o debate sobre SEO e IA generativa rodou em círculos. De um lado, profissionais de marketing dizendo que SEO estava morto porque as IAs "não usam o Google". Do outro, SEOs insistindo que SEO continuava igual, só que agora também precisava de "prompt engineering". Os dois grupos estavam errados. ☕️</p>
+
+    <p>A Semrush publicou um estudo analisando 10.000 domínios e cruzando dados de posicionamento orgânico com citações em respostas de IA generativa. Os resultados acabam com a ambiguidade: <strong>a correlação entre o footprint de palavras-chave no Google e as citações em IA é de 0,87</strong>, numa escala de 0 a 1. Para quem não é familiarizado com estatística, isso é uma correlação fortíssima, próxima do máximo possível.</p>
+
+    <p>SEO e visibilidade em IA não são disciplinas separadas que precisam de orçamentos separados. São a mesma infraestrutura de credibilidade, vista por dois prismas diferentes.</p>
+
+    <h2 id="o-estudo">O estudo da Semrush: metodologia e escopo</h2>
+
+    <p>O estudo "SEO & AI Search: Connected" da Semrush analisou 10.000 domínios e cruzou três conjuntos de dados: posicionamento orgânico no Google (volume de palavras-chave ranqueadas e Authority Score), citações em respostas de ChatGPT, Gemini e Perplexity, e padrões de consulta gerados pelas IAs a partir de perguntas originais dos usuários.</p>
+
+    <p>A escolha dessas três plataformas de IA não foi aleatória. ChatGPT e Gemini respondem à maioria das consultas de forma direta, com citações opcionais. O Perplexity cita fontes por padrão em quase todas as respostas. Incluir as três plataformas na amostra dá uma visão mais completa do ecossistema de IA generativa do que estudos que focam em apenas uma.</p>
+
+    <p>O recorte de 10.000 domínios também é relevante: não é uma amostra de nicho ou de um único setor. Os resultados têm peso estatístico suficiente para serem levados a sério como referência de mercado.</p>
+
+    <h2 id="correlacao">A correlação de 0,87: o que ela significa na prática</h2>
+
+    <p>Correlação de 0,87 entre footprint de palavras-chave e citações em IA quer dizer uma coisa simples: <strong>domínios que ranqueiam para muitas palavras-chave no Google também aparecem com mais frequência nas respostas de IA generativa</strong>. A relação não é perfeita (0 perfeito seria 1), mas é suficientemente forte para orientar decisão de investimento.</p>
+
+    <p>O mecanismo por trás disso faz sentido quando você pensa em como os modelos de linguagem são treinados. ChatGPT, Gemini e Perplexity aprenderam com conteúdo da web. Domínios com alto volume de palavras-chave ranqueadas tendem a ter mais conteúdo indexado, mais links de autoridade apontando para eles, e mais menções em outros sites. Tudo isso entra no treinamento dos modelos e no conjunto de fontes que o modelo considera confiáveis para citar.</p>
+
+    <p>Não é que a IA "consulta o Google" na hora de responder. É que a base de dados com que ela foi treinada e as fontes que ela prioriza para recuperação foram moldadas pela mesma infraestrutura que define visibilidade orgânica.</p>
+
+    <div class="accent-bar">
+      <p><strong>Dado-chave:</strong> A correlação de 0,87 entre footprint de palavras-chave (volume de termos ranqueados no Google) e frequência de citações em respostas de IA é estatisticamente forte. Para referência, correlações acima de 0,7 já são consideradas altas em ciências sociais e pesquisa de mercado.</p>
+    </div>
+
+    <h2 id="authority-score">Authority Score acima de 81: o ponto de inflexão real</h2>
+
+    <p>O segundo achado mais relevante do estudo é o papel do Authority Score, métrica proprietária da Semrush que combina qualidade de backlinks, tráfego orgânico e padrões de comportamento do site. Domínios com Authority Score acima de 81 recebem <strong>9 vezes mais citações medianas em IA do que domínios com pontuação inferior</strong>.</p>
+
+    <p>9 vezes. Não 9%. Não "significativamente mais". Nove vezes.</p>
+
+    <p>Esse número exige cautela na interpretação porque correlação não é causalidade. Domínios com Authority Score alto tendem a ser mais antigos, mais conhecidos, com mais conteúdo e mais links. A autoridade é um proxy de múltiplos fatores, não uma variável isolada que você aumenta e a IA passa a te citar na mesma semana. Mas o dado confirma algo que já era esperado: <strong>a infra de credibilidade que define autoridade no Google é a mesma que define credibilidade para as IAs generativas</strong>.</p>
+
+    <p>Para empresas B2B que estão começando a construir presença digital agora, isso é tanto uma má quanto uma boa notícia. A má: não existe atalho. A boa: o trabalho de SEO que você já fez ou vai fazer acumula em cima de si mesmo, e os benefícios aparecem em múltiplos canais, não só no Google.</p>
+
+    <h2 id="query-fan-out">Query fan-out: como as IAs amplificam suas perguntas</h2>
+
+    <p>O terceiro achado do estudo é o menos intuitivo e talvez o mais importante para quem trabalha com estratégia de conteúdo.</p>
+
+    <p>As IAs generativas não respondem à sua pergunta original de forma linear. Elas expandem a consulta internamente antes de buscar informações. O estudo registrou que <strong>540 consultas originais dos usuários geraram 1.323 queries derivadas</strong> usadas pelas IAs para compor as respostas, uma expansão média de 2,4 vezes por consulta.</p>
+
+    <p>Na prática, quando um usuário pergunta "qual é o melhor CRM para startups B2B?", a IA não busca exatamente essa frase. Ela expande a consulta internamente para algo como: "CRM para startups", "CRM B2B pequenas empresas", "comparativo HubSpot Pipedrive para startups", "custo CRM para empresa pequena", e assim por diante. O domínio que aparece em mais dessas queries derivadas tem mais chance de ser citado na resposta final.</p>
+
+    <p>Isso tem implicações diretas para estratégia de conteúdo. Clusters temáticos amplos, cobrindo variações de uma mesma intenção de busca, funcionam melhor do que páginas isoladas otimizadas para uma única palavra-chave. A lógica do SEO semântico, que muitas equipes de conteúdo já praticam, é exatamente o que favorece visibilidade no processo de query fan-out das IAs.</p>
+
+    <div class="accent-bar">
+      <p><strong>O que isso muda para conteúdo:</strong> Uma única página bem-feita sobre "CRM para B2B" vale menos do que um cluster de páginas cobrindo todas as variações do tema: implementação, custo, comparativos, casos de uso por setor, integração com ferramentas. O fan-out das IAs recompensa amplitude temática.</p>
+    </div>
+
+    <h2 id="o-que-muda">O que muda na prática para empresas B2B</h2>
+
+    <p>O estudo também cruzou os dados com perfil de empresa. Entre os profissionais de marketing de empresas do segmento enterprise, <strong>81% dos que já integraram operações de SEO e IA em um único fluxo reportaram crescimento de tráfego ou geração de leads</strong>, contra percentuais significativamente menores nos grupos que mantinham as iniciativas separadas.</p>
+
+    <p>Para empresas B2B, esse dado tem peso extra. O ciclo de compra B2B é longo e começa com pesquisa. Compradores de software, serviços e soluções B2B pesquisam antes de entrar no funil comercial, e cada vez mais essa pesquisa acontece em IAs generativas, não só no Google. Um gestor financeiro que pergunta ao ChatGPT "qual plataforma de automação financeira faz sentido para empresa com 200 funcionários" está no topo do funil, mas já está qualificado pelo contexto da pergunta.</p>
+
+    <p>Se sua empresa não aparece nas respostas das IAs para essas perguntas de topo de funil, você está fora de uma parte crescente da jornada de compra.</p>
+
+    <h2 id="seo-ia-comparativo">SEO para Google vs. SEO para IA: o que muda e o que fica igual</h2>
+
+    <p>Uma das perguntas mais frequentes de gestores de marketing que chegam até mim é: "preciso fazer coisas diferentes para aparecer na IA ou é o mesmo SEO de sempre?" A resposta honesta é: as fundações são as mesmas, mas algumas alavancas têm pesos diferentes.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Fator</th>
+          <th>Peso no Google</th>
+          <th>Peso em IAs generativas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Autoridade de domínio / backlinks</td>
+          <td>Alto</td>
+          <td>Alto (confirmado pelo estudo)</td>
+        </tr>
+        <tr>
+          <td>Volume de palavras-chave ranqueadas</td>
+          <td>Alto</td>
+          <td>Alto (correlação 0,87)</td>
+        </tr>
+        <tr>
+          <td>SEO técnico (Core Web Vitals, indexação)</td>
+          <td>Alto</td>
+          <td>Indireto (afeta rastreabilidade)</td>
+        </tr>
+        <tr>
+          <td>Cobertura temática ampla (clusters)</td>
+          <td>Médio/Alto</td>
+          <td>Alto (favorece query fan-out)</td>
+        </tr>
+        <tr>
+          <td>Estrutura semântica clara (H1/H2, schema)</td>
+          <td>Médio</td>
+          <td>Alto (facilita extração de resposta)</td>
+        </tr>
+        <tr>
+          <td>Menções de marca sem link (brand mentions)</td>
+          <td>Baixo</td>
+          <td>Alto (treinamento dos modelos)</td>
+        </tr>
+        <tr>
+          <td>Conteúdo em formatos de Q&amp;A</td>
+          <td>Médio</td>
+          <td>Alto (espelha como a IA busca informações)</td>
+        </tr>
+        <tr>
+          <td>Dados estruturados / schema markup</td>
+          <td>Médio</td>
+          <td>Médio/Alto</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>O que chama atenção na tabela é que nenhum fator que importa para IA é novo. São os mesmos fundamentos de SEO com pesos ligeiramente redistribuídos. Menções de marca sem link, por exemplo, são algo que o Google já considera há anos. Para as IAs, elas ganham ainda mais peso porque entram diretamente no treinamento dos modelos, não só como sinal de ranqueamento.</p>
+
+    <p>Isso vai ao encontro do que já defendi no artigo sobre <a href="https://orbitandonomarketing.com.br/insights/visibilidade-marca-respostas-ia-seo-geo-aeo">SEO, GEO e AEO</a>: as três disciplinas descrevem o mesmo objetivo de ângulos diferentes. O estudo da Semrush agora tem os números para sustentar esse argumento.</p>
+
+    <h2 id="o-que-fazer">Por onde começar: prioridades práticas a partir dos dados</h2>
+
+    <h3>1. Mapeie seu footprint atual de palavras-chave</h3>
+    <p>Se você não sabe para quantas palavras-chave seu site ranqueia e qual a posição média, esse é o ponto zero. Ferramentas como Semrush, Ahrefs ou Google Search Console mostram esse dado. O footprint de palavras-chave é o melhor preditor individual de visibilidade em IA que o estudo encontrou.</p>
+
+    <h3>2. Identifique os gaps temáticos do seu cluster principal</h3>
+    <p>Liste os temas centrais do seu negócio e mapeie todas as variações de intenção de busca que você ainda não cobre. Lembre que as IAs expandem cada consulta em 2,4 consultas derivadas em média. Cada gap temático é uma ausência multiplicada nas respostas das IAs.</p>
+
+    <h3>3. Construa autoridade de forma deliberada</h3>
+    <p>O patamar de Authority Score acima de 81 que o estudo identifica como ponto de inflexão não se alcança com tática isolada. Backlinks de qualidade, conteúdo citável, presença em publicações do setor, e menções de marca em contexto relevante constroem autoridade de forma composta ao longo do tempo.</p>
+
+    <h3>4. Revise a estrutura semântica do conteúdo existente</h3>
+    <p>Conteúdo com hierarquia clara de títulos (H1, H2, H3), dados estruturados e seções de perguntas e respostas é mais fácil de ser extraído por IAs. Isso não é sobre "hackear" a IA: é sobre facilitar que ela entenda e use seu conteúdo corretamente.</p>
+
+    <h3>5. Monitore menções de marca fora do seu domínio</h3>
+    <p>Alertas de menção de marca (Google Alerts, Mention, Brand24) servem para isso. Cada menção do seu nome em contexto relevante, mesmo sem link, é um sinal que entra no treinamento dos modelos de IA ao longo do tempo.</p>
+
+    <div class="cta-section">
+      <h2>Auditoria de Visibilidade em IA + SEO Técnico</h2>
+      <p>Antes de priorizar qualquer uma dessas frentes, você precisa saber onde está o gap maior no seu site. A Auditoria de Visibilidade em IA mapeia como sua marca aparece no Google e nas IAs generativas, e identifica as oportunidades de maior impacto.</p>
+      <a href="/auditoria-visibilidade-ia" class="btn-cta">Ver a auditoria</a>
+    </div>
+
+    <h2 id="auditoria">Hora de olhar para o seu site com dados, não com achismo</h2>
+
+    <p>O debate "SEO está morto por causa da IA" foi, acima de tudo, um debate sem dados. O estudo da Semrush encerra essa discussão com números concretos de uma amostra de 10.000 domínios. A correlação entre footprint de palavras-chave e citações em IA é forte demais para ser ignorada.</p>
+
+    <p>Para empresas B2B, a conclusão prática é direta: o investimento em SEO que você faz hoje constrói a infraestrutura de credibilidade que determina sua visibilidade tanto no Google quanto nas IAs generativas. Tratar SEO e GEO como projetos separados com orçamentos separados é desperdiçar budget duas vezes.</p>
+
+    <p>O que muda não é a fundação. O que muda é que a janela de oportunidade para empresas que ainda não constroem essa infraestrutura está se fechando. Domínios com alta autoridade estão acumulando vantagem em dois canais simultaneamente. Os que chegarem depois vão precisar de mais esforço para alcançar o mesmo resultado.</p>
+
+    <p>A pergunta que vale fazer agora: você sabe onde seu site está nessa escala de autoridade e cobertura temática? Se a resposta é não, esse é o primeiro dado que precisa levantar.</p>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <h2 class="faq-title" id="faq">Perguntas frequentes</h2>
+
+      <details>
+        <summary>A correlação de 0,87 entre SEO e citações em IA é suficiente para tomar decisões de investimento?</summary>
+        <div class="faq-answer">
+          <p>Correlação de 0,87 é estatisticamente forte e, com uma amostra de 10.000 domínios, tem peso suficiente para orientar prioridades de investimento. O ponto de atenção é que correlação não é causalidade: ter alto footprint de palavras-chave favorece citações em IA, mas outros fatores também atuam. Use o dado como validação de direção estratégica, não como garantia de resultado linear.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Quanto tempo leva para melhorias de SEO refletirem em visibilidade em IA?</summary>
+        <div class="faq-answer">
+          <p>Para Google, o prazo típico de impacto de melhorias de conteúdo e backlinks é de 3 a 6 meses. Para IAs generativas, o mecanismo é diferente: os modelos são treinados periodicamente, e alguns usam recuperação em tempo real (Perplexity, por exemplo). Melhorias técnicas de SEO que aumentam indexabilidade podem ter impacto mais rápido em plataformas com recuperação em tempo real. Para impacto no treinamento dos modelos, o prazo é mais longo e menos previsível.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>O que é query fan-out e como isso afeta minha estratégia de conteúdo?</summary>
+        <div class="faq-answer">
+          <p>Query fan-out é o processo pelo qual IAs expandem uma consulta do usuário em múltiplas consultas derivadas antes de buscar informações. O estudo da Semrush mediu uma expansão média de 2,4 vezes: 540 consultas originais geraram 1.323 queries derivadas. Para estratégia de conteúdo, isso significa que clusters temáticos amplos, cobrindo variações de uma mesma intenção, têm mais chances de aparecer em múltiplas etapas do processo de busca da IA, aumentando a probabilidade de citação na resposta final.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Authority Score acima de 81 é um objetivo realista para uma empresa B2B de médio porte?</summary>
+        <div class="faq-answer">
+          <p>Depende do setor e do histórico do domínio. Authority Score acima de 81 é territorio de grandes publicações e líderes de mercado com anos de acúmulo. Para a maioria das empresas B2B de médio porte, o objetivo prático não é cruzar esse limiar no curto prazo, mas avançar consistentemente na escala. Cada ponto de Authority Score adiciona ao conjunto de citações em IA, mesmo abaixo do patamar de 81. O estudo identifica esse número como ponto de aceleração, não como único ponto de valor.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Preciso de ferramentas específicas de GEO ou AEO além das ferramentas de SEO?</summary>
+        <div class="faq-answer">
+          <p>As ferramentas principais de SEO (Semrush, Ahrefs, Search Console) cobrem o monitoramento de footprint de palavras-chave e autoridade, que são os principais preditores de visibilidade em IA segundo o estudo. Para monitorar citações específicas em plataformas de IA, existem ferramentas emergentes como Profound, Goodie AI e Semrush AI Toolkit. Para a maioria das empresas, o passo inicial é consolidar o monitoramento de SEO antes de adicionar ferramentas específicas de GEO.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Menções de marca sem link realmente influenciam visibilidade em IA?</summary>
+        <div class="faq-answer">
+          <p>O estudo da Semrush aponta menções de marca como fator relevante para visibilidade em IA, com peso maior do que no Google. O mecanismo é o treinamento dos modelos: menções em contexto relevante entram na base de dados com que os modelos aprendem a associar sua marca a determinados temas e soluções. Para monitorar menções, ferramentas como Google Alerts, Brand24 e Mention cobrem a maior parte dos canais. O foco deve ser qualidade do contexto, não só volume de menções.</p>
+        </div>
+      </details>
+    </div>
+
+  </article>
+</div>
+
+<!-- RELATED ARTICLES -->
+<div class="related-section">
+  <div class="related-inner">
+    <p class="related-title">Continue lendo</p>
+    <div class="related-grid">
+      <div class="related-card">
+        <p class="rc-cat">GEO · AEO · SEO</p>
+        <h4><a href="/insights/visibilidade-marca-respostas-ia-seo-geo-aeo">Como melhorar a visibilidade da marca em respostas de IA: o que SEO, GEO e AEO têm a ver com isso</a></h4>
+        <p class="rc-read">Ler artigo</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER BAND -->
+<div class="newsletter-band">
+  <div class="newsletter-form-wrap">
+    <p style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:rgba(248,248,255,.6);margin-bottom:.5rem">Newsletter</p>
+    <h2 style="font-size:1.5rem;font-weight:700;color:#F8F8FF;margin-bottom:.6rem">Orbitando no Marketing</h2>
+    <p style="color:rgba(248,248,255,.75);margin-bottom:1.5rem;font-size:.95rem">Análises semanais sobre SEO, GEO e AEO para profissionais que querem entender o que está mudando na busca orgânica e nas IAs generativas.</p>
+    <a href="https://orbitandonomarketing.substack.com" target="_blank" class="btn-cta">Assinar grátis</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.85rem">
+        <svg viewBox="0 0 44 44" style="width:36px;height:36px;flex-shrink:0" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="16" fill="none" stroke="#F8F8FF" stroke-width="2.5"/>
+          <circle cx="34" cy="12" r="7" fill="#6A5ACD"/>
+          <circle cx="11" cy="33" r="5" fill="#836FFF"/>
+          <circle cx="22" cy="22" r="5" fill="#F8F8FF"/>
+        </svg>
+        <div>
+          <div class="footer-logo-name">Orbitando no Marketing</div>
+          <div class="footer-logo-tag">SEO · GEO · AEO</div>
+        </div>
+      </div>
+      <p>Consultoria e conteúdo técnico em marketing digital. 15+ anos de experiência em B3, PicPay, SAP Concur e D2L.</p>
+    </div>
+    <div>
+      <h4>Soluções B2B</h4>
+      <ul>
+        <li><a href="/auditoria-visibilidade-ia">Auditoria de Visibilidade em IA</a></li>
+        <li><a href="/consultoria-b2b-saas">Consultoria B2B SaaS</a></li>
+        <li><a href="/desenvolvimento-sites">Desenvolvimento de Sites</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Recursos</h4>
+      <ul>
+        <li><a href="/insights/">Insights</a></li>
+        <li><a href="/guia-marketing-digital">Guia de Marketing Digital</a></li>
+        <li><a href="/modelo-curriculo">Modelo de Currículo</a></li>
+        <li><a href="/cases-de-sucesso">Cases</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="/contato">Fale comigo</a></li>
+        <li><a href="https://www.linkedin.com/in/jacquelinealvesoliveira" target="_blank">LinkedIn</a></li>
+        <li><a href="https://orbitandonomarketing.substack.com" target="_blank">Newsletter</a></li>
+        <li><a href="/sobre-mim">Sobre mim</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Orbitando no Marketing. Todos os direitos reservados.</p>
+    <p><a href="/politica-privacidade" style="color:var(--muted)">Política de privacidade</a></p>
+  </div>
+</footer>
+
+<script>
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
+function toggleMega(e){
+  e.stopPropagation();
+  document.getElementById('megaItem').classList.toggle('open');
+}
+document.addEventListener('click',function(e){
+  var m=document.getElementById('megaItem');
+  if(m&&!m.contains(e.target))m.classList.remove('open');
+});
+function copyLink(){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var btn=event.currentTarget;
+    var orig=btn.innerHTML;
+    btn.innerHTML='<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Copiado!';
+    setTimeout(function(){btn.innerHTML=orig;},2000);
+  });
+}
+</script>
+</body>
+</html>
