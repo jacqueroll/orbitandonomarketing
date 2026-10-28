@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO sozinho não basta: o que o Google recompensa agora</title>
+<meta name="description" content="O Google passou a premiar confiança, pessoas e audiência própria. Entenda o que isso muda para empresas B2B e como reduzir a dependência da busca.">
+<meta name="author" content="Jacqueline Alves">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://orbitandonomarketing.com.br/insights/seo-nao-basta-confianca-audiencia-b2b">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://orbitandonomarketing.com.br/insights/seo-nao-basta-confianca-audiencia-b2b">
+<meta property="og:title" content="SEO sozinho não basta: o que o Google recompensa agora">
+<meta property="og:description" content="O Google passou a premiar confiança, pessoas e audiência própria. Entenda o que isso muda para empresas B2B e como reduzir a dependência da busca.">
+<link rel="icon" type="image/png" href="/Logo/favicon-512.png">
+<link rel="shortcut icon" href="/Logo/favicon-512.png">
+<link rel="apple-touch-icon" href="/Logo/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#191970;--navy-dark:#141459;--slate-dark:#483D8B;
+  --slate:#6A5ACD;--lilac:#836FFF;--ghost:#F8F8FF;
+  --light:#f0eeff;--light2:#f8f7ff;--border:#e8e6f8;
+  --muted:#9896CC;--text:#191970;--white:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--ghost);line-height:1.75}
+a{color:var(--slate);text-decoration:none}
+a:hover{color:var(--slate-dark)}
+img{max-width:100%;display:block}
+
+/* NAV */
+nav{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.nav-logo svg{width:36px;height:36px;flex-shrink:0}
+.nav-logo-name{display:block;font-size:.95rem;font-weight:700;color:var(--ghost);line-height:1.2}
+.nav-logo-tag{display:block;font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
+.nav-links a,.nav-links span{font-size:.88rem;font-weight:500;color:var(--ghost);opacity:.85;text-decoration:none;cursor:pointer;transition:opacity .15s}
+.nav-links a:hover,.nav-links span:hover{opacity:1}
+.nav-cta{background:var(--lilac)!important;color:var(--navy)!important;opacity:1!important;padding:.45rem 1.1rem;border-radius:6px;font-weight:700!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--ghost);border-radius:2px}
+
+/* MEGA MENU */
+.has-mega{position:static}
+.mega-menu{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy-dark);border-top:2px solid var(--lilac);box-shadow:0 16px 48px rgba(0,0,0,.45);z-index:300;padding:2rem}
+.has-mega.open .mega-menu{display:block}
+.mega-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.mega-col-title{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid rgba(131,111,255,.3)}
+.mega-item{display:flex;align-items:flex-start;gap:.75rem;padding:.75rem;border-radius:8px;text-decoration:none;transition:background .15s;margin-bottom:.25rem}
+.mega-item:hover{background:rgba(131,111,255,.12)}
+.mega-item-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.mega-item-text strong{display:block;font-size:.88rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.mega-item-text span{font-size:.78rem;color:var(--muted);line-height:1.4}
+.mega-badge{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(131,111,255,.25);color:var(--lilac);padding:.15rem .45rem;border-radius:4px;vertical-align:middle}
+
+/* ARTICLE LAYOUT */
+.article-header{background:var(--navy);padding:3.5rem 2rem 3rem;text-align:center}
+.back-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:600;color:var(--muted);margin-bottom:1.5rem;transition:color .15s}
+.back-link:hover{color:#F8F8FF}
+.back-link svg{transition:transform .15s}
+.back-link:hover svg{transform:translateX(-3px)}
+.article-cat-badge{display:inline-block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--lilac);background:rgba(131,111,255,.15);border:1px solid rgba(131,111,255,.35);padding:.28rem .8rem;border-radius:6px;margin-bottom:1rem}
+.article-header h1{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:700;color:#F8F8FF;line-height:1.15;max-width:760px;margin:0 auto 1.25rem}
+.article-meta-bar{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;font-size:.82rem;color:var(--muted);margin-bottom:1.5rem}
+.article-meta-bar span{display:flex;align-items:center;gap:.35rem}
+.article-meta-bar .author-name{font-weight:700;color:rgba(248,248,255,.88)}
+
+/* SHARE BUTTONS */
+.share-bar{display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap;margin-bottom:.5rem}
+.share-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.share-btn{display:inline-flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:600;padding:.35rem .9rem;border-radius:7px;border:1px solid rgba(131,111,255,.35);background:rgba(131,111,255,.1);transition:all .15s;cursor:pointer;text-decoration:none;font-family:'Plus Jakarta Sans',sans-serif}
+button.share-btn{color:rgba(248,248,255,.82)!important;-webkit-appearance:none;appearance:none;background:rgba(131,111,255,.12);border:1px solid rgba(131,111,255,.4)}
+.share-btn:not(button){color:rgba(248,248,255,.75)}
+.share-btn:hover{color:#F8F8FF!important;background:rgba(131,111,255,.28);border-color:var(--lilac)}
+button.share-btn:hover{color:#F8F8FF!important;background:rgba(131,111,255,.28);border-color:var(--lilac)}
+.article-body button.share-btn{color:var(--slate)!important;background:rgba(106,90,205,.08);border-color:rgba(106,90,205,.3)}
+.article-body button.share-btn:hover{color:var(--slate-dark)!important;background:rgba(106,90,205,.18);border-color:var(--slate)}
+
+/* ARTICLE OUTER: sidebar TOC + content */
+.article-outer{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:240px 1fr;gap:3rem;align-items:start}
+
+/* TABLE OF CONTENTS, sidebar */
+.toc{position:sticky;top:88px;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem}
+.toc-title{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:.9rem}
+.toc ol{padding-left:1.1rem}
+.toc li{font-size:.82rem;line-height:1.45;margin-bottom:.55rem}
+.toc li a{color:var(--slate);font-weight:500}
+.toc li a:hover{color:var(--slate-dark)}
+
+/* ARTICLE BODY */
+.article-body h2{font-size:clamp(1.25rem,2.2vw,1.7rem);font-weight:700;color:var(--navy);margin:2.75rem 0 1rem;line-height:1.22}
+.article-body h3{font-size:1.1rem;font-weight:700;color:var(--slate);margin:1.75rem 0 .65rem;line-height:1.4}
+.article-body p{font-size:1rem;line-height:1.8;color:var(--text);margin-bottom:1.25rem}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.25rem}
+.article-body li{font-size:1rem;line-height:1.75;color:var(--text);margin-bottom:.4rem}
+.article-body strong{font-weight:700}
+.article-body em{font-style:italic}
+.article-body a{color:var(--slate);font-weight:600}
+.article-body a:hover{color:var(--slate-dark)}
+
+/* TABLES */
+.article-body table{width:100%;border-collapse:collapse;margin:1.5rem 0 2rem;font-size:.9rem}
+.article-body th{background:var(--navy);color:#F8F8FF;padding:.75rem 1rem;text-align:left;font-weight:700}
+.article-body td{padding:.7rem 1rem;border-bottom:1px solid var(--border)}
+.article-body tr:nth-child(even) td{background:var(--light2)}
+.article-body th:first-child{border-radius:8px 0 0 0}
+.article-body th:last-child{border-radius:0 8px 0 0}
+
+/* ACCENT BAR (callout) */
+.accent-bar{border-left:4px solid var(--lilac);background:var(--light);border-radius:0 8px 8px 0;padding:1rem 1.5rem;margin:1.5rem 0}
+.accent-bar p{margin-bottom:0;font-size:.95rem}
+
+/* CTA SECTION */
+.cta-section{background:linear-gradient(135deg,var(--slate-dark),var(--slate));border-radius:14px;padding:2.25rem 2rem;margin:3rem 0;text-align:center}
+.cta-section h2{color:#F8F8FF;font-size:1.5rem;margin-bottom:.75rem}
+.cta-section p{color:rgba(248,248,255,.78);max-width:480px;margin:0 auto 1.5rem;font-size:.95rem}
+.btn-cta{display:inline-block;background:#F8F8FF;color:var(--navy);padding:.75rem 2rem;border-radius:8px;font-weight:700;font-size:.92rem}
+.btn-cta:hover{opacity:.9;color:var(--navy)}
+
+/* FAQ */
+.faq-section{margin:2.5rem 0}
+.faq-title{font-size:clamp(1.25rem,2vw,1.6rem);font-weight:700;color:var(--navy);margin-bottom:1.25rem}
+details{border:1px solid var(--border);border-radius:10px;margin-bottom:.75rem;overflow:hidden}
+details[open]{border-color:var(--lilac)}
+summary{padding:1rem 1.25rem;font-size:.95rem;font-weight:700;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:var(--white)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'';width:18px;height:18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%236A5ACD' stroke-width='2.5' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-size:contain;background-repeat:no-repeat;flex-shrink:0;transition:transform .2s}
+details[open] summary::after{transform:rotate(180deg)}
+.faq-answer{padding:1rem 1.25rem 1.25rem;background:var(--light2);font-size:.92rem;line-height:1.7;color:var(--text);border-top:1px solid var(--border)}
+.faq-answer p{margin-bottom:.75rem}
+.faq-answer p:last-child{margin-bottom:0}
+
+/* RELATED ARTICLES */
+.related-section{background:var(--white);border-top:1px solid var(--border);padding:2.5rem 2rem}
+.related-inner{max-width:760px;margin:0 auto}
+.related-title{font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:1.25rem}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.related-card{background:var(--ghost);border:1px solid var(--border);border-radius:10px;padding:1.1rem;transition:box-shadow .15s}
+.related-card:hover{box-shadow:0 4px 16px rgba(25,25,112,.08)}
+.related-card .rc-cat{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--lilac);margin-bottom:.4rem}
+.related-card h4{font-size:.88rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem}
+.related-card h4 a{color:var(--navy)}
+.related-card h4 a:hover{color:var(--slate)}
+.related-card .rc-read{font-size:.78rem;font-weight:600;color:var(--slate)}
+
+/* NEWSLETTER BAND */
+.newsletter-band{background:linear-gradient(135deg,var(--slate-dark),var(--slate));padding:2.5rem 2rem;text-align:center}
+.newsletter-form-wrap{max-width:480px;margin:0 auto}
+
+/* FOOTER */
+footer{background:var(--navy-dark);color:var(--ghost);padding:4rem 2rem 2rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+footer h4{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem}
+footer ul{list-style:none}
+footer ul li{margin-bottom:.5rem}
+footer ul a{font-size:.88rem;color:#C8C5F0;text-decoration:none;transition:color .15s}
+footer ul a:hover{color:var(--lilac)}
+.footer-logo-name{font-size:1rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.footer-logo-tag{font-size:.65rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.85rem}
+footer p{font-size:.85rem;color:var(--muted);line-height:1.6}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:.8rem;color:var(--muted)}
+
+/* MOBILE */
+@media(max-width:960px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--navy);padding:1rem 2rem;gap:1rem;align-items:flex-start}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  .mega-menu,.dropdown-menu{position:static;border-top:none;box-shadow:none;padding:.75rem 0}
+  .article-outer{grid-template-columns:1fr;gap:0;padding:2rem 1.25rem}
+  .toc{position:static;margin-bottom:2rem}
+  .related-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .nav-inner{padding:0 1rem}
+  .nav-logo-tag{display:none}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+
+/* TL;DR */
+.tldr{background:var(--white);border:1px solid var(--border);border-top:4px solid var(--lilac);border-radius:12px;padding:1.25rem 1.5rem;margin:1.75rem 0 2rem}
+.tldr-title{font-size:.72rem!important;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--slate)!important;margin-bottom:.6rem!important}
+.tldr ul{margin-bottom:0}
+.tldr li{font-size:.94rem}
+</style>
+<script type="application/ld+json">
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Por que o SEO sozinho já não sustenta uma marca B2B, e o que o Google passou a recompensar",
+  "description": "O Google passou a premiar confiança, pessoas e audiência própria. Entenda o que isso muda para empresas B2B e como reduzir a dependência da busca.",
+  "datePublished": "2026-10-28",
+  "dateModified": "2026-10-28",
+  "inLanguage": "pt-BR",
+  "mainEntityOfPage": "https://orbitandonomarketing.com.br/insights/seo-nao-basta-confianca-audiencia-b2b",
+  "author": {
+   "@type": "Person",
+   "name": "Jacqueline Alves",
+   "url": "https://orbitandonomarketing.com.br/sobre-mim"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Orbitando no Marketing",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://orbitandonomarketing.com.br/Logo/favicon-512.png"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "O SEO ainda vale a pena para empresas B2B?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Sim. O Google segue processando mais de 5 trilhões de buscas por ano, e a maioria das jornadas de compra passa por ele em algum momento. O que mudou é que posição e otimização de página já não bastam para sustentar a marca. O SEO rende mais quando vem junto com presença de especialistas, menções de terceiros e audiência própria."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "O que foi o Helpful Content Update e por que ele importa?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Foi a atualização de setembro de 2023 em que o Google passou a rebaixar sites criados principalmente para ranquear, com pouca presença fora da busca. Sites como o HouseFresh perderam mais de 90% do tráfego orgânico. Ela importa porque mostrou que depender de um único canal é um risco real de negócio."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "O que significa dizer que o algoritmo do Google é uma aproximação de confiança?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "É a leitura de Harry Clarkson-Bennett, diretor de SEO do The Telegraph: com tanto conteúdo gerado em escala, o Google usa cada vez mais sinais externos para avaliar qualidade, como quem escreveu, quem cita a marca, quantas pessoas buscam pelo nome dela e quantas voltam. Ele chama isso de forma final do E-E-A-T: prova social confirmada dentro e fora do site."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Como uma empresa B2B constrói sinais de confiança fora do site?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Com especialistas internos publicando com regularidade no LinkedIn, participação em eventos, podcasts e publicações do setor, avaliações espontâneas de clientes, pesquisas próprias que outros citam e uma newsletter que cria hábito. Cada uma dessas frentes gera menções, buscas pelo nome da marca e visitas diretas."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Que métricas usar no lugar do tráfego orgânico?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Clarkson-Bennett propõe fidelidade e engajamento como indicadores principais: leitores que voltam, assinantes ativos da newsletter, seguidores, busca pelo nome da marca e visitas diretas. Para avaliar campanhas, a recomendação é medir o impacto incremental, comparando esses sinais e as oportunidades comerciais antes e depois de cada ação."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Preferred Sources e os perfis no Discover afetam empresas B2B?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Diretamente, esses recursos têm mais peso em notícias e no Discover do que em buscas B2B. A importância deles está na direção que indicam: o Google está construindo uma camada que recompensa marcas e pessoas que o público escolhe acompanhar, e essa lógica também orienta a busca e as respostas de IA."
+    }
+   }
+  ]
+ }
+]
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="16" fill="none" stroke="#F8F8FF" stroke-width="2.5"/>
+        <circle cx="34" cy="12" r="7" fill="#6A5ACD"/>
+        <circle cx="11" cy="33" r="5" fill="#836FFF"/>
+        <circle cx="22" cy="22" r="5" fill="#F8F8FF"/>
+      </svg>
+      <div>
+        <span class="nav-logo-name">Orbitando no Marketing</span>
+        <span class="nav-logo-tag">SEO · GEO · AEO</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/sobre-mim">Sobre mim</a></li>
+      <li class="has-mega" id="megaItem">
+        <span onclick="toggleMega(event)">Soluções &#9662;</span>
+        <div class="mega-menu">
+          <div class="mega-grid">
+            <div>
+              <div class="mega-col-title">Para profissionais de marketing</div>
+              <a class="mega-item" href="/guia-marketing-digital">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128218;</div>
+                <div class="mega-item-text"><strong>Guia para Entrar no Mercado de Marketing Digital</strong><span>PDF completo com 15 capítulos para iniciantes e júniors</span></div>
+              </a>
+              <a class="mega-item" href="/modelo-curriculo">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128196;</div>
+                <div class="mega-item-text"><strong>Modelo de Currículo para Marketing Digital <span class="mega-badge">Grátis</span></strong><span>Template editável com guia de preenchimento</span></div>
+              </a>
+            </div>
+            <div>
+              <div class="mega-col-title">Para empresas B2B</div>
+              <a class="mega-item" href="/auditoria-visibilidade-ia">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128269;</div>
+                <div class="mega-item-text"><strong>Auditoria de Visibilidade em IA + SEO Técnico</strong><span>Diagnóstico completo de como sua marca aparece no Google e nas IAs</span></div>
+              </a>
+              <a class="mega-item" href="/consultoria-b2b-saas">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128200;</div>
+                <div class="mega-item-text"><strong>Consultoria Contínua para B2B SaaS</strong><span>Parceria recorrente para conteúdo, SEO e GEO/AEO</span></div>
+              </a>
+              <a class="mega-item" href="/desenvolvimento-sites">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128187;</div>
+                <div class="mega-item-text"><strong>Desenvolvimento de Sites para B2B</strong><span>Site institucional do zero, com alinhamento e entrega completa</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="/cases-de-sucesso">Cases</a></li>
+      <li><a href="/insights/" class="active">Insights</a></li>
+      <li><a href="https://orbitandonomarketing.com.br/insights/" target="_blank">Newsletter</a></li>
+      <li><a href="/contato" class="nav-cta">Contato</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ARTICLE HEADER -->
+<div class="article-header">
+  <a href="/insights/" class="back-link">
+    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Ver todos os artigos
+  </a>
+  <div>
+    <span class="article-cat-badge">SEO · Marca · Estratégia</span>
+  </div>
+  <h1>Por que o SEO sozinho já não sustenta uma marca B2B, e o que o Google passou a recompensar</h1>
+  <div class="article-meta-bar">
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span class="author-name">Jacqueline Alves</span>
+    </span>
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      28 de outubro de 2026
+    </span>
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      15 min de leitura
+    </span>
+  </div>
+  <div class="share-bar">
+    <span class="share-label">Compartilhar:</span>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://orbitandonomarketing.com.br/insights/seo-nao-basta-confianca-audiencia-b2b" target="_blank" class="share-btn">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://orbitandonomarketing.com.br/insights/seo-nao-basta-confianca-audiencia-b2b&text=Por+que+o+SEO+sozinho+j%C3%A1+n%C3%A3o+sustenta+uma+marca+B2B" target="_blank" class="share-btn">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      X / Twitter
+    </a>
+    <a href="mailto:?subject=Artigo: Por que o SEO sozinho já não sustenta uma marca B2B&body=Achei esse artigo interessante: https://orbitandonomarketing.com.br/insights/seo-nao-basta-confianca-audiencia-b2b" class="share-btn">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      E-mail
+    </a>
+    <button class="share-btn" onclick="copyLink()">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      Copiar link
+    </button>
+  </div>
+</div>
+
+<!-- ARTICLE OUTER: sidebar TOC + content -->
+<div class="article-outer">
+
+  <!-- TABLE OF CONTENTS, sidebar esquerda -->
+  <nav class="toc" aria-label="Índice do artigo">
+    <p class="toc-title">O que você vai entender neste artigo</p>
+    <ol>
+      <li><a href="#trafego-emprestado">O tráfego emprestado do último clique</a></li>
+      <li><a href="#helpful-content">O que o Helpful Content Update deixou claro</a></li>
+      <li><a href="#confianca-pessoas">Confiança: pessoas antes das marcas</a></li>
+      <li><a href="#ecossistema-fidelidade">O ecossistema de fidelidade do Google</a></li>
+      <li><a href="#descoberta-b2b">A descoberta começa antes da busca</a></li>
+      <li><a href="#o-que-fazer">O que fazer em empresas B2B</a></li>
+      <li><a href="#ciclo-de-vida">Publicar é o começo do ciclo</a></li>
+      <li><a href="#consultoria">SEO acompanhado de marketing</a></li>
+      <li><a href="#faq">Perguntas frequentes</a></li>
+    </ol>
+  </nav>
+
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <p>Seu site B2B depende quase só do Google para ser encontrado? Então a sua marca está mais exposta do que o relatório de tráfego mostra. O SEO continua sendo um canal enorme, mas deixou de bastar sozinho para construir uma marca: <strong>o Google passou a recompensar confiança, e a confiança agora é medida por sinais que acontecem fora do seu site</strong>, como pessoas reconhecidas associadas à empresa, menções de terceiros, busca pelo nome da marca e uma audiência que volta por vontade própria.</p>
+
+    <p>A busca segue gigante. O Google diz processar mais de 5 trilhões de buscas por ano. Mas, segundo o Pew Research Center, mais de um terço das páginas publicadas depois do lançamento do ChatGPT já mostra sinais de autoria por IA. Na leitura de Harry Clarkson-Bennett, o Google reagiu a esse volume privilegiando quem tem presença comprovada além da busca. O site independente HouseFresh, um caso famoso, perdeu mais de 90% do tráfego orgânico depois do Helpful Content Update, saindo de mais de 4 mil visitantes por dia em setembro de 2023 para cerca de 200 no início de 2024.</p>
+
+    <p>Clarkson-Bennett, diretor de SEO do The Telegraph, organizou esse diagnóstico em outubro de 2026 num texto publicado na sua newsletter Leadership in SEO e republicado pelo Search Engine Journal. A conclusão dele é provocadora para quem vive de SEO: o canal mais lucrativo dos últimos 15 anos já não constrói marca sozinho, e isso é uma boa notícia para quem sabe fazer marketing. Bora entender por quê? ☕️</p>
+
+    <div class="tldr">
+      <p class="tldr-title">TL;DR</p>
+      <ul>
+        <li>A atribuição de último clique fez o SEO parecer o herói de tudo, e muitas empresas construíram resultado sobre um tráfego que era emprestado.</li>
+        <li>Desde o Helpful Content Update, o Google vem rebaixando sites feitos só para a busca. Quem não tinha presença em outros canais ficou exposto.</li>
+        <li>Para Clarkson-Bennett, o algoritmo do Google funciona como uma aproximação de confiança, e as pessoas confiam em pessoas. Perfis sociais, criadores e vídeo já aparecem dentro da busca e do Discover.</li>
+        <li>O Google está montando um ecossistema de fidelidade (fontes preferidas, seguir marcas e criadores, vínculo de assinaturas) que recompensa quem tem audiência própria.</li>
+        <li>Para empresas B2B, a prioridade passa a ser fidelidade e engajamento como métricas principais, medição de impacto incremental e distribuição planejada para cada conteúdo publicado.</li>
+      </ul>
+    </div>
+
+    <h2 id="trafego-emprestado">Por que o SEO pareceu o canal mais lucrativo, e o que estava escondido nisso</h2>
+
+    <p>Clarkson-Bennett abre o texto com uma afirmação que pouca gente de marketing contestaria: <em>"O SEO foi o canal mais lucrativo, com folga, nos últimos 15 anos."</em> Ele foi o canal do dinheiro, aquele que os executivos aprenderam a valorizar. E continua relevante. Segundo os dados de clickstream que o autor analisou, a maior parte das jornadas de compra, guiadas por IA ou não, passa pelo Google em algum momento, principalmente perto da decisão.</p>
+
+    <p>O problema está em quanto desse mérito era real. A atribuição de último clique dá todo o crédito da venda ao canal que trouxe a última visita. Se o comprador conheceu a empresa num evento, leu um artigo de um executivo no LinkedIn, ouviu um podcast e, semanas depois, buscou o nome da marca no Google antes de pedir uma proposta, o relatório registra uma conversão orgânica. O SEO colheu o que outros canais plantaram.</p>
+
+    <table>
+      <thead>
+        <tr><th>O que o relatório de último clique mostra</th><th>O que aconteceu na jornada</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Conversão vinda de busca orgânica</td><td>O comprador conheceu a marca por indicação, conteúdo de um especialista ou evento, e usou o Google só para chegar ao site</td></tr>
+        <tr><td>Busca de marca como canal de aquisição</td><td>Busca de marca é consequência de um interesse criado antes, em outro lugar</td></tr>
+        <tr><td>Topo de funil "sem resultado"</td><td>O topo e o meio do funil prepararam a decisão, mas não receberam o último clique</td></tr>
+        <tr><td>Tráfego orgânico estável = marca saudável</td><td>Tráfego que depende de uma única plataforma, que pode mudar as regras a qualquer atualização</td></tr>
+      </tbody>
+    </table>
+
+    <p>O autor chama esse volume de tráfego de <strong>emprestado</strong>, e a palavra é precisa. Enquanto o Google mandava visitas generosamente para qualquer página bem otimizada, muita empresa construiu o modelo de aquisição inteiro sobre esse fluxo, sem marca, audiência ou distribuição própria por trás. A pergunta que esse cenário deixa para qualquer gestor B2B é incômoda: se o Google cortasse pela metade o tráfego orgânico do seu site amanhã, quantos clientes continuariam chegando até você? Para muita gente, a resposta sincera é "não faço ideia".</p>
+
+    <h2 id="helpful-content">O que o Helpful Content Update deixou claro</h2>
+
+    <p>O ponto de virada, para Clarkson-Bennett, foi o Helpful Content Update, de setembro de 2023. Ele fala com conhecimento de causa: um pequeno site de conteúdo e comparação de preços que ele mantinha foi derrubado pela atualização. E ele admite que, de modo geral, o Google estava certo em fazer isso. O alvo eram sites construídos primeiro para a busca, feitos por gente muito competente em SEO e sem nenhuma presença relevante fora dela. Conteúdo criado para mecanismos de busca foi dizimado, e houve bastante dano colateral no caminho.</p>
+
+    <h3>O caso HouseFresh</h3>
+
+    <p>O dano colateral mais citado é o do HouseFresh, um site independente de avaliações de purificadores de ar. As diretrizes do próprio site falam em mais de 130 produtos testados em casa e nenhuma avaliação patrocinada. É o tipo de conteúdo em primeira mão, especializado e original que as diretrizes do Google dizem querer. Mesmo assim, segundo o próprio HouseFresh, o Helpful Content Update tirou mais de 90% do tráfego vindo da busca. A atualização de março de 2024 terminou o serviço, colocando conteúdo genérico de fóruns acima das avaliações do site.</p>
+
+    <p>O detalhe que mais diz sobre o momento: segundo dados da Similarweb citados no artigo, a busca ainda representa quase 64% do tráfego total do HouseFresh. A dependência continuou. O que o site fez para sobreviver foi construir um canal no YouTube, que o autor descreve como perto da marca de 30 mil, uma audiência que nenhuma atualização de algoritmo consegue derrubar. O Retro Dodo, site de games retrô, perdeu 85% do tráfego orgânico no mesmo período.</p>
+
+    <table>
+      <thead>
+        <tr><th>Site dependente só da busca</th><th>Site com presença além da busca</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Uma atualização de algoritmo derruba a aquisição inteira</td><td>Uma atualização derruba um canal, e os outros sustentam a operação</td></tr>
+        <tr><td>Autoridade declarada nas próprias páginas</td><td>Autoridade confirmada por terceiros, pessoas e audiência</td></tr>
+        <tr><td>Sem forma de avisar o público sobre conteúdo novo</td><td>Newsletter, perfis sociais e comunidade avisam diretamente</td></tr>
+        <tr><td>Recuperação depende da próxima atualização do Google</td><td>Recuperação depende de trabalho que a empresa controla</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Grandes marcas no topo</h3>
+
+    <p>Enquanto sites independentes caíam, os grandes publishers se mostraram resilientes e chegaram a registrar receitas recordes com afiliados. A atualização de Site Reputation Abuse, que veio depois, tentou corrigir o abuso de domínios fortes que hospedavam conteúdo de terceiros, como cupons e apostas, mas o Google optou por ações manuais em seções específicas dos sites em vez de rebaixar o domínio inteiro. A leitura de Clarkson-Bennett é direta: <em>"O Google claramente favoreceu as grandes marcas."</em></p>
+
+    <p>Dá para discutir se isso é justo, e o próprio autor critica a queda de qualidade dos resultados. Mas, para quem planeja marketing, a conclusão prática importa mais do que a indignação. O Google premiou sinais de marca: reconhecimento, busca pelo nome, presença consolidada fora da busca. Esses sinais podem ser construídos por empresas menores, só que levam tempo e não saem de um checklist de SEO.</p>
+
+    <h2 id="confianca-pessoas">O algoritmo como aproximação de confiança: as pessoas vêm antes das marcas</h2>
+
+    <p>A frase central do artigo é esta: <em>"O algoritmo inteiro do Google é uma aproximação de confiança. E em quem as pessoas confiam? Em pessoas."</em> O raciocínio por trás dela é simples. Com um volume enorme de conteúdo gerado em escala, ficou mais difícil para o Google distinguir qualidade lendo só o texto da página. Os sinais que sobram são externos: quem escreveu, quem cita, quem procura, quem volta.</p>
+
+    <p>Clarkson-Bennett chama isso de forma final do E-E-A-T (experiência, especialização, autoridade e confiabilidade, os sinais de qualidade que o Google descreve nas suas diretrizes): <em>"A forma final do E-E-A-T é a prova social, confirmada dentro e fora do site."</em> Na prática, isso significa tráfego direto e busca de marca robustos, engajamento real e corroboração de terceiros.</p>
+
+    <p>O Google já mostra esse movimento nos próprios produtos. O Search Console passou a mostrar como o conteúdo dos perfis sociais de uma marca aparece na busca, com a possibilidade de adicionar canais como Instagram, TikTok e X. No Discover, o Google anunciou em setembro de 2025 que os usuários podem seguir criadores, com conteúdo de X, Instagram e YouTube Shorts, e reportagens da Press Gazette apontam o Discover priorizando YouTube e X em relação a publishers. Para o autor, <em>"o Google sabe que a confiança migrou das marcas de veículo para as pessoas."</em></p>
+
+    <h3>O que isso significa para uma empresa B2B</h3>
+
+    <p>No B2B, a tradução mais clara desse movimento são os especialistas da própria empresa. Um diretor técnico que escreve com regularidade no LinkedIn, uma head de produto que dá entrevistas para publicações do setor, um fundador que participa de podcasts e eventos. Cada uma dessas presenças gera sinais que o Google e as IAs usam para avaliar se a empresa é confiável naquele tema.</p>
+
+    <p>Esse é o mesmo ponto que discuti no artigo sobre <a href="/insights/visibilidade-marca-respostas-ia-seo-geo-aeo">como SEO, GEO e AEO contribuem para a visibilidade da marca em respostas de IA</a>: autores identificados, histórico publicado e menções em fontes de terceiros são o que sustenta a autoridade de uma marca, tanto no Google quanto nos sistemas generativos. A diferença é que Clarkson-Bennett mostra o Google montando essa lógica dentro da própria interface de busca.</p>
+
+    <table>
+      <thead>
+        <tr><th>Sinal que a empresa controla no próprio site</th><th>Sinal que precisa vir de fora</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Página "Sobre" com histórico da empresa</td><td>Menções da empresa em publicações e eventos do setor</td></tr>
+        <tr><td>Autor identificado no artigo</td><td>Autor com perfil ativo, seguido e citado por outras pessoas</td></tr>
+        <tr><td>Depoimentos selecionados pela empresa</td><td>Avaliações e comentários espontâneos de clientes em canais independentes</td></tr>
+        <tr><td>Conteúdo otimizado para palavras-chave</td><td>Busca pelo nome da marca e visitas diretas crescendo</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="ecossistema-fidelidade">O Google está montando um ecossistema de fidelidade</h2>
+
+    <p>O argumento mais interessante do artigo, na minha leitura, é que nada disso é acidente. Clarkson-Bennett mostra uma sequência de recursos que o Google lançou nos últimos anos, todos apontando na mesma direção:</p>
+
+    <ul>
+      <li><strong>Fontes preferidas (Preferred Sources):</strong> o usuário escolhe sites que quer ver com mais frequência nas notícias principais.</li>
+      <li><strong>Seguir marcas e criadores:</strong> no Discover, o usuário acompanha perfis específicos, incluindo conteúdo de redes sociais.</li>
+      <li><strong>Vínculo de assinaturas:</strong> o Google reconhece quem é assinante de um veículo e prioriza esse conteúdo para essa pessoa.</li>
+      <li><strong>Perfis no Discover:</strong> uma presença da marca ou do criador dentro do próprio ecossistema do Google.</li>
+    </ul>
+
+    <p>Todos esses recursos recompensam a mesma coisa: <strong>ter uma audiência que escolhe você</strong>. O Google continua sendo um canal de descoberta, e um dos maiores que existem. Mas a camada de fidelidade que ele está construindo favorece quem já tem relação com o público, algo que uma página bem otimizada não constrói sozinha. Para quem vende para outras empresas, parte desses recursos ainda é mais visível em notícias e no Discover, mas a lógica de fundo é a mesma que rege a busca e as respostas de IA.</p>
+
+    <table>
+      <thead>
+        <tr><th>Lógica de tráfego</th><th>Lógica de fidelidade</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Meta principal: sessões e pageviews</td><td>Meta principal: pessoas que voltam, seguem e assinam</td></tr>
+        <tr><td>Cada visita é avulsa</td><td>Cada visita reforça uma relação que gera a próxima</td></tr>
+        <tr><td>Conteúdo publicado e deixado para o Google distribuir</td><td>Conteúdo distribuído pela própria empresa nas primeiras horas</td></tr>
+        <tr><td>Dependência de uma plataforma</td><td>Audiência própria que sobrevive a mudanças de plataforma</td></tr>
+        <tr><td>Crédito dado ao último clique</td><td>Medição do impacto incremental de cada ação</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="descoberta-b2b">A descoberta continua grande, e ela começa antes da busca</h2>
+
+    <p>Clarkson-Bennett deixa claro que a busca continua relevante. A descoberta por ela segue enorme: segundo um relatório da iPullRank do terceiro trimestre de 2026, 86% dos cliques no Google vão para sites que o usuário não mencionou na busca, e só 14% são buscas navegacionais (quando a pessoa digita o nome do site que quer visitar). Sobre mais de 5 trilhões de buscas por ano, isso é uma quantidade colossal de oportunidade de ser descoberto.</p>
+
+    <p>O que mudou é que ganhar essa descoberta exige sinais que a otimização da página sozinha não entrega. E o comportamento varia por público. A mesma iPullRank aponta que 52,3% das buscas de pessoas entre 18 e 24 anos terminam sem clique, contra 42,7% na faixa de 55 a 64 anos, e que o grupo de 55 a 64 anos tem sete vezes mais chance de clicar em um anúncio do que o grupo mais jovem.</p>
+
+    <p>Para empresas B2B, esse recorte etário tem implicação direta. Os decisores de compra mais seniores ainda clicam mais, inclusive em anúncios. Os profissionais mais jovens, que muitas vezes fazem a pesquisa inicial e montam a lista de fornecedores para o chefe aprovar, resolvem mais coisas sem sair da página de resultados ou das respostas de IA. A empresa precisa estar presente para os dois, e a presença para o segundo grupo depende mais de sinais de marca do que de posição no ranking.</p>
+
+    <p>Esse descompasso entre o que influencia e o que aparece no relatório foi o tema do artigo sobre <a href="/insights/comprador-b2b-ia-medicao-orcamento-2027">como medir a influência da IA e planejar o orçamento de 2027</a>. Clarkson-Bennett chega à mesma conclusão por outro caminho: medir pelo último clique esconde a contribuição do topo e do meio do funil, e o caminho é medir o impacto incremental de cada campanha.</p>
+
+    <h2 id="o-que-fazer">O que fazer: as recomendações adaptadas para empresas B2B</h2>
+
+    <p>O artigo fecha com seis recomendações. Adaptei cada uma para a realidade de empresas B2B no Brasil, onde times de marketing costumam ser pequenos e o LinkedIn, os eventos do setor e o WhatsApp têm peso grande na formação de reputação.</p>
+
+    <h3>1. Trate fidelidade como meta principal, e tráfego como meta secundária</h3>
+    <p>Clarkson-Bennett propõe colocar fidelidade e engajamento como indicadores principais e reduzir o peso do tráfego bruto. Para uma empresa B2B, isso se traduz em acompanhar inscritos na newsletter que abrem com regularidade, seguidores dos perfis da empresa e dos especialistas, visitas recorrentes ao blog e crescimento da busca pelo nome da marca. Um artigo com 300 leitores que voltam vale mais do que um com 3 mil visitas que nunca mais aparecem.</p>
+
+    <h3>2. Meça o impacto incremental</h3>
+    <p>Em vez de perguntar "qual canal levou o último clique?", pergunte "o que mudou depois desta ação?". Depois de um webinar, de uma pesquisa publicada ou de uma série de artigos de um especialista, acompanhe a variação na busca de marca, nas visitas diretas, nas oportunidades abertas e no que os leads dizem no campo "como nos conheceu?". O método é menos preciso do que um painel de atribuição, mas mede o que o painel não enxerga.</p>
+
+    <h3>3. Esteja onde o seu comprador é influenciado</h3>
+    <p>O autor recomenda construir perfis nas plataformas relevantes para o público e entregar valor real nelas. No B2B brasileiro, isso costuma significar LinkedIn (perfis pessoais dos especialistas, além da página da empresa), YouTube para conteúdo técnico mais longo, eventos e associações do setor, e grupos de WhatsApp e newsletters de nicho onde a categoria é discutida. Presença com dono, frequência e assunto definido. Perfil criado e abandonado envia o sinal oposto ao pretendido.</p>
+
+    <h3>4. Crie hábito</h3>
+    <p>Entender o dia a dia do público e encontrar formas de fazer parte dele. Para um comprador B2B, isso pode ser uma newsletter mensal com dados do setor, um relatório anual que ele espera, uma série de vídeos curtos respondendo às dúvidas que o comercial ouve toda semana. É o hábito que faz um leitor ocasional passar a procurar a marca pelo nome.</p>
+
+    <h3>5. Divulgue o seu produto</h3>
+    <p>Parece óbvio, e por isso mesmo é esquecido. Clarkson-Bennett recomenda contar às pessoas o que muda no produto e por quê. Empresas B2B costumam lançar funcionalidades, integrações e melhorias sem nenhum conteúdo que explique o impacto para o cliente. Cada uma dessas mudanças é uma oportunidade de conteúdo útil e de contato com a base.</p>
+
+    <h3>6. Construa distribuição própria</h3>
+    <p>Distribuição protege contra o risco de plataforma e melhora o desempenho de cada publicação. É a lição do HouseFresh: a perda da busca foi grande demais para qualquer outro canal cobrir no curto prazo, e mesmo assim o YouTube deu ao site uma audiência que nenhuma atualização consegue tirar.</p>
+
+    <table>
+      <thead>
+        <tr><th>Recomendação</th><th>Como começar numa empresa B2B pequena</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Fidelidade como meta</td><td>Adicionar ao relatório mensal: assinantes ativos da newsletter, busca de marca e visitas recorrentes</td></tr>
+        <tr><td>Impacto incremental</td><td>Registrar a data de cada ação relevante e comparar busca de marca e oportunidades nas semanas seguintes</td></tr>
+        <tr><td>Presença onde o comprador está</td><td>Escolher dois especialistas internos para publicar com regularidade no LinkedIn</td></tr>
+        <tr><td>Hábito</td><td>Uma newsletter mensal com dados ou análise do setor, sempre no mesmo dia</td></tr>
+        <tr><td>Divulgar o produto</td><td>Um conteúdo explicando o impacto de cada lançamento relevante para o cliente</td></tr>
+        <tr><td>Distribuição própria</td><td>Plano de divulgação definido antes de publicar cada peça</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="ciclo-de-vida">Publicar é o começo do ciclo de vida do conteúdo</h2>
+
+    <p>Uma ideia do artigo que eu gostaria de ver em todo calendário editorial: tratar a publicação como o início do ciclo de vida de um conteúdo. Durante anos, o fluxo de muitos times B2B foi escrever, otimizar, publicar e esperar o Google fazer o resto. Clarkson-Bennett lembra que o Google já não faz todo o trabalho pesado sozinho. O conteúdo precisa de distribuição própria e de um engajamento acima do esperado para ganhar tração.</p>
+
+    <p>Ele menciona a ideia da "golden hour", a primeira hora depois da publicação, como momento de planejar a distribuição desde cedo. Para uma empresa B2B, isso pode ser simples: o artigo sai junto com o post do especialista que o escreveu, a newsletter da semana, o envio para clientes que perguntaram sobre o tema e o material para o time comercial usar nas conversas. Nada disso exige orçamento grande. Exige que alguém pense na distribuição antes de clicar em "publicar".</p>
+
+    <p>Esse ponto conversa com um dado que analisei no artigo sobre <a href="/insights/blog-b2b-resultados-pesquisa-orbit-media-2026">por que os resultados dos blogs despencaram em 2026</a>: na pesquisa da Orbit Media, colaboração com especialistas e canais de promoção menos óbvios aparecem entre as práticas mais associadas a resultados fortes, e entre as mais abandonadas. O diagnóstico de Clarkson-Bennett explica parte do porquê: o canal que dispensava essas práticas está deixando de dispensá-las.</p>
+
+    <p>Uma ressalva honesta sobre o texto original: o autor escreve a partir da experiência de um grande publisher britânico, e alguns recursos que ele cita, como fontes preferidas e perfis no Discover, têm mais peso em notícias do que em buscas B2B. Alguns números do artigo, como a preferência de jovens por vídeo e áudio, aparecem sem fonte, e por isso ficaram fora deste texto. A direção geral, porém, coincide com o que outras fontes mostram sobre visibilidade em busca e em IA: autoridade vem cada vez mais de fora do site.</p>
+
+    <h2 id="consultoria">SEO continua essencial, e precisa vir acompanhado de marketing</h2>
+
+    <p>A frase que resume o artigo de Clarkson-Bennett é dura para quem trabalha só com SEO técnico: o canal precisa de alguém que entenda audiência, distribuição e marca para continuar rendendo. Para empresas B2B, a consequência prática é integrar o SEO a um programa que construa presença, autoridade das pessoas e audiência própria, e medir esse programa com indicadores de fidelidade e impacto incremental.</p>
+
+    <p>A <a href="/consultoria-b2b-saas">Consultoria Contínua para B2B SaaS</a> da Orbitando no Marketing trabalha exatamente nessa integração. Cuida do SEO técnico e do conteúdo, organiza a presença dos especialistas da empresa nos canais onde o comprador se informa, planeja a distribuição de cada peça e acompanha mês a mês a busca de marca, o engajamento e a visibilidade nas respostas de IA. O objetivo é reduzir a dependência de uma única plataforma enquanto o orgânico continua crescendo.</p>
+
+    <p>Se você prefere começar entendendo onde a sua marca está hoje, a <a href="/auditoria-visibilidade-ia">Auditoria de Visibilidade em IA + SEO Técnico</a> mapeia como a empresa aparece no Google e nas IAs generativas e quais sinais de autoridade estão faltando.</p>
+
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <h2 class="faq-title" id="faq">Perguntas frequentes</h2>
+
+      <details>
+        <summary>O SEO ainda vale a pena para empresas B2B?</summary>
+        <div class="faq-answer">
+          <p>Sim. O Google segue processando mais de 5 trilhões de buscas por ano, e a maioria das jornadas de compra passa por ele em algum momento. O que mudou é que posição e otimização de página já não bastam para sustentar a marca. O SEO rende mais quando vem junto com presença de especialistas, menções de terceiros e audiência própria.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>O que foi o Helpful Content Update e por que ele importa?</summary>
+        <div class="faq-answer">
+          <p>Foi a atualização de setembro de 2023 em que o Google passou a rebaixar sites criados principalmente para ranquear, com pouca presença fora da busca. Sites como o HouseFresh perderam mais de 90% do tráfego orgânico. Ela importa porque mostrou que depender de um único canal é um risco real de negócio.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>O que significa dizer que o algoritmo do Google é uma aproximação de confiança?</summary>
+        <div class="faq-answer">
+          <p>É a leitura de Harry Clarkson-Bennett, diretor de SEO do The Telegraph: com tanto conteúdo gerado em escala, o Google usa cada vez mais sinais externos para avaliar qualidade, como quem escreveu, quem cita a marca, quantas pessoas buscam pelo nome dela e quantas voltam. Ele chama isso de forma final do E-E-A-T: prova social confirmada dentro e fora do site.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Como uma empresa B2B constrói sinais de confiança fora do site?</summary>
+        <div class="faq-answer">
+          <p>Com especialistas internos publicando com regularidade no LinkedIn, participação em eventos, podcasts e publicações do setor, avaliações espontâneas de clientes, pesquisas próprias que outros citam e uma newsletter que cria hábito. Cada uma dessas frentes gera menções, buscas pelo nome da marca e visitas diretas.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Que métricas usar no lugar do tráfego orgânico?</summary>
+        <div class="faq-answer">
+          <p>Clarkson-Bennett propõe fidelidade e engajamento como indicadores principais: leitores que voltam, assinantes ativos da newsletter, seguidores, busca pelo nome da marca e visitas diretas. Para avaliar campanhas, a recomendação é medir o impacto incremental, comparando esses sinais e as oportunidades comerciais antes e depois de cada ação.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Preferred Sources e os perfis no Discover afetam empresas B2B?</summary>
+        <div class="faq-answer">
+          <p>Diretamente, esses recursos têm mais peso em notícias e no Discover do que em buscas B2B. A importância deles está na direção que indicam: o Google está construindo uma camada que recompensa marcas e pessoas que o público escolhe acompanhar, e essa lógica também orienta a busca e as respostas de IA.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- SHARE BOTTOM -->
+    <div style="margin-top:2.5rem;padding-top:1.75rem;border-top:1px solid var(--border)">
+      <p style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:.75rem">Compartilhar este artigo</p>
+      <div class="share-bar" style="justify-content:flex-start">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://orbitandonomarketing.com.br/insights/seo-nao-basta-confianca-audiencia-b2b" target="_blank" class="share-btn">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=https://orbitandonomarketing.com.br/insights/seo-nao-basta-confianca-audiencia-b2b" target="_blank" class="share-btn">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X / Twitter
+        </a>
+        <a href="mailto:?subject=Artigo: Por que o SEO sozinho já não sustenta uma marca B2B&body=https://orbitandonomarketing.com.br/insights/seo-nao-basta-confianca-audiencia-b2b" class="share-btn">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          E-mail
+        </a>
+        <button class="share-btn" onclick="copyLink()">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          Copiar link
+        </button>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<!-- RELATED ARTICLES -->
+<div class="related-section">
+  <div class="related-inner">
+    <h3 class="related-title">Artigos relacionados</h3>
+    <div class="related-grid">
+      <div class="related-card">
+        <p class="rc-cat">GEO · Mensuração</p>
+        <h4><a href="/insights/comprador-b2b-ia-medicao-orcamento-2027">O comprador B2B já decidiu antes de falar com você: como medir a influência da IA e planejar o orçamento de 2027</a></h4>
+        <a href="/insights/comprador-b2b-ia-medicao-orcamento-2027" class="rc-read">Ler artigo</a>
+      </div>
+      <div class="related-card">
+        <p class="rc-cat">Conteúdo · SEO · IA</p>
+        <h4><a href="/insights/blog-b2b-resultados-pesquisa-orbit-media-2026">Seu blog ainda dá resultado? O que a pesquisa da Orbit Media com 1.042 profissionais mostra sobre conteúdo em 2026</a></h4>
+        <a href="/insights/blog-b2b-resultados-pesquisa-orbit-media-2026" class="rc-read">Ler artigo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER BAND -->
+<div class="newsletter-band">
+  <div class="newsletter-form-wrap">
+    <div data-reach-form="22c061ca-1ddf-4b0a-a9a9-52e1021274ab"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-name">Orbitando no Marketing</div>
+      <div class="footer-logo-tag">SEO · GEO · AEO</div>
+      <p>Consultoria estratégica de marketing digital para empresas B2B que querem aparecer no Google e nas IAs generativas. Por Jacqueline Alves.</p>
+    </div>
+    <div>
+      <h4>Para profissionais</h4>
+      <ul>
+        <li><a href="/guia-marketing-digital">Guia para Iniciantes</a></li>
+        <li><a href="/modelo-curriculo">Modelo de Currículo</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Para empresas B2B</h4>
+      <ul>
+        <li><a href="/auditoria-visibilidade-ia">Auditoria de Visibilidade em IA</a></li>
+        <li><a href="/consultoria-b2b-saas">Consultoria Contínua B2B SaaS</a></li>
+        <li><a href="/desenvolvimento-sites">Desenvolvimento de Sites</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Me conheça</h4>
+      <ul>
+        <li><a href="/sobre-mim">Sobre mim</a></li>
+        <li><a href="/cases-de-sucesso">Cases de sucesso</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Newsletter</h4>
+      <ul>
+        <li><a href="https://orbitandonomarketing.com.br/insights/" target="_blank">Orbitando no Marketing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Fale comigo</h4>
+      <ul>
+        <li><a href="/contato">Contato</a></li>
+        <li><a href="https://www.linkedin.com/in/jacquelinealvesoliveira" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Orbitando no Marketing. Todos os direitos reservados.</p>
+    <p><a href="/politica-privacidade" style="color:var(--muted);text-decoration:none;transition:color .15s" onmouseover="this.style.color='#836FFF'" onmouseout="this.style.color='var(--muted)'">Política de Privacidade</a></p>
+  </div>
+</footer>
+
+<script>
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
+function toggleMega(e){
+  e.stopPropagation();
+  var m=document.getElementById('megaItem');
+  m.classList.toggle('open');
+}
+document.addEventListener('click',function(){
+  var m=document.getElementById('megaItem');
+  if(m)m.classList.remove('open');
+});
+function copyLink(){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    const btns=document.querySelectorAll('.share-btn');
+    btns.forEach(b=>{if(b.textContent.includes('Copiar')){const orig=b.innerHTML;b.innerHTML='<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Copiado!';setTimeout(()=>{b.innerHTML=orig;},2000);}});
+  });
+}
+</script>
+<script>
+(function(){
+  var MAX_TRIES=3, RETRY_MS=3000, tries=0;
+  function checkAndInit(){
+    if(window.__reachEmbed && typeof window.__reachEmbed.init==='function'){
+      window.__reachEmbed.init();
+    }
+  }
+  function loadReach(){
+    var old=document.querySelector('script[data-reach-script]');
+    if(old) old.parentNode.removeChild(old);
+    var s=document.createElement('script');
+    s.setAttribute('data-reach-script','1');
+    s.src='https://cdn-reach.hostinger.com/js/embed.js?_='+Date.now();
+    s.onload=function(){
+      setTimeout(function(){
+        checkAndInit();
+        var el=document.querySelector('[data-reach-form]');
+        if(el && !el.querySelector('iframe') && tries<MAX_TRIES){
+          tries++;
+          setTimeout(loadReach, RETRY_MS);
+        }
+      }, 800);
+    };
+    s.onerror=function(){
+      if(tries<MAX_TRIES){ tries++; setTimeout(loadReach, RETRY_MS); }
+    };
+    document.body.appendChild(s);
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded', loadReach);
+  } else {
+    loadReach();
+  }
+})();
+</script>
+</body>
+</html>
