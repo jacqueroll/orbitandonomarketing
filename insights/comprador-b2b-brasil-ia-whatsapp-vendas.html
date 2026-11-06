@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comprador B2B no Brasil e IA: como adaptar site e vendas</title>
+<meta name="description" content="O comprador B2B brasileiro chega à empresa já pesquisado pela IA. Veja como adaptar site, WhatsApp, call de descoberta e medição ao contexto do Brasil.">
+<meta name="author" content="Jacqueline Alves">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://orbitandonomarketing.com.br/insights/comprador-b2b-brasil-ia-whatsapp-vendas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://orbitandonomarketing.com.br/insights/comprador-b2b-brasil-ia-whatsapp-vendas">
+<meta property="og:title" content="Comprador B2B no Brasil e IA: como adaptar site e vendas">
+<meta property="og:description" content="O comprador B2B brasileiro chega à empresa já pesquisado pela IA. Veja como adaptar site, WhatsApp, call de descoberta e medição ao contexto do Brasil.">
+<link rel="icon" type="image/png" href="/Logo/favicon-512.png">
+<link rel="shortcut icon" href="/Logo/favicon-512.png">
+<link rel="apple-touch-icon" href="/Logo/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#191970;--navy-dark:#141459;--slate-dark:#483D8B;
+  --slate:#6A5ACD;--lilac:#836FFF;--ghost:#F8F8FF;
+  --light:#f0eeff;--light2:#f8f7ff;--border:#e8e6f8;
+  --muted:#9896CC;--text:#191970;--white:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--ghost);line-height:1.75}
+a{color:var(--slate);text-decoration:none}
+a:hover{color:var(--slate-dark)}
+img{max-width:100%;display:block}
+
+/* NAV */
+nav{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.nav-logo svg{width:36px;height:36px;flex-shrink:0}
+.nav-logo-name{display:block;font-size:.95rem;font-weight:700;color:var(--ghost);line-height:1.2}
+.nav-logo-tag{display:block;font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
+.nav-links a,.nav-links span{font-size:.88rem;font-weight:500;color:var(--ghost);opacity:.85;text-decoration:none;cursor:pointer;transition:opacity .15s}
+.nav-links a:hover,.nav-links span:hover{opacity:1}
+.nav-cta{background:var(--lilac)!important;color:var(--navy)!important;opacity:1!important;padding:.45rem 1.1rem;border-radius:6px;font-weight:700!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--ghost);border-radius:2px}
+
+/* MEGA MENU */
+.has-mega{position:static}
+.mega-menu{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy-dark);border-top:2px solid var(--lilac);box-shadow:0 16px 48px rgba(0,0,0,.45);z-index:300;padding:2rem}
+.has-mega.open .mega-menu{display:block}
+.mega-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.mega-col-title{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid rgba(131,111,255,.3)}
+.mega-item{display:flex;align-items:flex-start;gap:.75rem;padding:.75rem;border-radius:8px;text-decoration:none;transition:background .15s;margin-bottom:.25rem}
+.mega-item:hover{background:rgba(131,111,255,.12)}
+.mega-item-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.mega-item-text strong{display:block;font-size:.88rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.mega-item-text span{font-size:.78rem;color:var(--muted);line-height:1.4}
+.mega-badge{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(131,111,255,.25);color:var(--lilac);padding:.15rem .45rem;border-radius:4px;vertical-align:middle}
+
+/* ARTICLE LAYOUT */
+.article-header{background:var(--navy);padding:3.5rem 2rem 3rem;text-align:center}
+.back-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:600;color:var(--muted);margin-bottom:1.5rem;transition:color .15s}
+.back-link:hover{color:#F8F8FF}
+.back-link svg{transition:transform .15s}
+.back-link:hover svg{transform:translateX(-3px)}
+.article-cat-badge{display:inline-block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--lilac);background:rgba(131,111,255,.15);border:1px solid rgba(131,111,255,.35);padding:.28rem .8rem;border-radius:6px;margin-bottom:1rem}
+.article-header h1{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:700;color:#F8F8FF;line-height:1.15;max-width:760px;margin:0 auto 1.25rem}
+.article-meta-bar{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;font-size:.82rem;color:var(--muted);margin-bottom:1.5rem}
+.article-meta-bar span{display:flex;align-items:center;gap:.35rem}
+.article-meta-bar .author-name{font-weight:700;color:rgba(248,248,255,.88)}
+
+/* SHARE BUTTONS */
+.share-bar{display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap;margin-bottom:.5rem}
+.share-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.share-btn{display:inline-flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:600;padding:.35rem .9rem;border-radius:7px;border:1px solid rgba(131,111,255,.35);background:rgba(131,111,255,.1);transition:all .15s;cursor:pointer;text-decoration:none;font-family:'Plus Jakarta Sans',sans-serif}
+button.share-btn{color:rgba(248,248,255,.82)!important;-webkit-appearance:none;appearance:none;background:rgba(131,111,255,.12);border:1px solid rgba(131,111,255,.4)}
+.share-btn:not(button){color:rgba(248,248,255,.75)}
+.share-btn:hover{color:#F8F8FF!important;background:rgba(131,111,255,.28);border-color:var(--lilac)}
+button.share-btn:hover{color:#F8F8FF!important;background:rgba(131,111,255,.28);border-color:var(--lilac)}
+.article-body button.share-btn{color:var(--slate)!important;background:rgba(106,90,205,.08);border-color:rgba(106,90,205,.3)}
+.article-body button.share-btn:hover{color:var(--slate-dark)!important;background:rgba(106,90,205,.18);border-color:var(--slate)}
+
+/* ARTICLE OUTER: sidebar TOC + content */
+.article-outer{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:240px 1fr;gap:3rem;align-items:start}
+
+/* TABLE OF CONTENTS, sidebar */
+.toc{position:sticky;top:88px;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem}
+.toc-title{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:.9rem}
+.toc ol{padding-left:1.1rem}
+.toc li{font-size:.82rem;line-height:1.45;margin-bottom:.55rem}
+.toc li a{color:var(--slate);font-weight:500}
+.toc li a:hover{color:var(--slate-dark)}
+
+/* ARTICLE BODY */
+.article-body h2{font-size:clamp(1.25rem,2.2vw,1.7rem);font-weight:700;color:var(--navy);margin:2.75rem 0 1rem;line-height:1.22}
+.article-body h3{font-size:1.1rem;font-weight:700;color:var(--slate);margin:1.75rem 0 .65rem;line-height:1.4}
+.article-body p{font-size:1rem;line-height:1.8;color:var(--text);margin-bottom:1.25rem}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.25rem}
+.article-body li{font-size:1rem;line-height:1.75;color:var(--text);margin-bottom:.4rem}
+.article-body strong{font-weight:700}
+.article-body em{font-style:italic}
+.article-body a{color:var(--slate);font-weight:600}
+.article-body a:hover{color:var(--slate-dark)}
+
+/* TABLES */
+.article-body table{width:100%;border-collapse:collapse;margin:1.5rem 0 2rem;font-size:.9rem}
+.article-body th{background:var(--navy);color:#F8F8FF;padding:.75rem 1rem;text-align:left;font-weight:700}
+.article-body td{padding:.7rem 1rem;border-bottom:1px solid var(--border)}
+.article-body tr:nth-child(even) td{background:var(--light2)}
+.article-body th:first-child{border-radius:8px 0 0 0}
+.article-body th:last-child{border-radius:0 8px 0 0}
+
+/* ACCENT BAR (callout) */
+.accent-bar{border-left:4px solid var(--lilac);background:var(--light);border-radius:0 8px 8px 0;padding:1rem 1.5rem;margin:1.5rem 0}
+.accent-bar p{margin-bottom:0;font-size:.95rem}
+
+/* CTA SECTION */
+.cta-section{background:linear-gradient(135deg,var(--slate-dark),var(--slate));border-radius:14px;padding:2.25rem 2rem;margin:3rem 0;text-align:center}
+.cta-section h2{color:#F8F8FF;font-size:1.5rem;margin-bottom:.75rem}
+.cta-section p{color:rgba(248,248,255,.78);max-width:480px;margin:0 auto 1.5rem;font-size:.95rem}
+.btn-cta{display:inline-block;background:#F8F8FF;color:var(--navy);padding:.75rem 2rem;border-radius:8px;font-weight:700;font-size:.92rem}
+.btn-cta:hover{opacity:.9;color:var(--navy)}
+
+/* FAQ */
+.faq-section{margin:2.5rem 0}
+.faq-title{font-size:clamp(1.25rem,2vw,1.6rem);font-weight:700;color:var(--navy);margin-bottom:1.25rem}
+details{border:1px solid var(--border);border-radius:10px;margin-bottom:.75rem;overflow:hidden}
+details[open]{border-color:var(--lilac)}
+summary{padding:1rem 1.25rem;font-size:.95rem;font-weight:700;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:var(--white)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'';width:18px;height:18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%236A5ACD' stroke-width='2.5' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-size:contain;background-repeat:no-repeat;flex-shrink:0;transition:transform .2s}
+details[open] summary::after{transform:rotate(180deg)}
+.faq-answer{padding:1rem 1.25rem 1.25rem;background:var(--light2);font-size:.92rem;line-height:1.7;color:var(--text);border-top:1px solid var(--border)}
+.faq-answer p{margin-bottom:.75rem}
+.faq-answer p:last-child{margin-bottom:0}
+
+/* RELATED ARTICLES */
+.related-section{background:var(--white);border-top:1px solid var(--border);padding:2.5rem 2rem}
+.related-inner{max-width:760px;margin:0 auto}
+.related-title{font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:1.25rem}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.related-card{background:var(--ghost);border:1px solid var(--border);border-radius:10px;padding:1.1rem;transition:box-shadow .15s}
+.related-card:hover{box-shadow:0 4px 16px rgba(25,25,112,.08)}
+.related-card .rc-cat{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--lilac);margin-bottom:.4rem}
+.related-card h4{font-size:.88rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem}
+.related-card h4 a{color:var(--navy)}
+.related-card h4 a:hover{color:var(--slate)}
+.related-card .rc-read{font-size:.78rem;font-weight:600;color:var(--slate)}
+
+/* NEWSLETTER BAND */
+.newsletter-band{background:linear-gradient(135deg,var(--slate-dark),var(--slate));padding:2.5rem 2rem;text-align:center}
+.newsletter-form-wrap{max-width:480px;margin:0 auto}
+
+/* FOOTER */
+footer{background:var(--navy-dark);color:var(--ghost);padding:4rem 2rem 2rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+footer h4{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem}
+footer ul{list-style:none}
+footer ul li{margin-bottom:.5rem}
+footer ul a{font-size:.88rem;color:#C8C5F0;text-decoration:none;transition:color .15s}
+footer ul a:hover{color:var(--lilac)}
+.footer-logo-name{font-size:1rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.footer-logo-tag{font-size:.65rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.85rem}
+footer p{font-size:.85rem;color:var(--muted);line-height:1.6}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:.8rem;color:var(--muted)}
+
+/* MOBILE */
+@media(max-width:960px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--navy);padding:1rem 2rem;gap:1rem;align-items:flex-start}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  .mega-menu,.dropdown-menu{position:static;border-top:none;box-shadow:none;padding:.75rem 0}
+  .article-outer{grid-template-columns:1fr;gap:0;padding:2rem 1.25rem}
+  .toc{position:static;margin-bottom:2rem}
+  .related-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .nav-inner{padding:0 1rem}
+  .nav-logo-tag{display:none}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+
+/* TL;DR */
+.tldr{background:var(--white);border:1px solid var(--border);border-top:4px solid var(--lilac);border-radius:12px;padding:1.25rem 1.5rem;margin:1.75rem 0 2rem}
+.tldr-title{font-size:.72rem!important;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--slate)!important;margin-bottom:.6rem!important}
+.tldr ul{margin-bottom:0}
+.tldr li{font-size:.94rem}
+</style>
+<script type="application/ld+json">
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "O comprador B2B brasileiro já pesquisou com a IA: como adaptar site, WhatsApp e time comercial",
+  "description": "O comprador B2B brasileiro chega à empresa já pesquisado pela IA. Veja como adaptar site, WhatsApp, call de descoberta e medição ao contexto do Brasil.",
+  "datePublished": "2026-11-05",
+  "dateModified": "2026-11-05",
+  "inLanguage": "pt-BR",
+  "mainEntityOfPage": "https://orbitandonomarketing.com.br/insights/comprador-b2b-brasil-ia-whatsapp-vendas",
+  "author": {
+   "@type": "Person",
+   "name": "Jacqueline Alves",
+   "url": "https://orbitandonomarketing.com.br/sobre-mim"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Orbitando no Marketing",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://orbitandonomarketing.com.br/Logo/favicon-512.png"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Quantos brasileiros usam inteligência artificial?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Segundo a TIC Domicílios 2025, do Cetic.br, cerca de 50 milhões de brasileiros com 10 anos ou mais usam IA generativa, o equivalente a 32% dos usuários de internet. O uso chega a 69% na classe A e a 59% entre pessoas com ensino superior, perfil que inclui boa parte dos decisores de compras B2B."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Existe pesquisa sobre o uso de IA por compradores B2B no Brasil?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Até a publicação deste artigo, não encontramos uma pesquisa pública com metodologia clara feita só com compradores B2B brasileiros. Os dados disponíveis são de uso de IA pela população brasileira (Cetic.br, Acquia, Visa) e de estudos B2B internacionais, como os da 6sense e da Gartner."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Como adaptar o atendimento no WhatsApp para o comprador que pesquisou com IA?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Troque o menu genérico por uma pergunta aberta sobre o que a pessoa procura e o que já pesquisou, responda à dúvida específica antes de mandar material institucional e registre a origem do contato no CRM. Pergunte também se ela comparou com outras opções e quais."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Devo publicar preço no site de uma empresa B2B?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Publicar ao menos uma faixa de preço ou o que define o valor ajuda o comprador informado a confirmar se a sua empresa cabe no orçamento. A IA vai dar uma estimativa de qualquer forma, montada com o que encontrar. Publicar a informação correta garante que a estimativa seja baseada nos seus dados."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Como descobrir o que o ChatGPT e o Gemini dizem sobre a minha empresa?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Monte uma lista de 20 a 30 perguntas que o seu comprador faria, em português e com contexto brasileiro (nota fiscal, suporte em português, integração com ERPs locais), e teste todo mês no ChatGPT, Gemini, Copilot e AI Overviews. Registre quem é citado, o que é dito sobre a sua empresa e quais fontes aparecem."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Como medir leads que chegam pela IA se eles não clicam em nada?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Pergunte. Inclua \"ChatGPT, Gemini ou outra IA\" no campo \"como nos conheceu?\" dos formulários, pergunte a origem na primeira conversa do WhatsApp e registre em uma etiqueta própria no CRM. Acompanhe também busca pelo nome da marca e tráfego direto, e configure o canal AI Assistant do GA4."
+    }
+   }
+  ]
+ }
+]
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="16" fill="none" stroke="#F8F8FF" stroke-width="2.5"/>
+        <circle cx="34" cy="12" r="7" fill="#6A5ACD"/>
+        <circle cx="11" cy="33" r="5" fill="#836FFF"/>
+        <circle cx="22" cy="22" r="5" fill="#F8F8FF"/>
+      </svg>
+      <div>
+        <span class="nav-logo-name">Orbitando no Marketing</span>
+        <span class="nav-logo-tag">SEO · GEO · AEO</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/sobre-mim">Sobre mim</a></li>
+      <li class="has-mega" id="megaItem">
+        <span onclick="toggleMega(event)">Soluções &#9662;</span>
+        <div class="mega-menu">
+          <div class="mega-grid">
+            <div>
+              <div class="mega-col-title">Para profissionais de marketing</div>
+              <a class="mega-item" href="/guia-marketing-digital">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128218;</div>
+                <div class="mega-item-text"><strong>Guia para Entrar no Mercado de Marketing Digital</strong><span>PDF completo com 15 capítulos para iniciantes e júniors</span></div>
+              </a>
+              <a class="mega-item" href="/modelo-curriculo">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128196;</div>
+                <div class="mega-item-text"><strong>Modelo de Currículo para Marketing Digital <span class="mega-badge">Grátis</span></strong><span>Template editável com guia de preenchimento</span></div>
+              </a>
+            </div>
+            <div>
+              <div class="mega-col-title">Para empresas B2B</div>
+              <a class="mega-item" href="/auditoria-visibilidade-ia">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128269;</div>
+                <div class="mega-item-text"><strong>Auditoria de Visibilidade em IA + SEO Técnico</strong><span>Diagnóstico completo de como sua marca aparece no Google e nas IAs</span></div>
+              </a>
+              <a class="mega-item" href="/consultoria-b2b-saas">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128200;</div>
+                <div class="mega-item-text"><strong>Consultoria Contínua para B2B SaaS</strong><span>Parceria recorrente para conteúdo, SEO e GEO/AEO</span></div>
+              </a>
+              <a class="mega-item" href="/desenvolvimento-sites">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128187;</div>
+                <div class="mega-item-text"><strong>Desenvolvimento de Sites para B2B</strong><span>Site institucional do zero, com alinhamento e entrega completa</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="/cases-de-sucesso">Cases</a></li>
+      <li><a href="/insights/" class="active">Insights</a></li>
+      <li><a href="https://orbitandonomarketing.com.br/insights/" target="_blank">Newsletter</a></li>
+      <li><a href="/contato" class="nav-cta">Contato</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ARTICLE HEADER -->
+<div class="article-header">
+  <a href="/insights/" class="back-link">
+    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Ver todos os artigos
+  </a>
+  <div>
+    <span class="article-cat-badge">GEO · Vendas B2B · Brasil</span>
+  </div>
+  <h1>O comprador B2B brasileiro já pesquisou com a IA: como adaptar site, WhatsApp e time comercial</h1>
+  <div class="article-meta-bar">
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span class="author-name">Jacqueline Alves</span>
+    </span>
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      5 de novembro de 2026
+    </span>
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      16 min de leitura
+    </span>
+  </div>
+  <div class="share-bar">
+    <span class="share-label">Compartilhar:</span>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://orbitandonomarketing.com.br/insights/comprador-b2b-brasil-ia-whatsapp-vendas" target="_blank" class="share-btn">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://orbitandonomarketing.com.br/insights/comprador-b2b-brasil-ia-whatsapp-vendas&text=O+comprador+B2B+brasileiro+j%C3%A1+pesquisou+com+a+IA" target="_blank" class="share-btn">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      X / Twitter
+    </a>
+    <a href="mailto:?subject=Artigo: O comprador B2B brasileiro já pesquisou com a IA&body=Achei esse artigo interessante: https://orbitandonomarketing.com.br/insights/comprador-b2b-brasil-ia-whatsapp-vendas" class="share-btn">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      E-mail
+    </a>
+    <button class="share-btn" onclick="copyLink()">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      Copiar link
+    </button>
+  </div>
+</div>
+
+<!-- ARTICLE OUTER: sidebar TOC + content -->
+<div class="article-outer">
+
+  <!-- TABLE OF CONTENTS, sidebar esquerda -->
+  <nav class="toc" aria-label="Índice do artigo">
+    <p class="toc-title">O que você vai entender neste artigo</p>
+    <ol>
+      <li><a href="#meio-da-decisao">O comprador chega no meio da decisão</a></li>
+      <li><a href="#dados-brasil">O que os dados dizem sobre o Brasil</a></li>
+      <li><a href="#particularidades">O que é diferente no Brasil</a></li>
+      <li><a href="#site-informado">Site para quem chega informado</a></li>
+      <li><a href="#whatsapp-comercial">WhatsApp e call de descoberta</a></li>
+      <li><a href="#fontes-portugues">As fontes que as IAs consultam em português</a></li>
+      <li><a href="#medir-brasil">Como medir a influência da IA</a></li>
+      <li><a href="#plano-90-dias">Plano de 90 dias</a></li>
+      <li><a href="#auditoria">O que a IA fala da sua empresa</a></li>
+      <li><a href="#faq">Perguntas frequentes</a></li>
+    </ol>
+  </nav>
+
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <p>O comprador B2B brasileiro já usa IA para pesquisar fornecedores antes de falar com você? Em boa parte dos casos, sim, e ele chega com uma lista curta pronta, referências de preço e perguntas específicas. A empresa que ainda recebe esse comprador com landing page explicando a categoria, call de descoberta apresentando o produto e WhatsApp respondendo "olá, como posso ajudar?" está conversando com alguém que já saiu da sala. A adaptação passa por quatro frentes que cabem na realidade de empresas brasileiras: <strong>site preparado para quem chega informado, atendimento comercial que começa pelo que a IA já disse, presença nas fontes que as IAs consultam em português e medição que pergunte ao lead de onde ele veio</strong>.</p>
+
+    <p>Os números do Brasil mostram que essa mudança também chegou aqui. A TIC Domicílios 2025, do Cetic.br, contou cerca de 50 milhões de brasileiros usando IA generativa, ou 32% dos usuários de internet, com uso de 69% na classe A e de 59% entre quem tem ensino superior, que é exatamente o perfil de quem decide compras corporativas. Segundo a Acquia, 46,5% dos brasileiros já usam ferramentas de IA para pesquisar produtos ou decidir compras. E no B2B global, o relatório de 2025 da 6sense, com mais de 4 mil compradores, mostra que 94% dos grupos de compra já tinham ranqueado os fornecedores preferidos antes do primeiro contato com vendas.</p>
+
+    <p>Em outubro, analisei aqui no site o diagnóstico de Duane Forrester sobre <a href="/insights/comprador-b2b-ia-medicao-orcamento-2027">como medir a influência da IA e planejar o orçamento de 2027</a>. Este texto volta ao mesmo comprador, agora com os pés no Brasil: o que muda no WhatsApp, na call de descoberta, no site e nas fontes em português. Pega seu café e vem comigo. ☕️</p>
+
+    <div class="tldr">
+      <p class="tldr-title">TL;DR</p>
+      <ul>
+        <li>Cerca de 50 milhões de brasileiros usam IA generativa (TIC Domicílios 2025), com uso concentrado em quem tem renda alta e ensino superior, o perfil típico de quem decide compras B2B.</li>
+        <li>No B2B global, 94% dos grupos de compra ranqueiam fornecedores antes do primeiro contato (6sense) e 69% procuram vendedores para validar o que a IA disse (Gartner).</li>
+        <li>No Brasil, o primeiro contato costuma acontecer pelo WhatsApp: 80% dos usuários do app costumam conversar com empresas por ali (Super Panorama 2026, Mobile Time e Opinion Box). Esse é o ponto de virada do atendimento.</li>
+        <li>Adapte o site para quem chega informado: comparativos honestos, faixas de preço, integrações com sistemas usados no Brasil, casos nacionais e informações de implementação e suporte em português.</li>
+        <li>Teste em português o que ChatGPT, Gemini, Copilot e AI Overviews dizem sobre a sua empresa. Quando falta informação local, a IA preenche o espaço com concorrentes ou com empresas estrangeiras.</li>
+        <li>Inclua "ChatGPT, Gemini ou outra IA" como opção no campo "como nos conheceu?" e pergunte isso também na primeira conversa do WhatsApp.</li>
+      </ul>
+    </div>
+
+    <h2 id="meio-da-decisao">O comprador chega no meio da decisão, e isso também acontece aqui</h2>
+
+    <p>Duane Forrester, ex-Bing e hoje à frente da UnboundAnswers, abriu o artigo que inspirou este texto contando a compra de uma caminhonete. Antes de ir à concessionária, ele entregou o número do chassi a um assistente de IA. Em minutos, recebeu a versão exata do veículo, o histórico do anúncio (280 dias à venda e 5 mil dólares de desconto acumulado), os registros de acidentes, os problemas conhecidos daquele ano de fabricação e uma lista de perguntas para fazer ao vendedor. Chegou à loja mais preparado do que a loja estava para recebê-lo.</p>
+
+    <p>A frase que resume a tese dele é curta: <em>"A IA mudou o comprador, e a empresa ainda não se adaptou."</em> Forrester descreve o novo comprador como alguém que <em>"chega no meio de uma decisão, e não no começo dela."</em> E aponta o descompasso de ritmo: o comportamento do comprador muda em semanas, enquanto a empresa precisa de orçamento, responsável, métrica e aprovação da diretoria para mudar qualquer coisa. Isso leva um ciclo inteiro de planejamento.</p>
+
+    <p>No artigo de outubro, olhei para a parte de medição e orçamento. Aqui interessa outra pergunta, mais operacional: o que acontece quando esse comprador chega a uma empresa brasileira? Ele cai num site, num formulário, numa conversa de WhatsApp e numa reunião comercial que foram desenhados para alguém no começo da pesquisa. Cada um desses pontos pode ser ajustado sem grande orçamento, desde que alguém na empresa assuma a tarefa.</p>
+
+    <h2 id="dados-brasil">O que os dados dizem sobre o Brasil</h2>
+
+    <p>Uma ressalva honesta antes dos números: não encontrei nenhuma pesquisa pública e com metodologia clara feita só com compradores B2B brasileiros sobre uso de IA. Os dados disponíveis se dividem em dois grupos: pesquisas sobre a população brasileira em geral e estudos de B2B com amostras internacionais. Juntando os dois, dá para montar um retrato bastante útil.</p>
+
+    <h3>Quem usa IA no Brasil</h3>
+
+    <p>A TIC Domicílios 2025, pesquisa do Cetic.br (centro de estudos ligado ao NIC.br) divulgada em dezembro de 2025, é a referência mais sólida. Ela estimou cerca de 50 milhões de usuários de IA generativa com 10 anos ou mais, o equivalente a 32% de quem usa internet no país. O uso varia muito por perfil: 69% na classe A contra 16% nas classes D e E, 59% entre pessoas com ensino superior contra 17% entre quem tem só o fundamental.</p>
+
+    <p>Para quem vende B2B, essa desigualdade aponta numa direção clara. O diretor financeiro, a gerente de compras, o head de tecnologia e o sócio de uma empresa média estão quase todos na faixa de maior uso. A média nacional de 32% subestima bastante a adoção entre os seus compradores.</p>
+
+    <h3>IA na decisão de compra</h3>
+
+    <p>No consumo, os números já são altos. Segundo a Acquia, 46,5% dos brasileiros usam ferramentas de IA como ChatGPT, Gemini e Copilot para pesquisar produtos ou tomar decisões de compra. A pesquisa não divulgou amostra nem metodologia na reportagem da TI Inside, então leia o número como indicação de direção. O estudo de comércio com agentes de IA da Visa, com cerca de 4 mil consumidores no Brasil, nos EUA, no Reino Unido e em Singapura, encontrou 76% dos brasileiros com intenção de usar agentes de IA para comprar, contra 44% nos EUA.</p>
+
+    <p>Esses são dados de consumo, e compra B2B tem outra dinâmica. Mas o comprador corporativo é a mesma pessoa que pergunta ao ChatGPT qual notebook comprar no fim de semana. O hábito migra.</p>
+
+    <h3>O que os estudos de B2B mostram</h3>
+
+    <table>
+      <thead>
+        <tr><th>Estudo</th><th>Amostra</th><th>Principal achado</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>6sense, Buyer Experience Report 2025</td><td>Mais de 4 mil compradores na América do Norte, Europa, Oriente Médio, África e Ásia-Pacífico</td><td>94% dos grupos de compra ranquearam fornecedores antes do primeiro contato. O favorito inicial fica com 80% dos negócios.</td></tr>
+        <tr><td>6sense, mesmo relatório</td><td>Idem</td><td>58% procuraram vendedores mais cedo para esclarecer detalhes que a IA não respondeu.</td></tr>
+        <tr><td>Gartner, pesquisa com compradores B2B (divulgada em maio de 2026)</td><td>645 compradores, campo entre agosto e setembro de 2025</td><td>45% usaram IA generativa numa compra recente, principalmente para pesquisar fornecedores e produtos. 69% preferem validar com um vendedor o que a IA disse.</td></tr>
+        <tr><td>Gartner, mesma pesquisa</td><td>Idem</td><td>51% acham mais provável encontrar informação enganosa na IA. 49% acham isso mais provável vindo de um vendedor.</td></tr>
+      </tbody>
+    </table>
+
+    <p>O último dado da tabela é o meu favorito, pela ironia. Os compradores desconfiam da IA e do vendedor quase na mesma medida. E a saída que eles encontraram foi usar um para checar o outro. Robert Blaisdell, vice-presidente de pesquisa da Gartner, resume a consequência: os líderes de vendas <em>"não devem interpretar a preferência dos compradores pelo autoatendimento digital como sinal de que os vendedores importam menos."</em> Eles continuam importando, só que num momento diferente da jornada e com outra função: confirmar, corrigir e aprofundar o que a IA já entregou.</p>
+
+    <p>Kerry Cunningham, head de pesquisa da 6sense, completa o raciocínio: <em>"Fornecedores que não conseguem dar respostas claras logo de início nem entram na lista curta."</em></p>
+
+    <h2 id="particularidades">O que é diferente no Brasil</h2>
+
+    <p>Importar o diagnóstico americano sem ajuste seria um erro. Pelo menos quatro características do mercado brasileiro mudam o jeito de aplicar essas ideias.</p>
+
+    <h3>O WhatsApp é o primeiro contato</h3>
+
+    <p>Nos EUA, a passagem do comprador da pesquisa para a conversa costuma acontecer por formulário, e-mail ou agendamento de reunião. No Brasil, muitas vezes ela acontece pelo WhatsApp. Segundo o Super Panorama 2026 da Mobile Time com a Opinion Box, 80% dos usuários do app costumam conversar com empresas por ali. Em empresas B2B pequenas e médias, o botão de WhatsApp no site costuma ser o canal de entrada de lead mais usado.</p>
+
+    <p>Isso tem uma consequência prática que pouca empresa percebe: a primeira mensagem do WhatsApp é o momento em que o comprador informado pela IA encontra a sua empresa. Se do outro lado estiver um robô com menu de opções genérico ou um atendente que responde "posso te enviar nosso material institucional?", a conversa começa errada.</p>
+
+    <h3>Indicação e rede de contatos ainda pesam muito</h3>
+
+    <p>Compras B2B no Brasil são bastante relacionais. Indicação de colega, conversa em evento do setor, grupo de WhatsApp de profissionais da área e recomendação em post de LinkedIn decidem muitos contratos. A IA entrou nessa rede como mais uma voz consultada, e às vezes como a voz que confere a indicação. O comprador recebe o nome de um fornecedor num grupo e pergunta ao ChatGPT se aquela empresa é confiável e quais são as alternativas.</p>
+
+    <h3>Há menos conteúdo B2B em português para a IA usar</h3>
+
+    <p>Esta é uma observação de quem acompanha o mercado, sem uma pesquisa que a quantifique: em muitas categorias B2B, o volume de conteúdo técnico e comparativo em português é bem menor do que em inglês. Quando o comprador pergunta em português "quais as melhores plataformas de gestão de frotas para transportadoras", a IA monta a resposta com o que encontra. Se a sua empresa tem pouco conteúdo claro e consistente sobre o que faz, ela some da resposta, e o espaço é ocupado por concorrentes mais organizados ou por empresas estrangeiras que nem atendem o Brasil direito.</p>
+
+    <p>Forrester já tinha apontado esse mecanismo: quando o modelo não tem informação suficiente sobre uma empresa, ele descreve outra no lugar. No Brasil, isso tem um lado bom. Em várias categorias, a concorrência por citação em português é menor, e uma empresa média com conteúdo bem estruturado consegue aparecer mais rápido do que conseguiria em inglês.</p>
+
+    <h3>As exigências locais definem a lista curta</h3>
+
+    <p>O comprador brasileiro tem perguntas que um conteúdo traduzido não responde: emite nota fiscal de serviço? Integra com o ERP que a gente usa? Tem suporte em português e em horário comercial do Brasil? Está adequado à LGPD? Aceita boleto ou exige cartão internacional em dólar? Essas respostas eliminam fornecedores logo de saída, e a IA só consegue respondê-las se a informação estiver publicada em algum lugar.</p>
+
+    <h2 id="site-informado">Como adaptar o site para quem chega informado</h2>
+
+    <p>O site da maioria das empresas B2B brasileiras foi construído para apresentar a empresa a quem nunca ouviu falar dela. "Somos uma empresa com X anos de mercado, comprometida com a excelência..." O comprador que vem de uma conversa com a IA já sabe o que você faz. Ele quer confirmar se você serve para o caso dele.</p>
+
+    <table>
+      <thead>
+        <tr><th>Site feito para o comprador do começo da pesquisa</th><th>Site feito para o comprador que chega informado</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Home explicando o que é a categoria</td><td>Home dizendo para quem a solução serve e para quem não serve</td></tr>
+        <tr><td>"Solicite um orçamento" como única informação de preço</td><td>Faixas de preço, modelo de cobrança ou ao menos o que define o valor</td></tr>
+        <tr><td>Lista genérica de benefícios</td><td>Integrações nomeadas (ERPs, meios de pagamento, sistemas fiscais usados no Brasil)</td></tr>
+        <tr><td>Logos de clientes sem contexto</td><td>Casos nacionais com setor, porte, problema e resultado mensurável</td></tr>
+        <tr><td>Nenhuma comparação com concorrentes</td><td>Comparativos honestos, inclusive dizendo quando outra opção faz mais sentido</td></tr>
+        <tr><td>Página de contato com formulário longo</td><td>FAQ comercial com prazo de implementação, suporte, contrato, LGPD e nota fiscal</td></tr>
+      </tbody>
+    </table>
+
+    <p>Duas dessas mudanças costumam gerar resistência interna. A primeira é publicar faixa de preço. Muita diretoria teme que isso afaste clientes ou ajude a concorrência. Só que a IA vai dar uma estimativa de preço ao comprador de qualquer jeito, montada com o que encontrar. Publicar a informação correta é a forma de garantir que a estimativa seja a sua.</p>
+
+    <p>A segunda é o comparativo honesto. Dizer em que cenário o concorrente é melhor parece contraintuitivo, mas é o tipo de conteúdo que o comprador procura, que a IA encontra quando precisa responder a uma pergunta de comparação e que gera confiança. E filtra leads que nunca fechariam, o que o time comercial agradece.</p>
+
+    <p>Tudo isso precisa estar em texto, numa estrutura que a IA consiga ler: títulos claros, perguntas e respostas, tabelas, dados estruturados. Informação escondida em PDF de apresentação ou em imagem de banner não ajuda ninguém. O artigo sobre <a href="/insights/visibilidade-marca-respostas-ia-seo-geo-aeo">como SEO, GEO e AEO contribuem para a visibilidade da marca em respostas de IA</a> detalha a parte técnica dessa estrutura.</p>
+
+    <h2 id="whatsapp-comercial">WhatsApp e call de descoberta: comece pelo que a IA já disse</h2>
+
+    <p>Se 69% dos compradores procuram um vendedor para validar o que a IA disse, segundo a Gartner, e 58% fazem contato mais cedo para esclarecer o que a IA não respondeu, segundo a 6sense, então a primeira conversa comercial tem uma função nova: descobrir o que o comprador já sabe e corrigir o que ele sabe errado.</p>
+
+    <table>
+      <thead>
+        <tr><th>Atendimento pensado para o começo da jornada</th><th>Atendimento pensado para o comprador informado</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>"Olá! Como posso ajudar?" seguido de menu numérico</td><td>Pergunta aberta sobre o que a pessoa procura e o que já pesquisou</td></tr>
+        <tr><td>Envio automático do material institucional</td><td>Resposta direta à dúvida específica que a pessoa trouxe</td></tr>
+        <tr><td>Call de descoberta começando pela apresentação da empresa</td><td>Call começando pelo que o comprador já viu, comparou e descartou</td></tr>
+        <tr><td>Vendedor apresentando a solução ponto a ponto</td><td>Vendedor confirmando, corrigindo e aprofundando o que a IA disse</td></tr>
+        <tr><td>Objeções tratadas com roteiro genérico</td><td>Objeções tratadas com dados, casos e documentação que o comprador pode verificar</td></tr>
+      </tbody>
+    </table>
+
+    <p>Na prática, isso pode ser bem simples. A primeira mensagem do atendimento no WhatsApp pode perguntar, com naturalidade, como a pessoa chegou até a empresa e o que ela já sabe sobre a solução. Algo como: "Oi, que bom falar com você. Pra eu te ajudar melhor: você já pesquisou um pouco sobre nossa solução ou conheceu a gente agora? Se tiver comparado com outras opções, me conta quais." A resposta já diz em que ponto da decisão a pessoa está e, muitas vezes, revela que ela veio de uma conversa com a IA.</p>
+
+    <p>Na call de descoberta, a pergunta pode ser direta: "o que você já viu sobre a gente?" Quando o comprador responde "o ChatGPT disse que vocês não integram com o sistema X", o vendedor ganha duas coisas. Corrige a informação naquela venda e descobre uma informação errada circulando sobre a empresa, que vai afetar outros compradores. Essa segunda descoberta precisa chegar ao marketing. Em muitas empresas, ela morre na anotação do CRM.</p>
+
+    <p>E o robô do WhatsApp? Automação ajuda no volume, mas uma pesquisa da Opinion Box de 2025 sobre o WhatsApp no Brasil aponta que 59% dos usuários não gostam de respostas automáticas robotizadas. Para um comprador B2B que chega com uma pergunta específica, um menu "digite 1 para vendas" é o equivalente digital de ser recebido na concessionária por alguém lendo o folheto.</p>
+
+    <h2 id="fontes-portugues">As fontes que as IAs consultam em português</h2>
+
+    <p>Kevin Indig, citando um levantamento da AirOps, aponta que sinais de terceiros respondem por 85% da visibilidade de uma marca nos LLMs. O site da empresa é uma fonte, mas a IA confere o que ele diz com o que outras fontes dizem. Para empresas brasileiras, essas fontes costumam ser:</p>
+
+    <ul>
+      <li><strong>LinkedIn:</strong> página da empresa e, principalmente, perfis dos especialistas e executivos publicando sobre o tema com regularidade.</li>
+      <li><strong>Imprensa e portais do setor:</strong> entrevistas, artigos assinados e menções em veículos especializados da sua área.</li>
+      <li><strong>Associações e entidades setoriais:</strong> listas de associados, eventos, comitês e publicações.</li>
+      <li><strong>Diretórios e plataformas de avaliação B2B:</strong> perfis completos e avaliações de clientes reais.</li>
+      <li><strong>Perfil da Empresa no Google:</strong> informações básicas consistentes, que aparecem na busca e no painel da empresa no Google.</li>
+      <li><strong>YouTube e podcasts do setor:</strong> conteúdo em vídeo e áudio com transcrição, que vira texto legível para a IA.</li>
+      <li><strong>Eventos:</strong> palestras, painéis e as páginas e coberturas que ficam publicadas depois.</li>
+    </ul>
+
+    <p>O ponto de partida é saber o que essas fontes dizem hoje. Monte uma lista de 20 a 30 perguntas que o seu comprador faria, sempre em português e com o vocabulário que ele usa, e teste no ChatGPT, no Gemini, no Copilot e no AI Overviews do Google. Registre quem é citado, se a sua empresa aparece, o que é dito sobre ela e quais fontes sustentam a resposta. Forrester resume a prioridade: saiba o que estão dizendo sobre você antes de decidir o que dizer.</p>
+
+    <p>Inclua perguntas com o contexto brasileiro: "para empresas no Brasil", "que emita nota fiscal", "com suporte em português", "que integre com" o ERP mais comum no seu setor. São essas perguntas que filtram a lista curta, e é nelas que um fornecedor nacional bem documentado ganha de um estrangeiro mais famoso.</p>
+
+    <p>E quando a informação estiver errada? A correção é lenta. Atualize o site, publique a informação correta em mais de uma fonte confiável, revise o Perfil da Empresa no Google e os diretórios. Os modelos vão incorporando as mudanças em ritmos diferentes, e por isso o teste precisa ser repetido todo mês.</p>
+
+    <h2 id="medir-brasil">Como medir a influência da IA numa empresa brasileira</h2>
+
+    <p>A medição tem um problema estrutural que discuti em detalhe no artigo de outubro: a influência da IA quase não deixa rastro de clique. O comprador lê a resposta, não clica e, dias depois, digita o endereço do site, busca o nome da empresa no Google ou, no caso brasileiro, manda mensagem direto no WhatsApp. Nenhuma ferramenta de analytics registra de onde veio essa mensagem.</p>
+
+    <p>Por isso, no Brasil, a medição mais confiável é a mais simples: perguntar.</p>
+
+    <table>
+      <thead>
+        <tr><th>Medição que não enxerga a IA</th><th>Medição adaptada</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Campo "como nos conheceu?" com opções fechadas (Google, indicação, redes sociais)</td><td>Opção "ChatGPT, Gemini ou outra IA" e um campo aberto para a pessoa escrever</td></tr>
+        <tr><td>Lead do WhatsApp registrado como "WhatsApp" no CRM</td><td>Origem perguntada na primeira conversa e registrada numa etiqueta própria</td></tr>
+        <tr><td>Tráfego direto tratado como "gente que já conhecia a marca"</td><td>Tráfego direto e busca pela marca acompanhados como possíveis sinais de influência da IA</td></tr>
+        <tr><td>Relatório de canais baseado só no último clique</td><td>Teste mensal de presença nas respostas de IA, lido junto com busca de marca e oportunidades</td></tr>
+        <tr><td>Informação do time comercial anotada e esquecida</td><td>Registro do que os compradores dizem ter ouvido da IA, revisado pelo marketing todo mês</td></tr>
+      </tbody>
+    </table>
+
+    <p>O canal AI Assistant no GA4, lançado em maio de 2026, e o relatório AI Performance do Bing Webmaster Tools ajudam e deveriam estar configurados. Mas eles medem cliques e citações exibidas, e o comprador brasileiro que vai da resposta da IA direto para o WhatsApp não aparece em nenhum dos dois. A pergunta feita por uma pessoa, na primeira conversa, cobre esse buraco melhor do que qualquer painel.</p>
+
+    <h2 id="plano-90-dias">Um plano de 90 dias para empresas B2B brasileiras</h2>
+
+    <p>Nada do que está acima exige um projeto grande. Uma empresa média consegue começar em três meses, com o time que já tem:</p>
+
+    <table>
+      <thead>
+        <tr><th>Período</th><th>O que fazer</th><th>Quem envolver</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Mês 1</td><td>Testar 20 a 30 perguntas do comprador nas principais IAs, em português. Listar informações erradas ou ausentes. Ajustar o campo "como nos conheceu?" e a primeira mensagem do WhatsApp.</td><td>Marketing e atendimento comercial</td></tr>
+        <tr><td>Mês 2</td><td>Publicar no site faixas de preço ou o que define o valor, integrações, FAQ comercial (implementação, suporte, LGPD, nota fiscal) e dois ou três casos nacionais. Corrigir Perfil da Empresa no Google e diretórios.</td><td>Marketing, produto, comercial e jurídico</td></tr>
+        <tr><td>Mês 3</td><td>Definir dois especialistas internos para publicar com regularidade no LinkedIn. Buscar uma pauta em veículo ou evento do setor. Repetir o teste das perguntas e comparar com o mês 1.</td><td>Marketing e lideranças técnicas</td></tr>
+      </tbody>
+    </table>
+
+    <p>Ao fim dos 90 dias, a empresa tem uma base de comparação: como aparecia nas respostas de IA antes, como aparece agora e quantos leads disseram ter chegado por elas. Com esse dado, a conversa sobre orçamento para 2027 deixa de depender de opinião.</p>
+
+    <h2 id="auditoria">Antes de mudar o discurso, descubra o que a IA já fala da sua empresa</h2>
+
+    <p>Tudo neste artigo depende de um diagnóstico inicial: saber como a sua empresa aparece hoje nas respostas que os compradores brasileiros recebem. Sem isso, o site é ajustado no escuro, o time comercial não sabe quais informações erradas vai encontrar e a medição não tem ponto de partida.</p>
+
+    <p>A <a href="/auditoria-visibilidade-ia">Auditoria de Visibilidade em IA + SEO Técnico</a> da Orbitando no Marketing faz esse mapeamento para empresas B2B. O diagnóstico testa em português as perguntas que o seu comprador faz no ChatGPT, no Gemini, no Perplexity e no Google AI Overviews, compara a sua presença com a dos concorrentes, identifica informações erradas ou ausentes e as fontes que sustentam as recomendações, e avalia a estrutura técnica do site. O entregável é um plano de ação priorizado, pensado para o tamanho do seu time e para o mercado brasileiro.</p>
+
+    <p>Se a empresa já sabe onde está e quer acompanhamento mensal para executar o plano, a <a href="/consultoria-b2b-saas">Consultoria Contínua para B2B SaaS</a> cuida de conteúdo, SEO e GEO/AEO com revisões periódicas.</p>
+
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <h2 class="faq-title" id="faq">Perguntas frequentes</h2>
+
+      <details>
+        <summary>Quantos brasileiros usam inteligência artificial?</summary>
+        <div class="faq-answer">
+          <p>Segundo a TIC Domicílios 2025, do Cetic.br, cerca de 50 milhões de brasileiros com 10 anos ou mais usam IA generativa, o equivalente a 32% dos usuários de internet. O uso chega a 69% na classe A e a 59% entre pessoas com ensino superior, perfil que inclui boa parte dos decisores de compras B2B.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Existe pesquisa sobre o uso de IA por compradores B2B no Brasil?</summary>
+        <div class="faq-answer">
+          <p>Até a publicação deste artigo, não encontramos uma pesquisa pública com metodologia clara feita só com compradores B2B brasileiros. Os dados disponíveis são de uso de IA pela população brasileira (Cetic.br, Acquia, Visa) e de estudos B2B internacionais, como os da 6sense e da Gartner.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Como adaptar o atendimento no WhatsApp para o comprador que pesquisou com IA?</summary>
+        <div class="faq-answer">
+          <p>Troque o menu genérico por uma pergunta aberta sobre o que a pessoa procura e o que já pesquisou, responda à dúvida específica antes de mandar material institucional e registre a origem do contato no CRM. Pergunte também se ela comparou com outras opções e quais.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Devo publicar preço no site de uma empresa B2B?</summary>
+        <div class="faq-answer">
+          <p>Publicar ao menos uma faixa de preço ou o que define o valor ajuda o comprador informado a confirmar se a sua empresa cabe no orçamento. A IA vai dar uma estimativa de qualquer forma, montada com o que encontrar. Publicar a informação correta garante que a estimativa seja baseada nos seus dados.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Como descobrir o que o ChatGPT e o Gemini dizem sobre a minha empresa?</summary>
+        <div class="faq-answer">
+          <p>Monte uma lista de 20 a 30 perguntas que o seu comprador faria, em português e com contexto brasileiro (nota fiscal, suporte em português, integração com ERPs locais), e teste todo mês no ChatGPT, Gemini, Copilot e AI Overviews. Registre quem é citado, o que é dito sobre a sua empresa e quais fontes aparecem.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Como medir leads que chegam pela IA se eles não clicam em nada?</summary>
+        <div class="faq-answer">
+          <p>Pergunte. Inclua "ChatGPT, Gemini ou outra IA" no campo "como nos conheceu?" dos formulários, pergunte a origem na primeira conversa do WhatsApp e registre em uma etiqueta própria no CRM. Acompanhe também busca pelo nome da marca e tráfego direto, e configure o canal AI Assistant do GA4.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- SHARE BOTTOM -->
+    <div style="margin-top:2.5rem;padding-top:1.75rem;border-top:1px solid var(--border)">
+      <p style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:.75rem">Compartilhar este artigo</p>
+      <div class="share-bar" style="justify-content:flex-start">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://orbitandonomarketing.com.br/insights/comprador-b2b-brasil-ia-whatsapp-vendas" target="_blank" class="share-btn">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=https://orbitandonomarketing.com.br/insights/comprador-b2b-brasil-ia-whatsapp-vendas" target="_blank" class="share-btn">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X / Twitter
+        </a>
+        <a href="mailto:?subject=Artigo: O comprador B2B brasileiro já pesquisou com a IA&body=https://orbitandonomarketing.com.br/insights/comprador-b2b-brasil-ia-whatsapp-vendas" class="share-btn">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          E-mail
+        </a>
+        <button class="share-btn" onclick="copyLink()">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          Copiar link
+        </button>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<!-- RELATED ARTICLES -->
+<div class="related-section">
+  <div class="related-inner">
+    <h3 class="related-title">Artigos relacionados</h3>
+    <div class="related-grid">
+      <div class="related-card">
+        <p class="rc-cat">GEO · Mensuração</p>
+        <h4><a href="/insights/comprador-b2b-ia-medicao-orcamento-2027">O comprador B2B já decidiu antes de falar com você: como medir a influência da IA e planejar o orçamento de 2027</a></h4>
+        <a href="/insights/comprador-b2b-ia-medicao-orcamento-2027" class="rc-read">Ler artigo</a>
+      </div>
+      <div class="related-card">
+        <p class="rc-cat">GEO · AEO · SEO</p>
+        <h4><a href="/insights/visibilidade-marca-respostas-ia-seo-geo-aeo">Como melhorar a visibilidade da marca em respostas de IA: o que SEO, GEO e AEO têm a ver com isso</a></h4>
+        <a href="/insights/visibilidade-marca-respostas-ia-seo-geo-aeo" class="rc-read">Ler artigo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER BAND -->
+<div class="newsletter-band">
+  <div class="newsletter-form-wrap">
+    <div data-reach-form="22c061ca-1ddf-4b0a-a9a9-52e1021274ab"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-name">Orbitando no Marketing</div>
+      <div class="footer-logo-tag">SEO · GEO · AEO</div>
+      <p>Consultoria estratégica de marketing digital para empresas B2B que querem aparecer no Google e nas IAs generativas. Por Jacqueline Alves.</p>
+    </div>
+    <div>
+      <h4>Para profissionais</h4>
+      <ul>
+        <li><a href="/guia-marketing-digital">Guia para Iniciantes</a></li>
+        <li><a href="/modelo-curriculo">Modelo de Currículo</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Para empresas B2B</h4>
+      <ul>
+        <li><a href="/auditoria-visibilidade-ia">Auditoria de Visibilidade em IA</a></li>
+        <li><a href="/consultoria-b2b-saas">Consultoria Contínua B2B SaaS</a></li>
+        <li><a href="/desenvolvimento-sites">Desenvolvimento de Sites</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Me conheça</h4>
+      <ul>
+        <li><a href="/sobre-mim">Sobre mim</a></li>
+        <li><a href="/cases-de-sucesso">Cases de sucesso</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Newsletter</h4>
+      <ul>
+        <li><a href="https://orbitandonomarketing.com.br/insights/" target="_blank">Orbitando no Marketing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Fale comigo</h4>
+      <ul>
+        <li><a href="/contato">Contato</a></li>
+        <li><a href="https://www.linkedin.com/in/jacquelinealvesoliveira" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Orbitando no Marketing. Todos os direitos reservados.</p>
+    <p><a href="/politica-privacidade" style="color:var(--muted);text-decoration:none;transition:color .15s" onmouseover="this.style.color='#836FFF'" onmouseout="this.style.color='var(--muted)'">Política de Privacidade</a></p>
+  </div>
+</footer>
+
+<script>
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
+function toggleMega(e){
+  e.stopPropagation();
+  var m=document.getElementById('megaItem');
+  m.classList.toggle('open');
+}
+document.addEventListener('click',function(){
+  var m=document.getElementById('megaItem');
+  if(m)m.classList.remove('open');
+});
+function copyLink(){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    const btns=document.querySelectorAll('.share-btn');
+    btns.forEach(b=>{if(b.textContent.includes('Copiar')){const orig=b.innerHTML;b.innerHTML='<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Copiado!';setTimeout(()=>{b.innerHTML=orig;},2000);}});
+  });
+}
+</script>
+<script>
+(function(){
+  var MAX_TRIES=3, RETRY_MS=3000, tries=0;
+  function checkAndInit(){
+    if(window.__reachEmbed && typeof window.__reachEmbed.init==='function'){
+      window.__reachEmbed.init();
+    }
+  }
+  function loadReach(){
+    var old=document.querySelector('script[data-reach-script]');
+    if(old) old.parentNode.removeChild(old);
+    var s=document.createElement('script');
+    s.setAttribute('data-reach-script','1');
+    s.src='https://cdn-reach.hostinger.com/js/embed.js?_='+Date.now();
+    s.onload=function(){
+      setTimeout(function(){
+        checkAndInit();
+        var el=document.querySelector('[data-reach-form]');
+        if(el && !el.querySelector('iframe') && tries<MAX_TRIES){
+          tries++;
+          setTimeout(loadReach, RETRY_MS);
+        }
+      }, 800);
+    };
+    s.onerror=function(){
+      if(tries<MAX_TRIES){ tries++; setTimeout(loadReach, RETRY_MS); }
+    };
+    document.body.appendChild(s);
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded', loadReach);
+  } else {
+    loadReach();
+  }
+})();
+</script>
+</body>
+</html>
