@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEO e busca agêntica do Google: como aparecer no Brasil</title>
+<meta name="description" content="O Google abriu a era dos agentes de busca. Veja o que o guia oficial diz sobre GEO e o que empresas B2B no Brasil podem fazer agora para aparecer.">
+<meta name="author" content="Jacqueline Alves">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://orbitandonomarketing.com.br/insights/geo-busca-agentica-google-brasil">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://orbitandonomarketing.com.br/insights/geo-busca-agentica-google-brasil">
+<meta property="og:title" content="GEO e busca agêntica do Google: como aparecer no Brasil">
+<meta property="og:description" content="O Google abriu a era dos agentes de busca. Veja o que o guia oficial diz sobre GEO e o que empresas B2B no Brasil podem fazer agora para aparecer.">
+<link rel="icon" type="image/png" href="/Logo/favicon-512.png">
+<link rel="shortcut icon" href="/Logo/favicon-512.png">
+<link rel="apple-touch-icon" href="/Logo/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#191970;--navy-dark:#141459;--slate-dark:#483D8B;
+  --slate:#6A5ACD;--lilac:#836FFF;--ghost:#F8F8FF;
+  --light:#f0eeff;--light2:#f8f7ff;--border:#e8e6f8;
+  --muted:#9896CC;--text:#191970;--white:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--ghost);line-height:1.75}
+a{color:var(--slate);text-decoration:none}
+a:hover{color:var(--slate-dark)}
+img{max-width:100%;display:block}
+
+/* NAV */
+nav{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.nav-logo svg{width:36px;height:36px;flex-shrink:0}
+.nav-logo-name{display:block;font-size:.95rem;font-weight:700;color:var(--ghost);line-height:1.2}
+.nav-logo-tag{display:block;font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
+.nav-links a,.nav-links span{font-size:.88rem;font-weight:500;color:var(--ghost);opacity:.85;text-decoration:none;cursor:pointer;transition:opacity .15s}
+.nav-links a:hover,.nav-links span:hover{opacity:1}
+.nav-cta{background:var(--lilac)!important;color:var(--navy)!important;opacity:1!important;padding:.45rem 1.1rem;border-radius:6px;font-weight:700!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--ghost);border-radius:2px}
+
+/* MEGA MENU */
+.has-mega{position:static}
+.mega-menu{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy-dark);border-top:2px solid var(--lilac);box-shadow:0 16px 48px rgba(0,0,0,.45);z-index:300;padding:2rem}
+.has-mega.open .mega-menu{display:block}
+.mega-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.mega-col-title{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid rgba(131,111,255,.3)}
+.mega-item{display:flex;align-items:flex-start;gap:.75rem;padding:.75rem;border-radius:8px;text-decoration:none;transition:background .15s;margin-bottom:.25rem}
+.mega-item:hover{background:rgba(131,111,255,.12)}
+.mega-item-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.mega-item-text strong{display:block;font-size:.88rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.mega-item-text span{font-size:.78rem;color:var(--muted);line-height:1.4}
+.mega-badge{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(131,111,255,.25);color:var(--lilac);padding:.15rem .45rem;border-radius:4px;vertical-align:middle}
+
+/* ARTICLE LAYOUT */
+.article-header{background:var(--navy);padding:3.5rem 2rem 3rem;text-align:center}
+.back-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:600;color:var(--muted);margin-bottom:1.5rem;transition:color .15s}
+.back-link:hover{color:#F8F8FF}
+.back-link svg{transition:transform .15s}
+.back-link:hover svg{transform:translateX(-3px)}
+.article-cat-badge{display:inline-block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--lilac);background:rgba(131,111,255,.15);border:1px solid rgba(131,111,255,.35);padding:.28rem .8rem;border-radius:6px;margin-bottom:1rem}
+.article-header h1{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:700;color:#F8F8FF;line-height:1.15;max-width:760px;margin:0 auto 1.25rem}
+.article-meta-bar{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;font-size:.82rem;color:var(--muted);margin-bottom:1.5rem}
+.article-meta-bar span{display:flex;align-items:center;gap:.35rem}
+.article-meta-bar .author-name{font-weight:700;color:rgba(248,248,255,.88)}
+
+/* SHARE BUTTONS */
+.share-bar{display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap;margin-bottom:.5rem}
+.share-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.share-btn{display:inline-flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:600;padding:.35rem .9rem;border-radius:7px;border:1px solid rgba(131,111,255,.35);background:rgba(131,111,255,.1);transition:all .15s;cursor:pointer;text-decoration:none;font-family:'Plus Jakarta Sans',sans-serif}
+button.share-btn{color:rgba(248,248,255,.82)!important;-webkit-appearance:none;appearance:none;background:rgba(131,111,255,.12);border:1px solid rgba(131,111,255,.4)}
+.share-btn:not(button){color:rgba(248,248,255,.75)}
+.share-btn:hover{color:#F8F8FF!important;background:rgba(131,111,255,.28);border-color:var(--lilac)}
+button.share-btn:hover{color:#F8F8FF!important;background:rgba(131,111,255,.28);border-color:var(--lilac)}
+.article-body button.share-btn{color:var(--slate)!important;background:rgba(106,90,205,.08);border-color:rgba(106,90,205,.3)}
+.article-body button.share-btn:hover{color:var(--slate-dark)!important;background:rgba(106,90,205,.18);border-color:var(--slate)}
+
+/* ARTICLE OUTER: sidebar TOC + content */
+.article-outer{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:240px 1fr;gap:3rem;align-items:start}
+
+/* TABLE OF CONTENTS, sidebar */
+.toc{position:sticky;top:88px;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem}
+.toc-title{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:.9rem}
+.toc ol{padding-left:1.1rem}
+.toc li{font-size:.82rem;line-height:1.45;margin-bottom:.55rem}
+.toc li a{color:var(--slate);font-weight:500}
+.toc li a:hover{color:var(--slate-dark)}
+
+/* ARTICLE BODY */
+.article-body h2{font-size:clamp(1.25rem,2.2vw,1.7rem);font-weight:700;color:var(--navy);margin:2.75rem 0 1rem;line-height:1.22}
+.article-body h3{font-size:1.1rem;font-weight:700;color:var(--slate);margin:1.75rem 0 .65rem;line-height:1.4}
+.article-body p{font-size:1rem;line-height:1.8;color:var(--text);margin-bottom:1.25rem}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.25rem}
+.article-body li{font-size:1rem;line-height:1.75;color:var(--text);margin-bottom:.4rem}
+.article-body strong{font-weight:700}
+.article-body em{font-style:italic}
+.article-body a{color:var(--slate);font-weight:600}
+.article-body a:hover{color:var(--slate-dark)}
+
+/* TABLES */
+.article-body table{width:100%;border-collapse:collapse;margin:1.5rem 0 2rem;font-size:.9rem}
+.article-body th{background:var(--navy);color:#F8F8FF;padding:.75rem 1rem;text-align:left;font-weight:700}
+.article-body td{padding:.7rem 1rem;border-bottom:1px solid var(--border)}
+.article-body tr:nth-child(even) td{background:var(--light2)}
+.article-body th:first-child{border-radius:8px 0 0 0}
+.article-body th:last-child{border-radius:0 8px 0 0}
+
+/* ACCENT BAR (callout) */
+.accent-bar{border-left:4px solid var(--lilac);background:var(--light);border-radius:0 8px 8px 0;padding:1rem 1.5rem;margin:1.5rem 0}
+.accent-bar p{margin-bottom:0;font-size:.95rem}
+
+/* CTA SECTION */
+.cta-section{background:linear-gradient(135deg,var(--slate-dark),var(--slate));border-radius:14px;padding:2.25rem 2rem;margin:3rem 0;text-align:center}
+.cta-section h2{color:#F8F8FF;font-size:1.5rem;margin-bottom:.75rem}
+.cta-section p{color:rgba(248,248,255,.78);max-width:480px;margin:0 auto 1.5rem;font-size:.95rem}
+.btn-cta{display:inline-block;background:#F8F8FF;color:var(--navy);padding:.75rem 2rem;border-radius:8px;font-weight:700;font-size:.92rem}
+.btn-cta:hover{opacity:.9;color:var(--navy)}
+
+/* FAQ */
+.faq-section{margin:2.5rem 0}
+.faq-title{font-size:clamp(1.25rem,2vw,1.6rem);font-weight:700;color:var(--navy);margin-bottom:1.25rem}
+details{border:1px solid var(--border);border-radius:10px;margin-bottom:.75rem;overflow:hidden}
+details[open]{border-color:var(--lilac)}
+summary{padding:1rem 1.25rem;font-size:.95rem;font-weight:700;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:var(--white)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'';width:18px;height:18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%236A5ACD' stroke-width='2.5' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-size:contain;background-repeat:no-repeat;flex-shrink:0;transition:transform .2s}
+details[open] summary::after{transform:rotate(180deg)}
+.faq-answer{padding:1rem 1.25rem 1.25rem;background:var(--light2);font-size:.92rem;line-height:1.7;color:var(--text);border-top:1px solid var(--border)}
+.faq-answer p{margin-bottom:.75rem}
+.faq-answer p:last-child{margin-bottom:0}
+
+/* RELATED ARTICLES */
+.related-section{background:var(--white);border-top:1px solid var(--border);padding:2.5rem 2rem}
+.related-inner{max-width:760px;margin:0 auto}
+.related-title{font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:1.25rem}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.related-card{background:var(--ghost);border:1px solid var(--border);border-radius:10px;padding:1.1rem;transition:box-shadow .15s}
+.related-card:hover{box-shadow:0 4px 16px rgba(25,25,112,.08)}
+.related-card .rc-cat{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--lilac);margin-bottom:.4rem}
+.related-card h4{font-size:.88rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem}
+.related-card h4 a{color:var(--navy)}
+.related-card h4 a:hover{color:var(--slate)}
+.related-card .rc-read{font-size:.78rem;font-weight:600;color:var(--slate)}
+
+/* NEWSLETTER BAND */
+.newsletter-band{background:linear-gradient(135deg,var(--slate-dark),var(--slate));padding:2.5rem 2rem;text-align:center}
+.newsletter-form-wrap{max-width:480px;margin:0 auto}
+
+/* FOOTER */
+footer{background:var(--navy-dark);color:var(--ghost);padding:4rem 2rem 2rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+footer h4{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem}
+footer ul{list-style:none}
+footer ul li{margin-bottom:.5rem}
+footer ul a{font-size:.88rem;color:#C8C5F0;text-decoration:none;transition:color .15s}
+footer ul a:hover{color:var(--lilac)}
+.footer-logo-name{font-size:1rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.footer-logo-tag{font-size:.65rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.85rem}
+footer p{font-size:.85rem;color:var(--muted);line-height:1.6}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:.8rem;color:var(--muted)}
+
+/* MOBILE */
+@media(max-width:960px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--navy);padding:1rem 2rem;gap:1rem;align-items:flex-start}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  .mega-menu,.dropdown-menu{position:static;border-top:none;box-shadow:none;padding:.75rem 0}
+  .article-outer{grid-template-columns:1fr;gap:0;padding:2rem 1.25rem}
+  .toc{position:static;margin-bottom:2rem}
+  .related-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .nav-inner{padding:0 1rem}
+  .nav-logo-tag{display:none}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+
+/* TL;DR */
+.tldr{background:var(--white);border:1px solid var(--border);border-top:4px solid var(--lilac);border-radius:12px;padding:1.25rem 1.5rem;margin:1.75rem 0 2rem}
+.tldr-title{font-size:.72rem!important;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--slate)!important;margin-bottom:.6rem!important}
+.tldr ul{margin-bottom:0}
+.tldr li{font-size:.94rem}
+</style>
+<script type="application/ld+json">
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "GEO: como aparecer na nova busca do Google movida por IA e agentes",
+  "description": "O Google abriu a era dos agentes de busca. Veja o que o guia oficial diz sobre GEO e o que empresas B2B no Brasil podem fazer agora para aparecer.",
+  "datePublished": "2026-11-12",
+  "dateModified": "2026-11-12",
+  "inLanguage": "pt-BR",
+  "mainEntityOfPage": "https://orbitandonomarketing.com.br/insights/geo-busca-agentica-google-brasil",
+  "author": {
+   "@type": "Person",
+   "name": "Jacqueline Alves",
+   "url": "https://orbitandonomarketing.com.br/sobre-mim"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Orbitando no Marketing",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://orbitandonomarketing.com.br/Logo/favicon-512.png"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "O que é GEO (Generative Engine Optimization)?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "É o trabalho de fazer uma marca aparecer e ser citada nas respostas geradas por IA, como o AI Overviews e o Modo IA do Google, o ChatGPT, o Gemini e o Perplexity. Na busca do Google, o próprio Google afirma que otimizar para esses recursos continua sendo SEO, porque eles usam os mesmos sistemas de ranqueamento e qualidade."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "O que é a busca agêntica do Google?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "É a fase em que a busca passa a executar tarefas em nome do usuário, além de responder. No Google I/O de maio de 2026, o Google anunciou agentes de informação que monitoram temas 24 horas por dia, reserva agêntica de serviços locais, ligações para empresas em nome do usuário e interfaces geradas sob medida para cada pergunta."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Os agentes de busca do Google já funcionam no Brasil?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Até a publicação deste artigo, os agentes de informação estavam disponíveis primeiro para assinantes AI Pro e Ultra, e a reserva agêntica para todos nos EUA, sem data anunciada para o Brasil. O Modo IA funciona em português desde setembro de 2025, e os anúncios dentro dele estão previstos para o país no quarto trimestre de 2026."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Preciso criar um arquivo llms.txt para aparecer nas respostas de IA do Google?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Não. O guia oficial do Google sobre recursos de IA na busca diz que o rastreador pode encontrar o arquivo, mas o trata como qualquer outro arquivo de texto. O mesmo guia diz que não é necessário fragmentar conteúdo para IA nem usar marcação de schema especial."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "O que fazer para uma empresa B2B aparecer no Modo IA do Google?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Garantir que as páginas comerciais estejam indexadas e aptas a mostrar snippet, publicar em texto as informações que o comprador procura (preço ou o que define o valor, integrações, implementação, suporte, LGPD, nota fiscal), criar conteúdo útil que responda às partes das perguntas longas e fortalecer menções reais em fontes do setor."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Como medir a presença da empresa nas respostas de IA do Google?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Acompanhe o relatório de desempenho do Search Console, que segundo o Google inclui AI Overviews e Modo IA, teste todo mês as perguntas do seu comprador em português nas principais IAs, observe o tráfego direto e a busca pela marca no GA4 e pergunte aos leads se chegaram por indicação de uma IA."
+    }
+   }
+  ]
+ }
+]
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="16" fill="none" stroke="#F8F8FF" stroke-width="2.5"/>
+        <circle cx="34" cy="12" r="7" fill="#6A5ACD"/>
+        <circle cx="11" cy="33" r="5" fill="#836FFF"/>
+        <circle cx="22" cy="22" r="5" fill="#F8F8FF"/>
+      </svg>
+      <div>
+        <span class="nav-logo-name">Orbitando no Marketing</span>
+        <span class="nav-logo-tag">SEO · GEO · AEO</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/sobre-mim">Sobre mim</a></li>
+      <li class="has-mega" id="megaItem">
+        <span onclick="toggleMega(event)">Soluções &#9662;</span>
+        <div class="mega-menu">
+          <div class="mega-grid">
+            <div>
+              <div class="mega-col-title">Para profissionais de marketing</div>
+              <a class="mega-item" href="/guia-marketing-digital">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128218;</div>
+                <div class="mega-item-text"><strong>Guia para Entrar no Mercado de Marketing Digital</strong><span>PDF completo com 15 capítulos para iniciantes e júniors</span></div>
+              </a>
+              <a class="mega-item" href="/modelo-curriculo">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128196;</div>
+                <div class="mega-item-text"><strong>Modelo de Currículo para Marketing Digital <span class="mega-badge">Grátis</span></strong><span>Template editável com guia de preenchimento</span></div>
+              </a>
+            </div>
+            <div>
+              <div class="mega-col-title">Para empresas B2B</div>
+              <a class="mega-item" href="/auditoria-visibilidade-ia">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128269;</div>
+                <div class="mega-item-text"><strong>Auditoria de Visibilidade em IA + SEO Técnico</strong><span>Diagnóstico completo de como sua marca aparece no Google e nas IAs</span></div>
+              </a>
+              <a class="mega-item" href="/consultoria-b2b-saas">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128200;</div>
+                <div class="mega-item-text"><strong>Consultoria Contínua para B2B SaaS</strong><span>Parceria recorrente para conteúdo, SEO e GEO/AEO</span></div>
+              </a>
+              <a class="mega-item" href="/desenvolvimento-sites">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128187;</div>
+                <div class="mega-item-text"><strong>Desenvolvimento de Sites para B2B</strong><span>Site institucional do zero, com alinhamento e entrega completa</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="/cases-de-sucesso">Cases</a></li>
+      <li><a href="/insights/" class="active">Insights</a></li>
+      <li><a href="https://orbitandonomarketing.com.br/insights/" target="_blank">Newsletter</a></li>
+      <li><a href="/contato" class="nav-cta">Contato</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ARTICLE HEADER -->
+<div class="article-header">
+  <a href="/insights/" class="back-link">
+    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Ver todos os artigos
+  </a>
+  <div>
+    <span class="article-cat-badge">GEO · Busca agêntica · Brasil</span>
+  </div>
+  <h1>GEO: como aparecer na nova busca do Google movida por IA e agentes</h1>
+  <div class="article-meta-bar">
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span class="author-name">Jacqueline Alves</span>
+    </span>
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      12 de novembro de 2026
+    </span>
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      15 min de leitura
+    </span>
+  </div>
+  <div class="share-bar">
+    <span class="share-label">Compartilhar:</span>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://orbitandonomarketing.com.br/insights/geo-busca-agentica-google-brasil" target="_blank" class="share-btn">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://orbitandonomarketing.com.br/insights/geo-busca-agentica-google-brasil&text=GEO%3A+como+aparecer+na+nova+busca+do+Google+movida+por+IA+e+agentes" target="_blank" class="share-btn">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      X / Twitter
+    </a>
+    <a href="mailto:?subject=Artigo: GEO e a nova busca do Google movida por IA e agentes&body=Achei esse artigo interessante: https://orbitandonomarketing.com.br/insights/geo-busca-agentica-google-brasil" class="share-btn">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      E-mail
+    </a>
+    <button class="share-btn" onclick="copyLink()">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      Copiar link
+    </button>
+  </div>
+</div>
+
+<!-- ARTICLE OUTER: sidebar TOC + content -->
+<div class="article-outer">
+
+  <!-- TABLE OF CONTENTS, sidebar esquerda -->
+  <nav class="toc" aria-label="Índice do artigo">
+    <p class="toc-title">O que você vai entender neste artigo</p>
+    <ol>
+      <li><a href="#busca-agentica">O que o Google anunciou sobre a busca agêntica</a></li>
+      <li><a href="#o-que-e-geo">GEO na prática: o que o Google diz</a></li>
+      <li><a href="#busca-que-age">Da resposta à ação</a></li>
+      <li><a href="#brasil">O que isso significa no Brasil</a></li>
+      <li><a href="#como-aparecer">Como aparecer na nova busca</a></li>
+      <li><a href="#medir">Como acompanhar a presença</a></li>
+      <li><a href="#plano-seis-meses">Plano para seis meses</a></li>
+      <li><a href="#auditoria">O primeiro passo</a></li>
+      <li><a href="#faq">Perguntas frequentes</a></li>
+    </ol>
+  </nav>
+
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <p>Como uma empresa aparece na busca do Google agora que ela responde, compara e começa a agir pelo usuário? A resposta curta: <strong>GEO, na busca do Google, é SEO bem feito somado a um trabalho de preparação para agentes</strong>. O próprio Google afirmou, em guia oficial publicado em maio de 2026, que otimizar para os recursos de IA da busca <em>"ainda é SEO"</em>. O que muda é o que precisa estar publicado: informação comercial completa e fácil de extrair, presença confirmada por outras fontes e um site que um agente de IA consiga ler e usar.</p>
+
+    <p>A pressa tem motivo. No Google I/O, em 19 de maio de 2026, a vice-presidente de Busca, Liz Reid, anunciou o que chamou de <em>"era dos agentes de busca"</em>, e informou que o Modo IA já passava de 1 bilhão de usuários por mês. Em outubro, o CEO Sundar Pichai disse que o Google está trabalhando nos agentes dentro da busca <em>"de forma bem profunda"</em> e que vai tornar esses recursos mais disponíveis <em>"ao longo dos próximos meses"</em>. No Brasil, o Modo IA funciona em português desde setembro de 2025, e o Google prevê anúncios dentro dele no país ainda no quarto trimestre de 2026.</p>
+
+    <p>A maioria dos recursos agênticos ainda chega primeiro aos Estados Unidos, e isso dá às empresas brasileiras uma janela curta para se preparar. Este artigo explica o que o Google anunciou, o que ele mesmo diz que funciona (e o que manda ignorar) e o que uma empresa B2B no Brasil consegue fazer agora. Pega seu café e vem comigo. ☕️</p>
+
+    <div class="tldr">
+      <p class="tldr-title">TL;DR</p>
+      <ul>
+        <li>O Google anunciou em maio de 2026 a "era dos agentes de busca": agentes que monitoram informações, reservam serviços e montam interfaces sob medida dentro da própria busca. Pichai disse em outubro que isso será ampliado nos próximos meses.</li>
+        <li>O guia oficial do Google sobre IA na busca diz que otimizar para AI Overviews e Modo IA continua sendo SEO, e manda ignorar táticas como llms.txt, fragmentar conteúdo para IA e marcação especial de schema.</li>
+        <li>O que pesa: conteúdo útil e original, página indexada e elegível para snippet, informação comercial explícita e sinais de autoridade vindos de outras fontes.</li>
+        <li>No Brasil, o Modo IA existe em português desde setembro de 2025 e terá anúncios no quarto trimestre de 2026. Os recursos agênticos chegam primeiro aos EUA, o que abre uma janela de preparação.</li>
+        <li>Para empresas B2B: publicar em texto o que o comprador pergunta (preço, integrações, implementação, nota fiscal, LGPD), fortalecer presença em fontes brasileiras e deixar o site legível e utilizável por agentes.</li>
+      </ul>
+    </div>
+
+    <h2 id="busca-agentica">O que o Google anunciou sobre a busca agêntica</h2>
+
+    <p>A virada foi apresentada no Google I/O de 2026. No blog oficial, o Google descreveu a novidade como a possibilidade de <em>"usar agentes só fazendo uma pergunta"</em>, e redesenhou a caixa de busca, que chamou de a maior mudança em mais de 25 anos. Os anúncios que interessam a quem trabalha com visibilidade se dividem em quatro frentes:</p>
+
+    <ul>
+      <li><strong>Agentes de informação:</strong> o usuário cria agentes que monitoram um tema 24 horas por dia, cruzando a web e dados em tempo real, e enviam atualizações resumidas. O exemplo do Google é alguém procurando apartamento, que descreve o que quer e recebe aviso quando aparecem opções compatíveis. Lançamento primeiro para assinantes dos planos AI Pro e Ultra.</li>
+      <li><strong>Reserva agêntica:</strong> a busca reúne preço e disponibilidade de serviços locais e leva o usuário direto ao agendamento. Em algumas categorias, o Google liga para empresas em nome do usuário. Disponível para todos nos EUA.</li>
+      <li><strong>Interfaces geradas na hora:</strong> a busca monta tabelas, gráficos, simulações e painéis sob medida para a pergunta, com o Gemini 3.5 Flash e a plataforma Antigravity. Liberado para todos, sem custo.</li>
+      <li><strong>Miniaplicativos:</strong> rastreadores e painéis persistentes que o usuário pede para a busca construir. Previstos para os próximos meses, começando pelos assinantes nos EUA.</li>
+    </ul>
+
+    <p>Em outubro, numa entrevista ao jornalista Alex Heath reportada pelo Search Engine Journal, Pichai foi além. Disse que a visão do Google para o futuro próximo é <em>"uma caixa só"</em>, em que uma camada de agentes unifica busca, Gemini e os outros produtos, e que o Google está trabalhando nisso a partir da busca. Na teleconferência de resultados de 28 de outubro, segundo o PPC Land, ele afirmou que as experiências agênticas vão chegar também ao Chrome, ao Android e ao Workspace.</p>
+
+    <p>Uma ressalva de precisão: o Google não anunciou uma data em que a busca inteira passará a funcionar por agentes. O que existe é uma direção declarada pelo CEO, recursos sendo liberados em etapas e uma sequência de lançamentos que começa nos EUA e em planos pagos. Para planejamento, isso basta. Ninguém precisa esperar a data oficial para saber para onde a busca está indo.</p>
+
+    <table>
+      <thead>
+        <tr><th>Recurso</th><th>Situação nos EUA</th><th>Situação no Brasil</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>AI Overviews</td><td>Disponível desde 2024</td><td>Disponível em português</td></tr>
+        <tr><td>Modo IA</td><td>Disponível desde maio de 2025</td><td>Disponível em português desde setembro de 2025</td></tr>
+        <tr><td>Anúncios no Modo IA</td><td>Disponíveis</td><td>Previstos para o quarto trimestre de 2026</td></tr>
+        <tr><td>Agentes de informação</td><td>Assinantes AI Pro e Ultra</td><td>Sem data anunciada</td></tr>
+        <tr><td>Reserva e ligação agênticas</td><td>Disponíveis para todos</td><td>Sem data anunciada</td></tr>
+        <tr><td>Interfaces geradas na hora</td><td>Disponíveis para todos</td><td>O Google fala em "todos na busca", sem detalhar países</td></tr>
+      </tbody>
+    </table>
+
+    <p>O padrão histórico ajuda a estimar o prazo. O Modo IA saiu em inglês nos EUA em maio de 2025 e chegou em português cerca de quatro meses depois. Não dá para garantir que os agentes vão seguir o mesmo ritmo, mas é razoável trabalhar com um horizonte de meses.</p>
+
+    <h2 id="o-que-e-geo">GEO na prática: o que o próprio Google diz</h2>
+
+    <p>GEO (Generative Engine Optimization) é o trabalho de fazer uma marca aparecer e ser citada nas respostas geradas por IA. Há dois anos o mercado discute se isso é uma disciplina nova ou uma extensão do SEO. Para a busca do Google, a empresa encerrou a discussão em 15 de maio de 2026, quando publicou o guia "Optimizing your website for generative AI features on Google Search", anunciado por John Mueller no blog do Search Central.</p>
+
+    <p>A frase central do guia, citada pela Semrush e por outros veículos, é esta: <em>"Do ponto de vista da Busca do Google, otimizar para a busca com IA generativa é otimizar para a experiência de busca, e portanto ainda é SEO."</em> O motivo é técnico. Segundo o Google, os recursos de IA da busca usam geração aumentada por recuperação (RAG) e "query fan-out", que é o desdobramento de uma pergunta em várias buscas menores, para trazer conteúdo do próprio índice do Google. Ou seja, a IA responde com o que os sistemas de ranqueamento e qualidade já selecionaram.</p>
+
+    <p>A parte mais útil do guia é uma seção chamada "o que você não precisa fazer". Ela lista táticas que circularam muito no mercado de GEO e que, segundo o Google, não fazem diferença para os recursos de IA da busca:</p>
+
+    <table>
+      <thead>
+        <tr><th>O que o mercado vendeu como GEO</th><th>O que o guia do Google diz</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Criar um arquivo llms.txt</td><td>O rastreador pode encontrar o arquivo, mas trata como qualquer outro arquivo de texto</td></tr>
+        <tr><td>Quebrar o conteúdo em pedaços pequenos para a IA</td><td>Não é necessário</td></tr>
+        <tr><td>Reescrever páginas para cobrir todas as variações de palavra-chave</td><td>Não é necessário</td></tr>
+        <tr><td>Marcação de schema especial ou versões em Markdown</td><td>Não são exigidas para aparecer nos recursos de IA</td></tr>
+        <tr><td>Fabricar menções à marca</td><td>Os sistemas do Google bloqueiam spam, e os recursos de IA dependem desses sistemas</td></tr>
+      </tbody>
+    </table>
+
+    <p>E o que conta? Conteúdo único, útil e original, segundo o guia, pesa mais do que qualquer outra recomendação. A página precisa estar indexada e apta a aparecer com snippet. E as boas práticas de sempre continuam valendo: rastreabilidade, conteúdo de qualidade e dados estruturados para os resultados ricos.</p>
+
+    <p>Na minha leitura, o guia tem dois efeitos práticos. O primeiro é poupar dinheiro: muita empresa pagou por "otimização para IA" que consistia em criar llms.txt e reescrever textos em listas curtas. O segundo é deslocar a atenção para o que dá trabalho de verdade, que é ter algo útil a dizer e ser reconhecido por outras fontes. Uma ressalva importante: o guia vale para a busca do Google. ChatGPT, Perplexity e Copilot usam outras fontes e outros índices, e por isso o trabalho de GEO precisa olhar para cada plataforma. O <a href="/insights/seo-visibilidade-ia-estudo-semrush">estudo da Semrush sobre SEO e visibilidade em IA</a> mostra o quanto a força no Google ainda se relaciona com as citações nas outras IAs.</p>
+
+    <h2 id="busca-que-age">Da resposta à ação: o que muda quando a busca age pelo usuário</h2>
+
+    <p>Até 2024, o trabalho era ranquear para que o usuário clicasse. Com AI Overviews e Modo IA, passou a ser também aparecer citado na resposta. Com os agentes, há uma terceira etapa: ser escolhido por um sistema que compara opções e executa uma tarefa em nome de alguém.</p>
+
+    <table>
+      <thead>
+        <tr><th>Busca com links</th><th>Busca com resposta gerada</th><th>Busca com agentes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>O usuário compara os sites que abriu</td><td>A IA compara e resume as opções</td><td>O agente compara, filtra e age</td></tr>
+        <tr><td>A meta é ranquear e receber o clique</td><td>A meta é ser citado como fonte ou recomendação</td><td>A meta é estar entre as opções que o agente considera e conseguir ser usado por ele</td></tr>
+        <tr><td>Informação incompleta leva a um contato comercial</td><td>Informação incompleta leva a uma resposta com o concorrente</td><td>Informação incompleta tira a empresa da comparação</td></tr>
+        <tr><td>O site precisa convencer uma pessoa</td><td>O site precisa ser uma boa fonte</td><td>O site precisa ser legível e utilizável por um sistema</td></tr>
+      </tbody>
+    </table>
+
+    <p>Para empresas B2B, a reserva de restaurante pode parecer distante, mas o mecanismo dos agentes de informação se aplica diretamente. Imagine um gerente de compras que configura um agente para acompanhar "fornecedores de software de gestão de frota com integração ao ERP X e suporte em português". O agente vai varrer a web e avisar quando encontrar algo que atenda aos requisitos. A sua empresa entra nessa lista se cada um desses requisitos estiver publicado de forma clara e verificável. Se a informação de integração estiver só num PDF de apresentação enviado pelo comercial, o agente nunca vai saber.</p>
+
+    <p>O guia do Google tem uma seção opcional sobre "experiências agênticas" que aponta para dois padrões ainda em formação: o Universal Commerce Protocol (UCP), voltado para compras feitas por agentes, e o WebMCP, que permite a um site expor ações que um agente pode executar. O Google é explícito sobre a prioridade: se for relevante para o seu negócio e houver tempo sobrando, a sugestão é conhecer essas experiências. Para a maioria das empresas B2B brasileiras, esses padrões são assunto para acompanhar de perto, com implementação mais adiante. A base (conteúdo claro, site rastreável, informação completa) vem antes.</p>
+
+    <h2 id="brasil">O que isso significa para empresas no Brasil</h2>
+
+    <p>O Brasil recebe esses recursos depois dos EUA, mas recebe. E o público brasileiro adota rápido. A TIC Domicílios 2025, do Cetic.br, estimou cerca de 50 milhões de brasileiros usando IA generativa, com uso de 69% na classe A e de 59% entre pessoas com ensino superior, o perfil de quem decide compras B2B. Já analisei esse comprador em detalhe no artigo sobre <a href="/insights/comprador-b2b-brasil-ia-whatsapp-vendas">como adaptar site, WhatsApp e time comercial ao comprador B2B que pesquisa com IA</a>.</p>
+
+    <p>Três particularidades do mercado brasileiro mudam a forma de aplicar o GEO.</p>
+
+    <h3>A janela de preparação é real, e curta</h3>
+
+    <p>Quando os agentes de informação e a reserva agêntica chegarem ao Brasil, as fontes que o Google já considera confiáveis em português vão sair na frente. Segundo o guia do Google, os recursos de IA da busca se apoiam nos mesmos sistemas de ranqueamento e qualidade da busca tradicional. Empresas que usarem os próximos meses para organizar conteúdo e reputação começam a corrida mais adiante.</p>
+
+    <h3>Os anúncios chegam ao Modo IA no Brasil antes dos agentes</h3>
+
+    <p>O Google anunciou em 28 de outubro de 2026 que levará anúncios ao Modo IA no Brasil, no México e no Reino Unido no quarto trimestre. Segundo Shashi Thakur, vice-presidente de anúncios da Busca, as perguntas no Modo IA são em média três vezes mais longas que as buscas comuns. Campanhas de Search, Shopping e Performance Max passam a participar automaticamente. Para quem investe em Google Ads, isso significa revisar campanhas para perguntas longas e conversacionais. Para quem depende do orgânico, significa mais concorrência por espaço na resposta, o que torna a presença orgânica bem construída ainda mais valiosa.</p>
+
+    <h3>Há menos conteúdo B2B bem estruturado em português</h3>
+
+    <p>Esta é uma observação de mercado, sem pesquisa que a quantifique: em muitas categorias B2B, o volume de conteúdo técnico e comparativo em português é bem menor do que em inglês. O query fan-out desdobra a pergunta do usuário em várias buscas menores. Se, para cada uma dessas buscas em português, a sua empresa tiver uma página clara e confiável, ela tem mais chances de entrar na resposta do que teria disputando o mesmo espaço em inglês.</p>
+
+    <table>
+      <thead>
+        <tr><th>Empresa que espera os agentes chegarem</th><th>Empresa que se prepara agora</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Descobre como aparece nas IAs quando o tráfego cai</td><td>Testa todo mês as perguntas do comprador em português e corrige o que falta</td></tr>
+        <tr><td>Mantém preço, integrações e prazos só no PDF comercial</td><td>Publica essas informações em texto, no site</td></tr>
+        <tr><td>Investe em "táticas de GEO" que o Google manda ignorar</td><td>Investe em conteúdo útil e em reputação fora do site</td></tr>
+        <tr><td>Começa a disputa quando os concorrentes já são as fontes de referência</td><td>Chega aos recursos agênticos como fonte já reconhecida</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="como-aparecer">Como aparecer na nova busca: o que uma empresa B2B pode fazer agora</h2>
+
+    <p>A lista abaixo junta o que o guia do Google recomenda com o que os agentes vão exigir, ajustado para o contexto brasileiro.</p>
+
+    <h3>1. Garanta a base técnica</h3>
+    <p>Para aparecer nos recursos de IA, a página precisa estar indexada e apta a mostrar snippet. Confira no Search Console se as páginas comerciais (produto, preço, integrações, casos) estão indexadas. Verifique se o conteúdo importante aparece no HTML e não depende de cliques ou de scripts para carregar, e se não há bloqueios acidentais de rastreamento. Parece básico, e é. Também é a falha mais comum em sites B2B construídos às pressas.</p>
+
+    <h3>2. Responda às perguntas longas que o comprador faz</h3>
+    <p>As perguntas no Modo IA são três vezes mais longas, e o fan-out quebra cada uma em várias buscas menores. Uma pergunta como "qual sistema de gestão financeira para empresa de serviços com 50 funcionários, que emita NFS-e e integre com o banco" vira buscas separadas sobre porte, nota fiscal, integração bancária e setor. Cada uma delas é uma oportunidade de conteúdo. Mapeie essas perguntas a partir do que o time comercial ouve, das dúvidas recebidas no WhatsApp e do Search Console, e crie páginas que respondam a cada parte com clareza.</p>
+
+    <h3>3. Publique a informação comercial que o agente vai procurar</h3>
+    <p>Faixa de preço ou o que define o valor, integrações nomeadas, prazo de implementação, modelo de suporte, adequação à LGPD, emissão de nota fiscal, formas de pagamento aceitas. São os filtros que um comprador, e o agente que trabalha para ele, aplicam primeiro. Informação que não está publicada não entra na comparação.</p>
+
+    <h3>4. Fortaleça os sinais de autoridade em português</h3>
+    <p>O guia do Google lembra que menções fabricadas não ajudam, porque os sistemas de spam as bloqueiam. As menções que contam são as reais: entrevistas e artigos em veículos do setor, participação em associações e eventos, perfis ativos dos especialistas da empresa no LinkedIn, avaliações espontâneas de clientes. Esse é o mesmo movimento que discuti no artigo sobre <a href="/insights/seo-nao-basta-confianca-audiencia-b2b">por que o SEO sozinho já não sustenta uma marca B2B</a>: o Google usa cada vez mais sinais externos para decidir em quem confiar.</p>
+
+    <h3>5. Mantenha dados estruturados e o Perfil da Empresa em ordem</h3>
+    <p>O Google diz que não existe schema especial para IA, mas continua recomendando dados estruturados para os resultados ricos, e o guia traz orientações específicas para negócios locais e comércio eletrônico. Para empresas B2B com atendimento local, o Perfil da Empresa no Google com informações completas e atualizadas (categoria, serviços, horário, área de atendimento) é de onde a busca tira as informações de negócios locais, inclusive para os recursos de reserva já disponíveis nos EUA.</p>
+
+    <h3>6. Deixe o site utilizável por um agente</h3>
+    <p>Formulários com campos bem rotulados, páginas de agendamento de demonstração que funcionam sem etapas confusas, informações de contato em texto. Se um agente tentar pedir uma proposta em nome do usuário e esbarrar num formulário de dez campos obrigatórios, a tarefa trava, e a sugestão seguinte é o concorrente. Para empresas com mais estrutura técnica, acompanhar o WebMCP e o UCP faz sentido. Para a maioria, deixar o caminho de contato simples já resolve boa parte.</p>
+
+    <h2 id="medir">Como acompanhar a presença na busca com IA</h2>
+
+    <p>A busca agêntica piora um problema que já existia: a influência acontece sem clique. O comprador lê a resposta, o agente compara e recomenda, e a visita ao site, quando acontece, chega como tráfego direto, busca pela marca ou mensagem no WhatsApp. Por isso, o acompanhamento precisa combinar fontes:</p>
+
+    <ul>
+      <li><strong>Search Console:</strong> segundo o Google, as impressões e os cliques do AI Overviews e do Modo IA entram no relatório de desempenho da busca, sem separação por recurso. Acompanhe páginas e consultas longas.</li>
+      <li><strong>Testes mensais de perguntas:</strong> 20 a 30 perguntas do seu comprador, em português, testadas no Modo IA, no AI Overviews, no ChatGPT, no Gemini e no Copilot. Registre quem é citado e o que é dito sobre a sua empresa.</li>
+      <li><strong>GA4:</strong> o canal de assistentes de IA e a evolução do tráfego direto.</li>
+      <li><strong>Origem declarada:</strong> a opção "ChatGPT, Gemini ou outra IA" no campo "como nos conheceu?" e a mesma pergunta na primeira conversa do WhatsApp.</li>
+    </ul>
+
+    <p>O artigo sobre <a href="/insights/comprador-b2b-ia-medicao-orcamento-2027">como medir a influência da IA e planejar o orçamento de 2027</a> detalha como ler esses sinais em três camadas (exposição, comportamento e resultado de negócio) e usar a combinação para decidir onde agir.</p>
+
+    <h2 id="plano-seis-meses">Um plano para os próximos seis meses</h2>
+
+    <table>
+      <thead>
+        <tr><th>Período</th><th>O que fazer</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Meses 1 e 2</td><td>Diagnóstico: indexação das páginas comerciais, teste das perguntas do comprador nas IAs em português, mapa das informações erradas ou ausentes, revisão do Perfil da Empresa no Google.</td></tr>
+        <tr><td>Meses 3 e 4</td><td>Conteúdo: publicar a informação comercial em texto, criar páginas que respondam às partes das perguntas longas, revisar formulários e o caminho de contato.</td></tr>
+        <tr><td>Meses 5 e 6</td><td>Autoridade e medição: pautas em veículos e eventos do setor, especialistas publicando no LinkedIn, painel mensal que combine Search Console, testes de perguntas e origem declarada dos leads.</td></tr>
+      </tbody>
+    </table>
+
+    <p>Nada disso depende de os agentes chegarem ao Brasil. Tudo isso melhora a presença no Modo IA e no AI Overviews que já estão aqui, e deixa a empresa pronta para quando os agentes chegarem.</p>
+
+    <h2 id="auditoria">O primeiro passo é saber onde a sua empresa está hoje</h2>
+
+    <p>A busca agêntica vai privilegiar as empresas que os sistemas do Google já reconhecem como boas fontes. Antes de produzir conteúdo novo, é preciso saber como a sua empresa aparece agora: se as páginas comerciais estão indexadas, se as IAs a mencionam quando o comprador pergunta em português, o que dizem sobre ela e quais concorrentes ocupam o espaço.</p>
+
+    <p>A <a href="/auditoria-visibilidade-ia">Auditoria de Visibilidade em IA + SEO Técnico</a> da Orbitando no Marketing faz esse diagnóstico para empresas B2B. Ela cobre a base técnica que o guia do Google exige, testa as perguntas do seu comprador no Modo IA, no AI Overviews, no ChatGPT, no Gemini e no Perplexity, identifica informações ausentes ou erradas e as fontes que sustentam as recomendações dos concorrentes, e entrega um plano de ação priorizado para os próximos meses. É a forma de usar a janela antes que os agentes cheguem ao Brasil.</p>
+
+    <p>Se a empresa já fez o diagnóstico e precisa de acompanhamento contínuo para executar o plano, a <a href="/consultoria-b2b-saas">Consultoria Contínua para B2B SaaS</a> cuida de conteúdo, SEO e GEO/AEO mês a mês.</p>
+
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <h2 class="faq-title" id="faq">Perguntas frequentes</h2>
+
+      <details>
+        <summary>O que é GEO (Generative Engine Optimization)?</summary>
+        <div class="faq-answer">
+          <p>É o trabalho de fazer uma marca aparecer e ser citada nas respostas geradas por IA, como o AI Overviews e o Modo IA do Google, o ChatGPT, o Gemini e o Perplexity. Na busca do Google, o próprio Google afirma que otimizar para esses recursos continua sendo SEO, porque eles usam os mesmos sistemas de ranqueamento e qualidade.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>O que é a busca agêntica do Google?</summary>
+        <div class="faq-answer">
+          <p>É a fase em que a busca passa a executar tarefas em nome do usuário, além de responder. No Google I/O de maio de 2026, o Google anunciou agentes de informação que monitoram temas 24 horas por dia, reserva agêntica de serviços locais, ligações para empresas em nome do usuário e interfaces geradas sob medida para cada pergunta.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Os agentes de busca do Google já funcionam no Brasil?</summary>
+        <div class="faq-answer">
+          <p>Até a publicação deste artigo, os agentes de informação estavam disponíveis primeiro para assinantes AI Pro e Ultra, e a reserva agêntica para todos nos EUA, sem data anunciada para o Brasil. O Modo IA funciona em português desde setembro de 2025, e os anúncios dentro dele estão previstos para o país no quarto trimestre de 2026.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Preciso criar um arquivo llms.txt para aparecer nas respostas de IA do Google?</summary>
+        <div class="faq-answer">
+          <p>Não. O guia oficial do Google sobre recursos de IA na busca diz que o rastreador pode encontrar o arquivo, mas o trata como qualquer outro arquivo de texto. O mesmo guia diz que não é necessário fragmentar conteúdo para IA nem usar marcação de schema especial.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>O que fazer para uma empresa B2B aparecer no Modo IA do Google?</summary>
+        <div class="faq-answer">
+          <p>Garantir que as páginas comerciais estejam indexadas e aptas a mostrar snippet, publicar em texto as informações que o comprador procura (preço ou o que define o valor, integrações, implementação, suporte, LGPD, nota fiscal), criar conteúdo útil que responda às partes das perguntas longas e fortalecer menções reais em fontes do setor.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Como medir a presença da empresa nas respostas de IA do Google?</summary>
+        <div class="faq-answer">
+          <p>Acompanhe o relatório de desempenho do Search Console, que segundo o Google inclui AI Overviews e Modo IA, teste todo mês as perguntas do seu comprador em português nas principais IAs, observe o tráfego direto e a busca pela marca no GA4 e pergunte aos leads se chegaram por indicação de uma IA.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- SHARE BOTTOM -->
+    <div style="margin-top:2.5rem;padding-top:1.75rem;border-top:1px solid var(--border)">
+      <p style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:.75rem">Compartilhar este artigo</p>
+      <div class="share-bar" style="justify-content:flex-start">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://orbitandonomarketing.com.br/insights/geo-busca-agentica-google-brasil" target="_blank" class="share-btn">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=https://orbitandonomarketing.com.br/insights/geo-busca-agentica-google-brasil" target="_blank" class="share-btn">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X / Twitter
+        </a>
+        <a href="mailto:?subject=Artigo: GEO e a nova busca do Google movida por IA e agentes&body=https://orbitandonomarketing.com.br/insights/geo-busca-agentica-google-brasil" class="share-btn">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          E-mail
+        </a>
+        <button class="share-btn" onclick="copyLink()">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          Copiar link
+        </button>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<!-- RELATED ARTICLES -->
+<div class="related-section">
+  <div class="related-inner">
+    <h3 class="related-title">Artigos relacionados</h3>
+    <div class="related-grid">
+      <div class="related-card">
+        <p class="rc-cat">GEO · Vendas B2B</p>
+        <h4><a href="/insights/comprador-b2b-brasil-ia-whatsapp-vendas">O comprador B2B brasileiro já pesquisou com a IA: como adaptar site, WhatsApp e time comercial</a></h4>
+        <a href="/insights/comprador-b2b-brasil-ia-whatsapp-vendas" class="rc-read">Ler artigo</a>
+      </div>
+      <div class="related-card">
+        <p class="rc-cat">GEO · AEO · SEO</p>
+        <h4><a href="/insights/visibilidade-marca-respostas-ia-seo-geo-aeo">Como melhorar a visibilidade da marca em respostas de IA: o que SEO, GEO e AEO têm a ver com isso</a></h4>
+        <a href="/insights/visibilidade-marca-respostas-ia-seo-geo-aeo" class="rc-read">Ler artigo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER BAND -->
+<div class="newsletter-band">
+  <div class="newsletter-form-wrap">
+    <div data-reach-form="22c061ca-1ddf-4b0a-a9a9-52e1021274ab"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-name">Orbitando no Marketing</div>
+      <div class="footer-logo-tag">SEO · GEO · AEO</div>
+      <p>Consultoria estratégica de marketing digital para empresas B2B que querem aparecer no Google e nas IAs generativas. Por Jacqueline Alves.</p>
+    </div>
+    <div>
+      <h4>Para profissionais</h4>
+      <ul>
+        <li><a href="/guia-marketing-digital">Guia para Iniciantes</a></li>
+        <li><a href="/modelo-curriculo">Modelo de Currículo</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Para empresas B2B</h4>
+      <ul>
+        <li><a href="/auditoria-visibilidade-ia">Auditoria de Visibilidade em IA</a></li>
+        <li><a href="/consultoria-b2b-saas">Consultoria Contínua B2B SaaS</a></li>
+        <li><a href="/desenvolvimento-sites">Desenvolvimento de Sites</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Me conheça</h4>
+      <ul>
+        <li><a href="/sobre-mim">Sobre mim</a></li>
+        <li><a href="/cases-de-sucesso">Cases de sucesso</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Newsletter</h4>
+      <ul>
+        <li><a href="https://orbitandonomarketing.com.br/insights/" target="_blank">Orbitando no Marketing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Fale comigo</h4>
+      <ul>
+        <li><a href="/contato">Contato</a></li>
+        <li><a href="https://www.linkedin.com/in/jacquelinealvesoliveira" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Orbitando no Marketing. Todos os direitos reservados.</p>
+    <p><a href="/politica-privacidade" style="color:var(--muted);text-decoration:none;transition:color .15s" onmouseover="this.style.color='#836FFF'" onmouseout="this.style.color='var(--muted)'">Política de Privacidade</a></p>
+  </div>
+</footer>
+
+<script>
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
+function toggleMega(e){
+  e.stopPropagation();
+  var m=document.getElementById('megaItem');
+  m.classList.toggle('open');
+}
+document.addEventListener('click',function(){
+  var m=document.getElementById('megaItem');
+  if(m)m.classList.remove('open');
+});
+function copyLink(){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    const btns=document.querySelectorAll('.share-btn');
+    btns.forEach(b=>{if(b.textContent.includes('Copiar')){const orig=b.innerHTML;b.innerHTML='<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Copiado!';setTimeout(()=>{b.innerHTML=orig;},2000);}});
+  });
+}
+</script>
+<script>
+(function(){
+  var MAX_TRIES=3, RETRY_MS=3000, tries=0;
+  function checkAndInit(){
+    if(window.__reachEmbed && typeof window.__reachEmbed.init==='function'){
+      window.__reachEmbed.init();
+    }
+  }
+  function loadReach(){
+    var old=document.querySelector('script[data-reach-script]');
+    if(old) old.parentNode.removeChild(old);
+    var s=document.createElement('script');
+    s.setAttribute('data-reach-script','1');
+    s.src='https://cdn-reach.hostinger.com/js/embed.js?_='+Date.now();
+    s.onload=function(){
+      setTimeout(function(){
+        checkAndInit();
+        var el=document.querySelector('[data-reach-form]');
+        if(el && !el.querySelector('iframe') && tries<MAX_TRIES){
+          tries++;
+          setTimeout(loadReach, RETRY_MS);
+        }
+      }, 800);
+    };
+    s.onerror=function(){
+      if(tries<MAX_TRIES){ tries++; setTimeout(loadReach, RETRY_MS); }
+    };
+    document.body.appendChild(s);
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded', loadReach);
+  } else {
+    loadReach();
+  }
+})();
+</script>
+</body>
+</html>
