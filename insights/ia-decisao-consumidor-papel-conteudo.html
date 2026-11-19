@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IA e decisão de compra: o novo papel do conteúdo no Brasil</title>
+<meta name="description" content="A IA compara, recomenda e o consumidor confere. Veja como mapear decisões com dados e o que fazer para a IA mostrar sua marca com informação correta.">
+<meta name="author" content="Jacqueline Alves">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://orbitandonomarketing.com.br/insights/ia-decisao-consumidor-papel-conteudo">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://orbitandonomarketing.com.br/insights/ia-decisao-consumidor-papel-conteudo">
+<meta property="og:title" content="IA e decisão de compra: o novo papel do conteúdo no Brasil">
+<meta property="og:description" content="A IA compara, recomenda e o consumidor confere. Veja como mapear decisões com dados e o que fazer para a IA mostrar sua marca com informação correta.">
+<link rel="icon" type="image/png" href="/Logo/favicon-512.png">
+<link rel="shortcut icon" href="/Logo/favicon-512.png">
+<link rel="apple-touch-icon" href="/Logo/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#191970;--navy-dark:#141459;--slate-dark:#483D8B;
+  --slate:#6A5ACD;--lilac:#836FFF;--ghost:#F8F8FF;
+  --light:#f0eeff;--light2:#f8f7ff;--border:#e8e6f8;
+  --muted:#9896CC;--text:#191970;--white:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--ghost);line-height:1.75}
+a{color:var(--slate);text-decoration:none}
+a:hover{color:var(--slate-dark)}
+img{max-width:100%;display:block}
+
+/* NAV */
+nav{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.nav-logo svg{width:36px;height:36px;flex-shrink:0}
+.nav-logo-name{display:block;font-size:.95rem;font-weight:700;color:var(--ghost);line-height:1.2}
+.nav-logo-tag{display:block;font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
+.nav-links a,.nav-links span{font-size:.88rem;font-weight:500;color:var(--ghost);opacity:.85;text-decoration:none;cursor:pointer;transition:opacity .15s}
+.nav-links a:hover,.nav-links span:hover{opacity:1}
+.nav-cta{background:var(--lilac)!important;color:var(--navy)!important;opacity:1!important;padding:.45rem 1.1rem;border-radius:6px;font-weight:700!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--ghost);border-radius:2px}
+
+/* MEGA MENU */
+.has-mega{position:static}
+.mega-menu{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy-dark);border-top:2px solid var(--lilac);box-shadow:0 16px 48px rgba(0,0,0,.45);z-index:300;padding:2rem}
+.has-mega.open .mega-menu{display:block}
+.mega-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.mega-col-title{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid rgba(131,111,255,.3)}
+.mega-item{display:flex;align-items:flex-start;gap:.75rem;padding:.75rem;border-radius:8px;text-decoration:none;transition:background .15s;margin-bottom:.25rem}
+.mega-item:hover{background:rgba(131,111,255,.12)}
+.mega-item-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.mega-item-text strong{display:block;font-size:.88rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.mega-item-text span{font-size:.78rem;color:var(--muted);line-height:1.4}
+.mega-badge{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(131,111,255,.25);color:var(--lilac);padding:.15rem .45rem;border-radius:4px;vertical-align:middle}
+
+/* ARTICLE LAYOUT */
+.article-header{background:var(--navy);padding:3.5rem 2rem 3rem;text-align:center}
+.back-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:600;color:var(--muted);margin-bottom:1.5rem;transition:color .15s}
+.back-link:hover{color:#F8F8FF}
+.back-link svg{transition:transform .15s}
+.back-link:hover svg{transform:translateX(-3px)}
+.article-cat-badge{display:inline-block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--lilac);background:rgba(131,111,255,.15);border:1px solid rgba(131,111,255,.35);padding:.28rem .8rem;border-radius:6px;margin-bottom:1rem}
+.article-header h1{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:700;color:#F8F8FF;line-height:1.15;max-width:760px;margin:0 auto 1.25rem}
+.article-meta-bar{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;font-size:.82rem;color:var(--muted);margin-bottom:1.5rem}
+.article-meta-bar span{display:flex;align-items:center;gap:.35rem}
+.article-meta-bar .author-name{font-weight:700;color:rgba(248,248,255,.88)}
+
+/* SHARE BUTTONS */
+.share-bar{display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap;margin-bottom:.5rem}
+.share-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.share-btn{display:inline-flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:600;padding:.35rem .9rem;border-radius:7px;border:1px solid rgba(131,111,255,.35);background:rgba(131,111,255,.1);transition:all .15s;cursor:pointer;text-decoration:none;font-family:'Plus Jakarta Sans',sans-serif}
+button.share-btn{color:rgba(248,248,255,.82)!important;-webkit-appearance:none;appearance:none;background:rgba(131,111,255,.12);border:1px solid rgba(131,111,255,.4)}
+.share-btn:not(button){color:rgba(248,248,255,.75)}
+.share-btn:hover{color:#F8F8FF!important;background:rgba(131,111,255,.28);border-color:var(--lilac)}
+button.share-btn:hover{color:#F8F8FF!important;background:rgba(131,111,255,.28);border-color:var(--lilac)}
+.article-body button.share-btn{color:var(--slate)!important;background:rgba(106,90,205,.08);border-color:rgba(106,90,205,.3)}
+.article-body button.share-btn:hover{color:var(--slate-dark)!important;background:rgba(106,90,205,.18);border-color:var(--slate)}
+
+/* ARTICLE OUTER: sidebar TOC + content */
+.article-outer{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:240px 1fr;gap:3rem;align-items:start}
+
+/* TABLE OF CONTENTS, sidebar */
+.toc{position:sticky;top:88px;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem}
+.toc-title{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:.9rem}
+.toc ol{padding-left:1.1rem}
+.toc li{font-size:.82rem;line-height:1.45;margin-bottom:.55rem}
+.toc li a{color:var(--slate);font-weight:500}
+.toc li a:hover{color:var(--slate-dark)}
+
+/* ARTICLE BODY */
+.article-body h2{font-size:clamp(1.25rem,2.2vw,1.7rem);font-weight:700;color:var(--navy);margin:2.75rem 0 1rem;line-height:1.22}
+.article-body h3{font-size:1.1rem;font-weight:700;color:var(--slate);margin:1.75rem 0 .65rem;line-height:1.4}
+.article-body p{font-size:1rem;line-height:1.8;color:var(--text);margin-bottom:1.25rem}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.25rem}
+.article-body li{font-size:1rem;line-height:1.75;color:var(--text);margin-bottom:.4rem}
+.article-body strong{font-weight:700}
+.article-body em{font-style:italic}
+.article-body a{color:var(--slate);font-weight:600}
+.article-body a:hover{color:var(--slate-dark)}
+
+/* TABLES */
+.article-body table{width:100%;border-collapse:collapse;margin:1.5rem 0 2rem;font-size:.9rem}
+.article-body th{background:var(--navy);color:#F8F8FF;padding:.75rem 1rem;text-align:left;font-weight:700}
+.article-body td{padding:.7rem 1rem;border-bottom:1px solid var(--border)}
+.article-body tr:nth-child(even) td{background:var(--light2)}
+.article-body th:first-child{border-radius:8px 0 0 0}
+.article-body th:last-child{border-radius:0 8px 0 0}
+
+/* ACCENT BAR (callout) */
+.accent-bar{border-left:4px solid var(--lilac);background:var(--light);border-radius:0 8px 8px 0;padding:1rem 1.5rem;margin:1.5rem 0}
+.accent-bar p{margin-bottom:0;font-size:.95rem}
+
+/* CTA SECTION */
+.cta-section{background:linear-gradient(135deg,var(--slate-dark),var(--slate));border-radius:14px;padding:2.25rem 2rem;margin:3rem 0;text-align:center}
+.cta-section h2{color:#F8F8FF;font-size:1.5rem;margin-bottom:.75rem}
+.cta-section p{color:rgba(248,248,255,.78);max-width:480px;margin:0 auto 1.5rem;font-size:.95rem}
+.btn-cta{display:inline-block;background:#F8F8FF;color:var(--navy);padding:.75rem 2rem;border-radius:8px;font-weight:700;font-size:.92rem}
+.btn-cta:hover{opacity:.9;color:var(--navy)}
+
+/* FAQ */
+.faq-section{margin:2.5rem 0}
+.faq-title{font-size:clamp(1.25rem,2vw,1.6rem);font-weight:700;color:var(--navy);margin-bottom:1.25rem}
+details{border:1px solid var(--border);border-radius:10px;margin-bottom:.75rem;overflow:hidden}
+details[open]{border-color:var(--lilac)}
+summary{padding:1rem 1.25rem;font-size:.95rem;font-weight:700;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:var(--white)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'';width:18px;height:18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%236A5ACD' stroke-width='2.5' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-size:contain;background-repeat:no-repeat;flex-shrink:0;transition:transform .2s}
+details[open] summary::after{transform:rotate(180deg)}
+.faq-answer{padding:1rem 1.25rem 1.25rem;background:var(--light2);font-size:.92rem;line-height:1.7;color:var(--text);border-top:1px solid var(--border)}
+.faq-answer p{margin-bottom:.75rem}
+.faq-answer p:last-child{margin-bottom:0}
+
+/* RELATED ARTICLES */
+.related-section{background:var(--white);border-top:1px solid var(--border);padding:2.5rem 2rem}
+.related-inner{max-width:760px;margin:0 auto}
+.related-title{font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:1.25rem}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.related-card{background:var(--ghost);border:1px solid var(--border);border-radius:10px;padding:1.1rem;transition:box-shadow .15s}
+.related-card:hover{box-shadow:0 4px 16px rgba(25,25,112,.08)}
+.related-card .rc-cat{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--lilac);margin-bottom:.4rem}
+.related-card h4{font-size:.88rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem}
+.related-card h4 a{color:var(--navy)}
+.related-card h4 a:hover{color:var(--slate)}
+.related-card .rc-read{font-size:.78rem;font-weight:600;color:var(--slate)}
+
+/* NEWSLETTER BAND */
+.newsletter-band{background:linear-gradient(135deg,var(--slate-dark),var(--slate));padding:2.5rem 2rem;text-align:center}
+.newsletter-form-wrap{max-width:480px;margin:0 auto}
+
+/* FOOTER */
+footer{background:var(--navy-dark);color:var(--ghost);padding:4rem 2rem 2rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+footer h4{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem}
+footer ul{list-style:none}
+footer ul li{margin-bottom:.5rem}
+footer ul a{font-size:.88rem;color:#C8C5F0;text-decoration:none;transition:color .15s}
+footer ul a:hover{color:var(--lilac)}
+.footer-logo-name{font-size:1rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.footer-logo-tag{font-size:.65rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.85rem}
+footer p{font-size:.85rem;color:var(--muted);line-height:1.6}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:.8rem;color:var(--muted)}
+
+/* MOBILE */
+@media(max-width:960px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--navy);padding:1rem 2rem;gap:1rem;align-items:flex-start}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  .mega-menu,.dropdown-menu{position:static;border-top:none;box-shadow:none;padding:.75rem 0}
+  .article-outer{grid-template-columns:1fr;gap:0;padding:2rem 1.25rem}
+  .toc{position:static;margin-bottom:2rem}
+  .related-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .nav-inner{padding:0 1rem}
+  .nav-logo-tag{display:none}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+
+/* TL;DR */
+.tldr{background:var(--white);border:1px solid var(--border);border-top:4px solid var(--lilac);border-radius:12px;padding:1.25rem 1.5rem;margin:1.75rem 0 2rem}
+.tldr-title{font-size:.72rem!important;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--slate)!important;margin-bottom:.6rem!important}
+.tldr ul{margin-bottom:0}
+.tldr li{font-size:.94rem}
+</style>
+<script type="application/ld+json">
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Da busca à resposta: como a IA muda o papel do conteúdo na decisão do consumidor",
+  "description": "A IA compara, recomenda e o consumidor confere. Veja como mapear decisões com dados e o que fazer para a IA mostrar sua marca com informação correta.",
+  "datePublished": "2026-11-19",
+  "dateModified": "2026-11-19",
+  "inLanguage": "pt-BR",
+  "mainEntityOfPage": "https://orbitandonomarketing.com.br/insights/ia-decisao-consumidor-papel-conteudo",
+  "author": {
+   "@type": "Person",
+   "name": "Jacqueline Alves",
+   "url": "https://orbitandonomarketing.com.br/sobre-mim"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Orbitando no Marketing",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://orbitandonomarketing.com.br/Logo/favicon-512.png"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Quantos brasileiros usam IA para decidir compras?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Segundo a pesquisa Jornadas com IA, do Google com a Ipsos (janeiro de 2026, 2.749 entrevistados), 57% dos brasileiros usaram IA em alguma etapa da jornada de compra no último ano. A pesquisa E-consumidor 2026, da Nuvemshop com a Opinion Box, aponta que 46% dos consumidores online já usaram ChatGPT ou Gemini para ajudar numa compra."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "O consumidor compra direto o que a IA recomenda?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Na maioria das vezes, não. Segundo o State of Search Brasil 7, da Hedgehog Digital com a Opinion Box, depois de uma recomendação de IA 39,1% vão a um buscador conferir, 36,3% procuram avaliações de quem já comprou, 31,6% comparam preços entre lojas e só 6,5% compram o produto recomendado na hora."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Qual o papel do conteúdo da marca quando a IA responde pelo consumidor?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "O conteúdo tem dois papéis. Antes da resposta, é a matéria-prima que a IA usa para comparar e recomendar: especificações, preço, diferenciais e para quem o produto serve. Depois da resposta, é a prova que o consumidor procura para conferir a recomendação: avaliações, histórico de atendimento e preço coerente entre canais."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "O Reclame Aqui influencia as respostas do ChatGPT?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "O Reclame Aqui aparece com frequência nas respostas de IA sobre marcas brasileiras. Segundo dados da própria plataforma, foram em média 555 milhões de citações por mês nas principais ferramentas de IA no primeiro semestre de 2026. Não há regra pública sobre o peso que cada IA dá à plataforma, mas reclamações sem resposta entram na leitura que as IAs fazem da reputação."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Dá para pagar para aparecer nas respostas de IA?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "No Google, os anúncios chegam ao Modo IA no Brasil no quarto trimestre de 2026, identificados como anúncio. A resposta orgânica não é vendida. Ela depende da informação publicada, da reputação e da presença em fontes confiáveis. Menções fabricadas e avaliações compradas são tratadas como spam."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Como descobrir o que as IAs dizem sobre a minha marca?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Reúna de 30 a 50 perguntas reais do seu consumidor, tiradas do Search Console, do atendimento, das vendas e do Reclame Aqui, e teste em português no ChatGPT, no Gemini, no Copilot, no Perplexity e nos recursos de IA do Google. Registre quais marcas aparecem, como a sua é descrita, quais fontes são citadas e se há informação errada. Repita o teste todo mês."
+    }
+   }
+  ]
+ }
+]
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="16" fill="none" stroke="#F8F8FF" stroke-width="2.5"/>
+        <circle cx="34" cy="12" r="7" fill="#6A5ACD"/>
+        <circle cx="11" cy="33" r="5" fill="#836FFF"/>
+        <circle cx="22" cy="22" r="5" fill="#F8F8FF"/>
+      </svg>
+      <div>
+        <span class="nav-logo-name">Orbitando no Marketing</span>
+        <span class="nav-logo-tag">SEO · GEO · AEO</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/sobre-mim">Sobre mim</a></li>
+      <li class="has-mega" id="megaItem">
+        <span onclick="toggleMega(event)">Soluções &#9662;</span>
+        <div class="mega-menu">
+          <div class="mega-grid">
+            <div>
+              <div class="mega-col-title">Para profissionais de marketing</div>
+              <a class="mega-item" href="/guia-marketing-digital">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128218;</div>
+                <div class="mega-item-text"><strong>Guia para Entrar no Mercado de Marketing Digital</strong><span>PDF completo com 15 capítulos para iniciantes e júniors</span></div>
+              </a>
+              <a class="mega-item" href="/modelo-curriculo">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128196;</div>
+                <div class="mega-item-text"><strong>Modelo de Currículo para Marketing Digital <span class="mega-badge">Grátis</span></strong><span>Template editável com guia de preenchimento</span></div>
+              </a>
+            </div>
+            <div>
+              <div class="mega-col-title">Para empresas B2B</div>
+              <a class="mega-item" href="/auditoria-visibilidade-ia">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128269;</div>
+                <div class="mega-item-text"><strong>Auditoria de Visibilidade em IA + SEO Técnico</strong><span>Diagnóstico completo de como sua marca aparece no Google e nas IAs</span></div>
+              </a>
+              <a class="mega-item" href="/consultoria-b2b-saas">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128200;</div>
+                <div class="mega-item-text"><strong>Consultoria Contínua para B2B SaaS</strong><span>Parceria recorrente para conteúdo, SEO e GEO/AEO</span></div>
+              </a>
+              <a class="mega-item" href="/desenvolvimento-sites">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128187;</div>
+                <div class="mega-item-text"><strong>Desenvolvimento de Sites para B2B</strong><span>Site institucional do zero, com alinhamento e entrega completa</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="/cases-de-sucesso">Cases</a></li>
+      <li><a href="/insights/" class="active">Insights</a></li>
+      <li><a href="https://orbitandonomarketing.com.br/insights/" target="_blank">Newsletter</a></li>
+      <li><a href="/contato" class="nav-cta">Contato</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ARTICLE HEADER -->
+<div class="article-header">
+  <a href="/insights/" class="back-link">
+    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Ver todos os artigos
+  </a>
+  <div>
+    <span class="article-cat-badge">Conteúdo · GEO · Consumo</span>
+  </div>
+  <h1>Da busca à resposta: como a IA muda o papel do conteúdo na decisão do consumidor</h1>
+  <div class="article-meta-bar">
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span class="author-name">Jacqueline Alves</span>
+    </span>
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      19 de novembro de 2026
+    </span>
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      15 min de leitura
+    </span>
+  </div>
+  <div class="share-bar">
+    <span class="share-label">Compartilhar:</span>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://orbitandonomarketing.com.br/insights/ia-decisao-consumidor-papel-conteudo" target="_blank" class="share-btn">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://orbitandonomarketing.com.br/insights/ia-decisao-consumidor-papel-conteudo&text=Da+busca+%C3%A0+resposta%3A+como+a+IA+muda+o+papel+do+conte%C3%BAdo+na+decis%C3%A3o+do+consumidor" target="_blank" class="share-btn">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      X / Twitter
+    </a>
+    <a href="mailto:?subject=Artigo: Da busca à resposta, o papel do conteúdo na decisão do consumidor&body=Achei esse artigo interessante: https://orbitandonomarketing.com.br/insights/ia-decisao-consumidor-papel-conteudo" class="share-btn">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      E-mail
+    </a>
+    <button class="share-btn" onclick="copyLink()">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      Copiar link
+    </button>
+  </div>
+</div>
+
+<!-- ARTICLE OUTER: sidebar TOC + content -->
+<div class="article-outer">
+
+  <!-- TABLE OF CONTENTS, sidebar esquerda -->
+  <nav class="toc" aria-label="Índice do artigo">
+    <p class="toc-title">O que você vai entender neste artigo</p>
+    <ol>
+      <li><a href="#busca-resposta">Da busca à resposta</a></li>
+      <li><a href="#dados-brasil">O consumidor brasileiro em dados</a></li>
+      <li><a href="#dois-momentos">Os dois momentos em que o conteúdo decide</a></li>
+      <li><a href="#fontes-ia">O que a IA lê sobre a sua marca</a></li>
+      <li><a href="#como-mapeamos">Como mapeamos decisões com dados</a></li>
+      <li><a href="#influenciar">O que dá para influenciar</a></li>
+      <li><a href="#b2c-b2b">Marcas de consumo e empresas B2B</a></li>
+      <li><a href="#plano-90-dias">Plano de 90 dias</a></li>
+      <li><a href="#auditoria">Como a IA descreve a sua marca</a></li>
+      <li><a href="#faq">Perguntas frequentes</a></li>
+    </ol>
+  </nav>
+
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <p>O que acontece com o conteúdo de uma marca quando o consumidor para de clicar em links e passa a receber uma resposta pronta? Ele ganha dois papéis novos. <strong>Antes da resposta, o conteúdo vira a matéria-prima que a IA usa para comparar e recomendar. Depois da resposta, vira a prova que o consumidor procura para conferir se a recomendação faz sentido.</strong> A marca que trabalha só para atrair o clique fica de fora dos dois momentos. A que mapeia as decisões do seu público com dados consegue estar presente nos dois, e com informação correta.</p>
+
+    <p>Os números brasileiros mostram que essa mudança já é comportamento de massa. Segundo a pesquisa "Jornadas com IA", do Google com a Ipsos (janeiro de 2026, 2.749 entrevistados), 57% dos brasileiros usaram IA em alguma etapa da jornada de compra no último ano. O State of Search Brasil 7, da Hedgehog Digital com campo da Opinion Box (4.327 entrevistados entre julho e agosto de 2026), encontrou um dado que resume bem o novo caminho: depois de receber uma recomendação de IA, 39,1% vão a um buscador para conferir, 36,3% procuram avaliações de quem já comprou e só 6,5% compram o produto recomendado na hora.</p>
+
+    <p>Ou seja: a IA encurtou a pesquisa, mas o consumidor brasileiro continua conferindo. E as duas etapas dependem do que está publicado sobre a sua marca. Neste artigo, explico o que mudou na decisão de consumo, o que a IA lê sobre as marcas no Brasil e como a Orbitando usa tecnologia e dados para mapear essas decisões e trabalhar o que a IA mostra. Pega seu café e vem comigo. ☕️</p>
+
+    <div class="tldr">
+      <p class="tldr-title">TL;DR</p>
+      <ul>
+        <li>57% dos brasileiros usaram IA em alguma etapa da compra no último ano (Google e Ipsos). 46% dos consumidores online já usaram ChatGPT ou Gemini para ajudar numa compra (Nuvemshop e Opinion Box).</li>
+        <li>O conteúdo tem dois papéis: alimentar a resposta da IA na fase de comparação e servir de prova na fase de verificação, quando 39,1% voltam ao buscador e 36,3% procuram avaliações (State of Search Brasil 7).</li>
+        <li>No Brasil, a IA lê a reputação da marca em fontes como o Reclame Aqui, que, segundo a empresa, teve em média 555 milhões de citações por mês nas principais ferramentas de IA no primeiro semestre de 2026.</li>
+        <li>Mapear decisões com dados envolve reunir as perguntas reais do consumidor, testar sistematicamente o que as IAs respondem em português e cruzar isso com Search Console, analytics e CRM.</li>
+        <li>Influenciar a resposta da IA é um trabalho de informação: publicar dados corretos e completos, resolver problemas de reputação e estar nas fontes que a IA consulta. Menções fabricadas não funcionam.</li>
+      </ul>
+    </div>
+
+    <h2 id="busca-resposta">Da busca à resposta: o que mudou no caminho até a decisão</h2>
+
+    <p>Na busca tradicional, o consumidor fazia o trabalho de comparação. Digitava duas ou três palavras, abria cinco abas, lia avaliações, voltava ao Google, refinava a busca. O conteúdo da marca disputava a atenção dele em cada uma dessas etapas.</p>
+
+    <p>Com a IA, a pessoa descreve o que quer numa frase longa e recebe uma comparação pronta. O Google Brasil chama isso de troca da palavra-chave pela "missão". Em vez de "tênis de corrida", a pessoa pede um tênis para iniciante, com amortecimento extra, para correr no asfalto. Segundo dados internos do Google publicados no Think with Google, as consultas no Modo IA são de duas a três vezes mais longas que as tradicionais, e 40% das buscas no Brasil já têm cinco palavras ou mais.</p>
+
+    <table>
+      <thead>
+        <tr><th>Na busca tradicional</th><th>Na busca com resposta de IA</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>O consumidor digita poucas palavras</td><td>O consumidor descreve a situação, as restrições e o orçamento</td></tr>
+        <tr><td>O consumidor compara os sites que abriu</td><td>A IA compara e entrega uma lista curta</td></tr>
+        <tr><td>O conteúdo da marca disputa o clique</td><td>O conteúdo da marca disputa a menção dentro da resposta</td></tr>
+        <tr><td>Avaliações são lidas no fim, se der tempo</td><td>Avaliações entram na própria resposta e são conferidas depois</td></tr>
+        <tr><td>A marca mede sucesso por posição e tráfego</td><td>A marca precisa saber se é citada, como é descrita e se a informação está certa</td></tr>
+      </tbody>
+    </table>
+
+    <p>O artigo do Think with Google traz uma observação que eu acho bem precisa: com a IA cuidando da parte cansativa de filtrar e comparar, <em>"o usuário ganha fôlego para ser mais exigente"</em>. Ele faz perguntas mais detalhadas e considera mais opções. Para as marcas, isso significa que respostas genéricas perdem espaço. Quem não publicou a informação específica que a pessoa pediu simplesmente não entra na comparação.</p>
+
+    <h2 id="dados-brasil">O que os dados dizem sobre o consumidor brasileiro</h2>
+
+    <p>Quatro pesquisas de 2026 ajudam a montar o retrato. Elas usam metodologias e recortes diferentes, então os números não se somam, mas apontam na mesma direção.</p>
+
+    <table>
+      <thead>
+        <tr><th>Pesquisa</th><th>Amostra e período</th><th>Principais achados</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Jornadas com IA (Google e Ipsos)</td><td>2.749 brasileiros com 18 anos ou mais, janeiro de 2026</td><td>82% usam ferramentas de IA no dia a dia. 57% usaram IA em alguma etapa da compra no último ano. 80% dizem que o processo de compra ficou mais rápido.</td></tr>
+        <tr><td>E-consumidor 2026 (Nuvemshop e Opinion Box)</td><td>Consumidores online brasileiros (amostra não divulgada na reportagem do InfoMoney)</td><td>46% já usaram ChatGPT ou Gemini para ajudar numa compra. Só 1,3% começam a busca por produtos nessas ferramentas.</td></tr>
+        <tr><td>State of Search Brasil 7 (Hedgehog Digital e Opinion Box)</td><td>4.327 brasileiros com 16 anos ou mais, julho e agosto de 2026</td><td>Uso diário de IA para pesquisa passou de 29,8% em 2025 para 39,7% em 2026. Entre quem usou IA numa compra pelo celular, 32,7% começaram num chatbot.</td></tr>
+        <tr><td>Global Digital Shopping Index 2026 (Visa)</td><td>Varejistas e consumidores, Brasil incluído</td><td>Só 15% dos varejistas brasileiros têm dados de produto estruturados para agentes de IA. 21% conseguem identificar vendas vindas de plataformas de IA.</td></tr>
+      </tbody>
+    </table>
+
+    <p>Dois números parecem se contradizer: 32,7% começam a compra num chatbot, segundo o State of Search, e só 1,3% começam a busca por produtos na IA, segundo a Nuvemshop. A diferença está no recorte. O primeiro número considera só quem usou IA numa compra pelo celular. O segundo considera todos os consumidores online. Contando todos os compradores pelo celular, o State of Search mostra o Google abrindo a compra para 22% e a IA para 5,3%. A leitura que faço é esta: a IA ainda é porta de entrada para uma minoria, mas já participa da comparação para quase metade dos consumidores. E a etapa de comparação é justamente onde a decisão se forma.</p>
+
+    <p>O dado da Visa é o mais revelador para quem cuida de marca no Brasil. Se só 21% dos varejistas conseguem identificar vendas vindas de IA, a maioria está tomando decisões de investimento sem enxergar uma parte cada vez maior da jornada.</p>
+
+    <h3>Confiança alta, conferência também</h3>
+
+    <p>O brasileiro confia mais na IA do que a média global. Segundo outro artigo do Think with Google, 56% dos usuários no país confiam tanto em assistentes de IA quanto em pessoas, contra uma média global de 46%. Mas a confiança convive com desconfiança prática: no State of Search Brasil 7, 69,9% dos usuários já tiveram uma experiência ruim com respostas sem sentido ou informações inventadas.</p>
+
+    <p>O resultado é um consumidor que usa a IA para ganhar tempo e depois confere. E é nessa conferência que muita marca perde a venda sem saber.</p>
+
+    <h2 id="dois-momentos">Os dois momentos em que o conteúdo decide</h2>
+
+    <p>Se a IA comparou e recomendou, e o consumidor ainda vai conferir, o conteúdo da marca precisa funcionar em dois momentos diferentes, com exigências diferentes.</p>
+
+    <table>
+      <thead>
+        <tr><th>Momento</th><th>O que acontece</th><th>O que o conteúdo precisa entregar</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Antes da resposta (comparação)</td><td>A IA busca informação para montar a lista curta e explicar as diferenças entre as opções</td><td>Especificações, preço ou faixa de preço, diferenciais concretos, para quem o produto serve, tudo em texto claro e consistente entre as fontes</td></tr>
+        <tr><td>Depois da resposta (verificação)</td><td>O consumidor volta ao buscador, procura avaliações e compara preços entre lojas</td><td>Avaliações reais, histórico de atendimento, preço coerente entre canais, página de produto que confirma o que a IA disse</td></tr>
+      </tbody>
+    </table>
+
+    <p>O State of Search Brasil 7 mostra o comportamento da segunda etapa com precisão: depois de uma recomendação de IA, 39,1% vão a um buscador conferir, 36,3% procuram avaliações de compradores e 31,6% comparam preços entre lojas. Pense no que acontece quando a IA recomenda o seu produto com um preço que não é mais o atual, ou com uma característica que mudou. O consumidor confere, encontra a divergência e desconfia. A recomendação vira motivo de desistência.</p>
+
+    <p>Por isso, eu desconfio de qualquer estratégia que olhe só para "aparecer na IA". Aparecer com informação errada pode ser pior do que não aparecer. O trabalho completo inclui garantir que a informação publicada esteja certa, que seja a mesma no site, no marketplace, no Perfil da Empresa no Google e nas redes, e que as avaliações confirmem o que a marca promete.</p>
+
+    <h3>Um exemplo de como os dois momentos se conectam</h3>
+
+    <p>Imagine uma loja de colchões com vendas pelo próprio site e por marketplaces. Uma consumidora pergunta ao ChatGPT qual colchão comprar para dor nas costas, para um casal, até 3 mil reais, com entrega rápida em Belo Horizonte. A IA desdobra a pergunta: firmeza, tamanho, faixa de preço, prazo de entrega na região, avaliações. Se o site da loja não diz em texto qual é a firmeza de cada modelo, nem informa prazo por região, a IA monta a resposta com quem informa.</p>
+
+    <p>Suponha que a loja entre na lista. A consumidora vai ao Google conferir, encontra o produto num marketplace por um preço diferente do citado e vê, no Reclame Aqui, três reclamações recentes sobre atraso sem resposta. A recomendação perde força exatamente no momento em que parecia ganha. Nenhum desses problemas é de "otimização para IA". São problemas de informação incompleta, preço incoerente entre canais e atendimento. A IA só tornou esses problemas visíveis mais cedo, para mais gente.</p>
+
+    <h2 id="fontes-ia">O que a IA lê sobre a sua marca no Brasil</h2>
+
+    <p>Quando o consumidor pergunta se uma empresa é confiável, a IA não consulta só o site dela. No Brasil, uma fonte se destaca: o Reclame Aqui. Segundo dados de Felipe Paniago, CMO e cofundador da plataforma, publicados pelo Toque Tec, o Reclame Aqui teve em média 555 milhões de citações por mês nas principais ferramentas de IA entre janeiro e junho de 2026. A reportagem faz a ressalva correta: o número mede presença nas ferramentas. Sozinho, ele não prova que uma reclamação específica mudou uma recomendação. Mas mostra o tamanho do peso da reputação pública.</p>
+
+    <p>Um monitoramento independente da Promptado, que acompanhou conversas no ChatGPT sobre 204 marcas em março de 2026, encontrou o Reclame Aqui nas respostas sobre mais de 180 delas, com taxa de citação de 23,4%. Paniago resume a lógica numa frase: as IAs <em>"leem histórico, constância e dados públicos de resolução"</em>.</p>
+
+    <p>Isso tem uma consequência prática para qualquer marca que vende ao consumidor no Brasil. Reclamação sem resposta, ou respondida com texto padrão, entra na avaliação que a IA faz da empresa. Paniago tem uma frase que eu gosto: <em>"Ninguém espera que uma empresa seja perfeita 100% do tempo."</em> A IA também não. O que pesa é a capacidade de resolver.</p>
+
+    <table>
+      <thead>
+        <tr><th>Fonte</th><th>O que a IA procura nela</th><th>O que a marca pode fazer</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Site da marca</td><td>Especificações, preço, políticas, para quem o produto serve</td><td>Publicar informação completa em texto, atualizada e sem contradição entre páginas</td></tr>
+        <tr><td>Reclame Aqui e avaliações</td><td>Histórico de atendimento, taxa de resolução, padrões de problema</td><td>Responder de forma específica e resolver, usar as reclamações como dado sobre o negócio</td></tr>
+        <tr><td>Marketplaces</td><td>Preço, avaliações de produto, disponibilidade</td><td>Manter ficha de produto completa e preço coerente com os outros canais</td></tr>
+        <tr><td>Perfil da Empresa no Google</td><td>Endereço, horário, avaliações, categoria</td><td>Manter dados atualizados e responder às avaliações</td></tr>
+        <tr><td>Imprensa, blogs e criadores</td><td>Opinião independente, comparativos, testes</td><td>Gerar pautas reais e relacionamento, sem comprar menções disfarçadas</td></tr>
+        <tr><td>YouTube e redes sociais</td><td>Demonstrações, uso real, dúvidas frequentes</td><td>Publicar conteúdo que responda às perguntas que o consumidor faz</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="como-mapeamos">Como usamos tecnologia e dados para mapear decisões de consumo</h2>
+
+    <p>Na Orbitando, o trabalho de mapear a decisão do consumidor e trabalhar o que a IA mostra segue um método em etapas. Nenhuma delas depende de ferramenta cara. Todas dependem de juntar dados que, na maioria das empresas, estão espalhados entre marketing, atendimento e vendas.</p>
+
+    <h3>1. Reunir as perguntas reais do consumidor</h3>
+    <p>O ponto de partida são as perguntas que as pessoas fazem de verdade, em português e com o vocabulário delas. As fontes são várias: consultas longas no Google Search Console, tendências no Google Trends, perguntas que chegam ao atendimento e ao WhatsApp, objeções que o time de vendas ouve, reclamações no Reclame Aqui e dúvidas nos comentários das redes. É aqui que aparecem as "missões" de que o Google fala, como "qual o melhor plano de internet para home office num apartamento pequeno em São Paulo".</p>
+
+    <h3>2. Organizar as perguntas pelas etapas da decisão</h3>
+    <p>Cada pergunta é classificada pela etapa em que aparece: entender o problema, comparar opções, conferir confiança, decidir. Isso mostra onde a marca precisa de conteúdo explicativo, onde precisa de comparativos e onde precisa de prova (avaliações, garantias, políticas).</p>
+
+    <h3>3. Testar sistematicamente o que as IAs respondem</h3>
+    <p>As perguntas mapeadas são testadas no ChatGPT, no Gemini, no Copilot, no Perplexity e nos recursos de IA do Google (AI Overviews e Modo IA), sempre em português. Para cada resposta, registramos quais marcas aparecem, em que ordem, como a marca do cliente é descrita, quais fontes são citadas e se há informação errada ou desatualizada. Como as respostas variam, o mesmo conjunto é repetido periodicamente para acompanhar a tendência ao longo do tempo.</p>
+
+    <h3>4. Cruzar com os dados da própria empresa</h3>
+    <p>As respostas das IAs ganham sentido quando cruzadas com o que a empresa já mede: consultas e páginas no Search Console, o canal de assistentes de IA no GA4, a evolução do tráfego direto e da busca pela marca, e a origem declarada pelos clientes no CRM ou no WhatsApp. O artigo sobre <a href="/insights/comprador-b2b-ia-medicao-orcamento-2027">como medir a influência da IA em três camadas</a> detalha como ler esses sinais juntos.</p>
+
+    <h3>5. Priorizar as lacunas</h3>
+    <p>O cruzamento gera uma lista de problemas com tamanhos diferentes. Perguntas importantes em que a marca não aparece. Respostas em que ela aparece com informação errada. Categorias em que um concorrente domina porque está em fontes que a marca ignora. A prioridade vai para o que pesa mais na decisão e é mais rápido de corrigir.</p>
+
+    <h3>6. Agir no conteúdo e nas fontes</h3>
+    <p>A correção acontece em várias frentes: páginas que respondem às perguntas mapeadas, informação comercial publicada em texto, dados estruturados nos produtos, ficha de marketplace completa, resposta às reclamações, relacionamento com imprensa e criadores do setor. Depois, o ciclo recomeça na etapa 3, para ver o que mudou nas respostas.</p>
+
+    <table>
+      <thead>
+        <tr><th>Fonte de dados</th><th>O que revela sobre a decisão</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Google Search Console</td><td>Perguntas longas que já trazem pessoas ao site e páginas que aparecem nos recursos de IA do Google</td></tr>
+        <tr><td>Google Trends</td><td>Variação de interesse por tema e por região do Brasil</td></tr>
+        <tr><td>Atendimento, WhatsApp e vendas</td><td>Dúvidas e objeções que aparecem perto da decisão</td></tr>
+        <tr><td>Reclame Aqui e avaliações</td><td>Medos e problemas que o consumidor confere antes de comprar</td></tr>
+        <tr><td>Testes nas IAs</td><td>Quem é recomendado, como a marca é descrita e quais fontes sustentam a resposta</td></tr>
+        <tr><td>GA4 e CRM</td><td>Quanto da demanda chega por IA, direto ou por busca de marca</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="influenciar">O que dá para influenciar na resposta da IA, e o que não dá</h2>
+
+    <p>"Influenciar o que a IA mostra" pode soar como manipulação. Na prática, o que funciona é bem menos misterioso. Segundo o guia oficial do Google sobre recursos de IA na busca, que analisei no artigo sobre <a href="/insights/geo-busca-agentica-google-brasil">GEO e a nova busca do Google</a>, os recursos de IA se apoiam nos mesmos sistemas de ranqueamento e qualidade da busca, e esses sistemas bloqueiam spam. Menções fabricadas, avaliações compradas e conteúdo criado para enganar não sustentam presença.</p>
+
+    <table>
+      <thead>
+        <tr><th>O que a marca consegue influenciar</th><th>O que a marca não controla</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>A informação publicada no site e nos canais oficiais</td><td>A forma exata como cada IA redige a resposta</td></tr>
+        <tr><td>A consistência entre site, marketplace, redes e Perfil da Empresa</td><td>A ordem em que as marcas aparecem em cada consulta</td></tr>
+        <tr><td>A resposta e a resolução das reclamações</td><td>O que os consumidores escrevem nas avaliações</td></tr>
+        <tr><td>A presença em veículos, eventos e criadores do setor</td><td>Quais fontes cada IA escolhe consultar</td></tr>
+        <tr><td>A clareza sobre para quem o produto serve e para quem não serve</td><td>As mudanças de modelo e de algoritmo das plataformas</td></tr>
+      </tbody>
+    </table>
+
+    <p>Existe ainda o caminho pago. O Google anunciou que os anúncios chegam ao Modo IA no Brasil no quarto trimestre de 2026. É uma forma legítima de aparecer na conversa, identificada como anúncio. Mas ela não substitui o trabalho orgânico, porque não muda o que a IA diz sobre a marca quando o consumidor pergunta se ela é confiável.</p>
+
+    <h2 id="b2c-b2b">O que muda entre marcas de consumo e empresas B2B</h2>
+
+    <p>A lógica dos dois momentos vale para qualquer compra. As fontes e o tipo de prova mudam conforme o mercado.</p>
+
+    <table>
+      <thead>
+        <tr><th>Marca de consumo (B2C)</th><th>Empresa que vende para empresas (B2B)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Reclame Aqui, avaliações de produto e marketplaces pesam muito na verificação</td><td>Casos de clientes, LinkedIn de especialistas e veículos do setor pesam mais</td></tr>
+        <tr><td>Preço e prazo de entrega decidem a comparação final</td><td>Integrações, implementação, suporte e contrato decidem a comparação</td></tr>
+        <tr><td>Criadores de conteúdo e vídeos de uso real influenciam</td><td>Indicação, eventos e associações do setor influenciam</td></tr>
+        <tr><td>A compra pode acontecer minutos depois da resposta</td><td>A resposta da IA alimenta uma decisão que leva semanas e envolve várias pessoas</td></tr>
+      </tbody>
+    </table>
+
+    <p>Para empresas B2B, o detalhamento desse caminho está no artigo sobre <a href="/insights/comprador-b2b-brasil-ia-whatsapp-vendas">como adaptar site, WhatsApp e time comercial ao comprador que já pesquisou com IA</a>.</p>
+
+    <h2 id="plano-90-dias">Um plano de 90 dias para começar</h2>
+
+    <table>
+      <thead>
+        <tr><th>Período</th><th>O que fazer</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Mês 1</td><td>Reunir 30 a 50 perguntas reais do consumidor a partir de Search Console, atendimento, vendas e Reclame Aqui. Classificar por etapa da decisão. Testar nas principais IAs e registrar o resultado.</td></tr>
+        <tr><td>Mês 2</td><td>Corrigir informações erradas ou ausentes no site, nos marketplaces e no Perfil da Empresa no Google. Responder e resolver as reclamações pendentes. Criar páginas para as perguntas em que a marca não aparece.</td></tr>
+        <tr><td>Mês 3</td><td>Incluir "IA" como opção de origem no CRM e nos formulários, configurar o canal de assistentes de IA no GA4, repetir os testes e comparar com o mês 1.</td></tr>
+      </tbody>
+    </table>
+
+    <p>Ao fim de 90 dias, a marca sabe como é descrita pelas IAs, corrigiu o que estava errado e tem uma base para acompanhar a evolução. É o mínimo para basear as decisões de conteúdo em dados.</p>
+
+    <h2 id="auditoria">Antes de produzir mais conteúdo, descubra como a IA descreve a sua marca</h2>
+
+    <p>A decisão de consumo passou a ter uma etapa intermediária que a maioria das marcas não enxerga: a resposta da IA. Ela define quem entra na lista e influencia a verificação que vem depois. Produzir mais conteúdo sem saber o que essa resposta diz hoje é trabalhar no escuro.</p>
+
+    <p>A <a href="/auditoria-visibilidade-ia">Auditoria de Visibilidade em IA + SEO Técnico</a> da Orbitando no Marketing aplica as primeiras etapas do método descrito neste artigo. Ela reúne as perguntas reais do seu público, testa em português o que ChatGPT, Gemini, Perplexity e os recursos de IA do Google respondem, mostra como a marca é descrita, quais concorrentes aparecem, quais fontes sustentam as respostas e onde há informação errada. O entregável é um plano de ação priorizado, com as correções de conteúdo, reputação e técnica que mais pesam na decisão do seu consumidor.</p>
+
+    <p>Para empresas que já fizeram o diagnóstico e precisam executar o plano mês a mês, a <a href="/consultoria-b2b-saas">Consultoria Contínua para B2B SaaS</a> cuida de conteúdo, SEO e GEO/AEO com revisões periódicas.</p>
+
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <h2 class="faq-title" id="faq">Perguntas frequentes</h2>
+
+      <details>
+        <summary>Quantos brasileiros usam IA para decidir compras?</summary>
+        <div class="faq-answer">
+          <p>Segundo a pesquisa Jornadas com IA, do Google com a Ipsos (janeiro de 2026, 2.749 entrevistados), 57% dos brasileiros usaram IA em alguma etapa da jornada de compra no último ano. A pesquisa E-consumidor 2026, da Nuvemshop com a Opinion Box, aponta que 46% dos consumidores online já usaram ChatGPT ou Gemini para ajudar numa compra.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>O consumidor compra direto o que a IA recomenda?</summary>
+        <div class="faq-answer">
+          <p>Na maioria das vezes, não. Segundo o State of Search Brasil 7, da Hedgehog Digital com a Opinion Box, depois de uma recomendação de IA 39,1% vão a um buscador conferir, 36,3% procuram avaliações de quem já comprou, 31,6% comparam preços entre lojas e só 6,5% compram o produto recomendado na hora.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Qual o papel do conteúdo da marca quando a IA responde pelo consumidor?</summary>
+        <div class="faq-answer">
+          <p>O conteúdo tem dois papéis. Antes da resposta, é a matéria-prima que a IA usa para comparar e recomendar: especificações, preço, diferenciais e para quem o produto serve. Depois da resposta, é a prova que o consumidor procura para conferir a recomendação: avaliações, histórico de atendimento e preço coerente entre canais.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>O Reclame Aqui influencia as respostas do ChatGPT?</summary>
+        <div class="faq-answer">
+          <p>O Reclame Aqui aparece com frequência nas respostas de IA sobre marcas brasileiras. Segundo dados da própria plataforma, foram em média 555 milhões de citações por mês nas principais ferramentas de IA no primeiro semestre de 2026. Não há regra pública sobre o peso que cada IA dá à plataforma, mas reclamações sem resposta entram na leitura que as IAs fazem da reputação.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Dá para pagar para aparecer nas respostas de IA?</summary>
+        <div class="faq-answer">
+          <p>No Google, os anúncios chegam ao Modo IA no Brasil no quarto trimestre de 2026, identificados como anúncio. A resposta orgânica não é vendida. Ela depende da informação publicada, da reputação e da presença em fontes confiáveis. Menções fabricadas e avaliações compradas são tratadas como spam.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Como descobrir o que as IAs dizem sobre a minha marca?</summary>
+        <div class="faq-answer">
+          <p>Reúna de 30 a 50 perguntas reais do seu consumidor, tiradas do Search Console, do atendimento, das vendas e do Reclame Aqui, e teste em português no ChatGPT, no Gemini, no Copilot, no Perplexity e nos recursos de IA do Google. Registre quais marcas aparecem, como a sua é descrita, quais fontes são citadas e se há informação errada. Repita o teste todo mês.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- SHARE BOTTOM -->
+    <div style="margin-top:2.5rem;padding-top:1.75rem;border-top:1px solid var(--border)">
+      <p style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:.75rem">Compartilhar este artigo</p>
+      <div class="share-bar" style="justify-content:flex-start">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://orbitandonomarketing.com.br/insights/ia-decisao-consumidor-papel-conteudo" target="_blank" class="share-btn">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=https://orbitandonomarketing.com.br/insights/ia-decisao-consumidor-papel-conteudo" target="_blank" class="share-btn">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X / Twitter
+        </a>
+        <a href="mailto:?subject=Artigo: Da busca à resposta, o papel do conteúdo na decisão do consumidor&body=https://orbitandonomarketing.com.br/insights/ia-decisao-consumidor-papel-conteudo" class="share-btn">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          E-mail
+        </a>
+        <button class="share-btn" onclick="copyLink()">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          Copiar link
+        </button>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<!-- RELATED ARTICLES -->
+<div class="related-section">
+  <div class="related-inner">
+    <h3 class="related-title">Artigos relacionados</h3>
+    <div class="related-grid">
+      <div class="related-card">
+        <p class="rc-cat">GEO · Busca agêntica</p>
+        <h4><a href="/insights/geo-busca-agentica-google-brasil">GEO: como aparecer na nova busca do Google movida por IA e agentes</a></h4>
+        <a href="/insights/geo-busca-agentica-google-brasil" class="rc-read">Ler artigo</a>
+      </div>
+      <div class="related-card">
+        <p class="rc-cat">GEO · AEO · SEO</p>
+        <h4><a href="/insights/visibilidade-marca-respostas-ia-seo-geo-aeo">Como melhorar a visibilidade da marca em respostas de IA: o que SEO, GEO e AEO têm a ver com isso</a></h4>
+        <a href="/insights/visibilidade-marca-respostas-ia-seo-geo-aeo" class="rc-read">Ler artigo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER BAND -->
+<div class="newsletter-band">
+  <div class="newsletter-form-wrap">
+    <div data-reach-form="22c061ca-1ddf-4b0a-a9a9-52e1021274ab"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-name">Orbitando no Marketing</div>
+      <div class="footer-logo-tag">SEO · GEO · AEO</div>
+      <p>Consultoria estratégica de marketing digital para empresas B2B que querem aparecer no Google e nas IAs generativas. Por Jacqueline Alves.</p>
+    </div>
+    <div>
+      <h4>Para profissionais</h4>
+      <ul>
+        <li><a href="/guia-marketing-digital">Guia para Iniciantes</a></li>
+        <li><a href="/modelo-curriculo">Modelo de Currículo</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Para empresas B2B</h4>
+      <ul>
+        <li><a href="/auditoria-visibilidade-ia">Auditoria de Visibilidade em IA</a></li>
+        <li><a href="/consultoria-b2b-saas">Consultoria Contínua B2B SaaS</a></li>
+        <li><a href="/desenvolvimento-sites">Desenvolvimento de Sites</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Me conheça</h4>
+      <ul>
+        <li><a href="/sobre-mim">Sobre mim</a></li>
+        <li><a href="/cases-de-sucesso">Cases de sucesso</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Newsletter</h4>
+      <ul>
+        <li><a href="https://orbitandonomarketing.com.br/insights/" target="_blank">Orbitando no Marketing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Fale comigo</h4>
+      <ul>
+        <li><a href="/contato">Contato</a></li>
+        <li><a href="https://www.linkedin.com/in/jacquelinealvesoliveira" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Orbitando no Marketing. Todos os direitos reservados.</p>
+    <p><a href="/politica-privacidade" style="color:var(--muted);text-decoration:none;transition:color .15s" onmouseover="this.style.color='#836FFF'" onmouseout="this.style.color='var(--muted)'">Política de Privacidade</a></p>
+  </div>
+</footer>
+
+<script>
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
+function toggleMega(e){
+  e.stopPropagation();
+  var m=document.getElementById('megaItem');
+  m.classList.toggle('open');
+}
+document.addEventListener('click',function(){
+  var m=document.getElementById('megaItem');
+  if(m)m.classList.remove('open');
+});
+function copyLink(){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    const btns=document.querySelectorAll('.share-btn');
+    btns.forEach(b=>{if(b.textContent.includes('Copiar')){const orig=b.innerHTML;b.innerHTML='<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Copiado!';setTimeout(()=>{b.innerHTML=orig;},2000);}});
+  });
+}
+</script>
+<script>
+(function(){
+  var MAX_TRIES=3, RETRY_MS=3000, tries=0;
+  function checkAndInit(){
+    if(window.__reachEmbed && typeof window.__reachEmbed.init==='function'){
+      window.__reachEmbed.init();
+    }
+  }
+  function loadReach(){
+    var old=document.querySelector('script[data-reach-script]');
+    if(old) old.parentNode.removeChild(old);
+    var s=document.createElement('script');
+    s.setAttribute('data-reach-script','1');
+    s.src='https://cdn-reach.hostinger.com/js/embed.js?_='+Date.now();
+    s.onload=function(){
+      setTimeout(function(){
+        checkAndInit();
+        var el=document.querySelector('[data-reach-form]');
+        if(el && !el.querySelector('iframe') && tries<MAX_TRIES){
+          tries++;
+          setTimeout(loadReach, RETRY_MS);
+        }
+      }, 800);
+    };
+    s.onerror=function(){
+      if(tries<MAX_TRIES){ tries++; setTimeout(loadReach, RETRY_MS); }
+    };
+    document.body.appendChild(s);
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded', loadReach);
+  } else {
+    loadReach();
+  }
+})();
+</script>
+</body>
+</html>
