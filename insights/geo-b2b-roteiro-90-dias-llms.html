@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEO para B2B: roteiro de 90 dias para aparecer nos LLMs</title>
+<meta name="description" content="O comprador B2B decide antes do clique. Veja como montar um roteiro de GEO em ciclos de 90 dias para manter sua empresa relevante no ChatGPT e no Google.">
+<meta name="author" content="Jacqueline Alves">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://orbitandonomarketing.com.br/insights/geo-b2b-roteiro-90-dias-llms">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://orbitandonomarketing.com.br/insights/geo-b2b-roteiro-90-dias-llms">
+<meta property="og:title" content="GEO para B2B: roteiro de 90 dias para aparecer nos LLMs">
+<meta property="og:description" content="O comprador B2B decide antes do clique. Veja como montar um roteiro de GEO em ciclos de 90 dias para manter sua empresa relevante no ChatGPT e no Google.">
+<link rel="icon" type="image/png" href="/Logo/favicon-512.png">
+<link rel="shortcut icon" href="/Logo/favicon-512.png">
+<link rel="apple-touch-icon" href="/Logo/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#191970;--navy-dark:#141459;--slate-dark:#483D8B;
+  --slate:#6A5ACD;--lilac:#836FFF;--ghost:#F8F8FF;
+  --light:#f0eeff;--light2:#f8f7ff;--border:#e8e6f8;
+  --muted:#9896CC;--text:#191970;--white:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--ghost);line-height:1.75}
+a{color:var(--slate);text-decoration:none}
+a:hover{color:var(--slate-dark)}
+img{max-width:100%;display:block}
+
+/* NAV */
+nav{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.nav-logo svg{width:36px;height:36px;flex-shrink:0}
+.nav-logo-name{display:block;font-size:.95rem;font-weight:700;color:var(--ghost);line-height:1.2}
+.nav-logo-tag{display:block;font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
+.nav-links a,.nav-links span{font-size:.88rem;font-weight:500;color:var(--ghost);opacity:.85;text-decoration:none;cursor:pointer;transition:opacity .15s}
+.nav-links a:hover,.nav-links span:hover{opacity:1}
+.nav-cta{background:var(--lilac)!important;color:var(--navy)!important;opacity:1!important;padding:.45rem 1.1rem;border-radius:6px;font-weight:700!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--ghost);border-radius:2px}
+
+/* MEGA MENU */
+.has-mega{position:static}
+.mega-menu{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy-dark);border-top:2px solid var(--lilac);box-shadow:0 16px 48px rgba(0,0,0,.45);z-index:300;padding:2rem}
+.has-mega.open .mega-menu{display:block}
+.mega-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.mega-col-title{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid rgba(131,111,255,.3)}
+.mega-item{display:flex;align-items:flex-start;gap:.75rem;padding:.75rem;border-radius:8px;text-decoration:none;transition:background .15s;margin-bottom:.25rem}
+.mega-item:hover{background:rgba(131,111,255,.12)}
+.mega-item-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.mega-item-text strong{display:block;font-size:.88rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.mega-item-text span{font-size:.78rem;color:var(--muted);line-height:1.4}
+.mega-badge{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(131,111,255,.25);color:var(--lilac);padding:.15rem .45rem;border-radius:4px;vertical-align:middle}
+
+/* ARTICLE LAYOUT */
+.article-header{background:var(--navy);padding:3.5rem 2rem 3rem;text-align:center}
+.back-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:600;color:var(--muted);margin-bottom:1.5rem;transition:color .15s}
+.back-link:hover{color:#F8F8FF}
+.back-link svg{transition:transform .15s}
+.back-link:hover svg{transform:translateX(-3px)}
+.article-cat-badge{display:inline-block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--lilac);background:rgba(131,111,255,.15);border:1px solid rgba(131,111,255,.35);padding:.28rem .8rem;border-radius:6px;margin-bottom:1rem}
+.article-header h1{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:700;color:#F8F8FF;line-height:1.15;max-width:760px;margin:0 auto 1.25rem}
+.article-meta-bar{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;font-size:.82rem;color:var(--muted);margin-bottom:1.5rem}
+.article-meta-bar span{display:flex;align-items:center;gap:.35rem}
+.article-meta-bar .author-name{font-weight:700;color:rgba(248,248,255,.88)}
+
+/* SHARE BUTTONS */
+.share-bar{display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap;margin-bottom:.5rem}
+.share-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.share-btn{display:inline-flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:600;padding:.35rem .9rem;border-radius:7px;border:1px solid rgba(131,111,255,.35);background:rgba(131,111,255,.1);transition:all .15s;cursor:pointer;text-decoration:none;font-family:'Plus Jakarta Sans',sans-serif}
+button.share-btn{color:rgba(248,248,255,.82)!important;-webkit-appearance:none;appearance:none;background:rgba(131,111,255,.12);border:1px solid rgba(131,111,255,.4)}
+.share-btn:not(button){color:rgba(248,248,255,.75)}
+.share-btn:hover{color:#F8F8FF!important;background:rgba(131,111,255,.28);border-color:var(--lilac)}
+button.share-btn:hover{color:#F8F8FF!important;background:rgba(131,111,255,.28);border-color:var(--lilac)}
+.article-body button.share-btn{color:var(--slate)!important;background:rgba(106,90,205,.08);border-color:rgba(106,90,205,.3)}
+.article-body button.share-btn:hover{color:var(--slate-dark)!important;background:rgba(106,90,205,.18);border-color:var(--slate)}
+
+/* ARTICLE OUTER: sidebar TOC + content */
+.article-outer{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:240px 1fr;gap:3rem;align-items:start}
+
+/* TABLE OF CONTENTS, sidebar */
+.toc{position:sticky;top:88px;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem}
+.toc-title{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:.9rem}
+.toc ol{padding-left:1.1rem}
+.toc li{font-size:.82rem;line-height:1.45;margin-bottom:.55rem}
+.toc li a{color:var(--slate);font-weight:500}
+.toc li a:hover{color:var(--slate-dark)}
+
+/* ARTICLE BODY */
+.article-body h2{font-size:clamp(1.25rem,2.2vw,1.7rem);font-weight:700;color:var(--navy);margin:2.75rem 0 1rem;line-height:1.22}
+.article-body h3{font-size:1.1rem;font-weight:700;color:var(--slate);margin:1.75rem 0 .65rem;line-height:1.4}
+.article-body p{font-size:1rem;line-height:1.8;color:var(--text);margin-bottom:1.25rem}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.25rem}
+.article-body li{font-size:1rem;line-height:1.75;color:var(--text);margin-bottom:.4rem}
+.article-body strong{font-weight:700}
+.article-body em{font-style:italic}
+.article-body a{color:var(--slate);font-weight:600}
+.article-body a:hover{color:var(--slate-dark)}
+
+/* TABLES */
+.article-body table{width:100%;border-collapse:collapse;margin:1.5rem 0 2rem;font-size:.9rem}
+.article-body th{background:var(--navy);color:#F8F8FF;padding:.75rem 1rem;text-align:left;font-weight:700}
+.article-body td{padding:.7rem 1rem;border-bottom:1px solid var(--border)}
+.article-body tr:nth-child(even) td{background:var(--light2)}
+.article-body th:first-child{border-radius:8px 0 0 0}
+.article-body th:last-child{border-radius:0 8px 0 0}
+
+/* ACCENT BAR (callout) */
+.accent-bar{border-left:4px solid var(--lilac);background:var(--light);border-radius:0 8px 8px 0;padding:1rem 1.5rem;margin:1.5rem 0}
+.accent-bar p{margin-bottom:0;font-size:.95rem}
+
+/* CTA SECTION */
+.cta-section{background:linear-gradient(135deg,var(--slate-dark),var(--slate));border-radius:14px;padding:2.25rem 2rem;margin:3rem 0;text-align:center}
+.cta-section h2{color:#F8F8FF;font-size:1.5rem;margin-bottom:.75rem}
+.cta-section p{color:rgba(248,248,255,.78);max-width:480px;margin:0 auto 1.5rem;font-size:.95rem}
+.btn-cta{display:inline-block;background:#F8F8FF;color:var(--navy);padding:.75rem 2rem;border-radius:8px;font-weight:700;font-size:.92rem}
+.btn-cta:hover{opacity:.9;color:var(--navy)}
+
+/* FAQ */
+.faq-section{margin:2.5rem 0}
+.faq-title{font-size:clamp(1.25rem,2vw,1.6rem);font-weight:700;color:var(--navy);margin-bottom:1.25rem}
+details{border:1px solid var(--border);border-radius:10px;margin-bottom:.75rem;overflow:hidden}
+details[open]{border-color:var(--lilac)}
+summary{padding:1rem 1.25rem;font-size:.95rem;font-weight:700;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:var(--white)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'';width:18px;height:18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%236A5ACD' stroke-width='2.5' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-size:contain;background-repeat:no-repeat;flex-shrink:0;transition:transform .2s}
+details[open] summary::after{transform:rotate(180deg)}
+.faq-answer{padding:1rem 1.25rem 1.25rem;background:var(--light2);font-size:.92rem;line-height:1.7;color:var(--text);border-top:1px solid var(--border)}
+.faq-answer p{margin-bottom:.75rem}
+.faq-answer p:last-child{margin-bottom:0}
+
+/* RELATED ARTICLES */
+.related-section{background:var(--white);border-top:1px solid var(--border);padding:2.5rem 2rem}
+.related-inner{max-width:760px;margin:0 auto}
+.related-title{font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:1.25rem}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.related-card{background:var(--ghost);border:1px solid var(--border);border-radius:10px;padding:1.1rem;transition:box-shadow .15s}
+.related-card:hover{box-shadow:0 4px 16px rgba(25,25,112,.08)}
+.related-card .rc-cat{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--lilac);margin-bottom:.4rem}
+.related-card h4{font-size:.88rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.5rem}
+.related-card h4 a{color:var(--navy)}
+.related-card h4 a:hover{color:var(--slate)}
+.related-card .rc-read{font-size:.78rem;font-weight:600;color:var(--slate)}
+
+/* NEWSLETTER BAND */
+.newsletter-band{background:linear-gradient(135deg,var(--slate-dark),var(--slate));padding:2.5rem 2rem;text-align:center}
+.newsletter-form-wrap{max-width:480px;margin:0 auto}
+
+/* FOOTER */
+footer{background:var(--navy-dark);color:var(--ghost);padding:4rem 2rem 2rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+footer h4{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--lilac);margin-bottom:1rem}
+footer ul{list-style:none}
+footer ul li{margin-bottom:.5rem}
+footer ul a{font-size:.88rem;color:#C8C5F0;text-decoration:none;transition:color .15s}
+footer ul a:hover{color:var(--lilac)}
+.footer-logo-name{font-size:1rem;font-weight:700;color:var(--ghost);margin-bottom:.2rem}
+.footer-logo-tag{font-size:.65rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.85rem}
+footer p{font-size:.85rem;color:var(--muted);line-height:1.6}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:.8rem;color:var(--muted)}
+
+/* MOBILE */
+@media(max-width:960px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--navy);padding:1rem 2rem;gap:1rem;align-items:flex-start}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  .mega-menu,.dropdown-menu{position:static;border-top:none;box-shadow:none;padding:.75rem 0}
+  .article-outer{grid-template-columns:1fr;gap:0;padding:2rem 1.25rem}
+  .toc{position:static;margin-bottom:2rem}
+  .related-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .nav-inner{padding:0 1rem}
+  .nav-logo-tag{display:none}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+
+/* TL;DR */
+.tldr{background:var(--white);border:1px solid var(--border);border-top:4px solid var(--lilac);border-radius:12px;padding:1.25rem 1.5rem;margin:1.75rem 0 2rem}
+.tldr-title{font-size:.72rem!important;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--slate)!important;margin-bottom:.6rem!important}
+.tldr ul{margin-bottom:0}
+.tldr li{font-size:.94rem}
+</style>
+<script type="application/ld+json">
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "GEO para B2B: como manter sua empresa relevante nos LLMs com um roteiro de 90 dias",
+  "description": "O comprador B2B decide antes do clique. Veja como montar um roteiro de GEO em ciclos de 90 dias para manter sua empresa relevante no ChatGPT e no Google.",
+  "datePublished": "2026-11-26",
+  "dateModified": "2026-11-26",
+  "inLanguage": "pt-BR",
+  "mainEntityOfPage": "https://orbitandonomarketing.com.br/insights/geo-b2b-roteiro-90-dias-llms",
+  "author": {
+   "@type": "Person",
+   "name": "Jacqueline Alves",
+   "url": "https://orbitandonomarketing.com.br/sobre-mim"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Orbitando no Marketing",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://orbitandonomarketing.com.br/Logo/favicon-512.png"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "O que é GEO para empresas B2B?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "É o trabalho de fazer uma empresa B2B aparecer, ser recomendada e ser descrita corretamente nas respostas de IA, como ChatGPT, Gemini, Perplexity e os recursos de IA do Google. Para B2B, isso envolve deixar acessíveis páginas de preço, integrações e casos, alinhar o conteúdo às perguntas do comprador e conquistar menções em fontes do setor."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Por que trabalhar GEO em ciclos de 90 dias?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Porque as respostas das IAs mudam com frequência, variam entre execuções e há pouca evidência sobre quais táticas funcionam. Ciclos de 90 dias permitem medir uma linha de base, executar as ações prioritárias, testar de novo e decidir o que manter, expandir, revisar ou parar, dentro de um trimestre."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Quantos prompts monitorar?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "O roteiro da Similarweb recomenda de 30 a 50 prompts que representem as perguntas reais do comprador, marcados pela etapa da jornada. Cada prompt deve rodar várias vezes: de três a cinco execuções em 24 a 72 horas, ou diariamente por algumas semanas, porque as respostas variam."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Como medir o resultado de GEO se o tráfego de IA é pequeno no analytics?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Segundo a Similarweb, só 8,8% das visitas geradas por recomendação do ChatGPT chegam rotuladas como IA. Use o tráfego de IA como piso e acompanhe junto a busca pela marca, o tráfego direto e a origem declarada pelo lead no formulário e no WhatsApp."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Preciso de ferramenta paga para fazer GEO?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Não para começar. O ciclo pode ser feito com uma planilha, execuções manuais dos prompts e as ferramentas gratuitas do Google, como Search Console e GA4. Ferramentas de monitoramento passam a compensar quando o número de prompts, plataformas ou mercados cresce."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Quais as primeiras ações de GEO para uma empresa de software B2B?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Segundo o roteiro da Similarweb, os primeiros 30 dias focam em corrigir o acesso às páginas de preço e de integrações e em ajustar os títulos das páginas de comparação para refletir as perguntas do comprador. Nos 90 dias seguintes, entram comparativos com parâmetros explícitos e presença em fontes de avaliação e publicações do setor."
+    }
+   }
+  ]
+ }
+]
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="16" fill="none" stroke="#F8F8FF" stroke-width="2.5"/>
+        <circle cx="34" cy="12" r="7" fill="#6A5ACD"/>
+        <circle cx="11" cy="33" r="5" fill="#836FFF"/>
+        <circle cx="22" cy="22" r="5" fill="#F8F8FF"/>
+      </svg>
+      <div>
+        <span class="nav-logo-name">Orbitando no Marketing</span>
+        <span class="nav-logo-tag">SEO · GEO · AEO</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/sobre-mim">Sobre mim</a></li>
+      <li class="has-mega" id="megaItem">
+        <span onclick="toggleMega(event)">Soluções &#9662;</span>
+        <div class="mega-menu">
+          <div class="mega-grid">
+            <div>
+              <div class="mega-col-title">Para profissionais de marketing</div>
+              <a class="mega-item" href="/guia-marketing-digital">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128218;</div>
+                <div class="mega-item-text"><strong>Guia para Entrar no Mercado de Marketing Digital</strong><span>PDF completo com 15 capítulos para iniciantes e júniors</span></div>
+              </a>
+              <a class="mega-item" href="/modelo-curriculo">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128196;</div>
+                <div class="mega-item-text"><strong>Modelo de Currículo para Marketing Digital <span class="mega-badge">Grátis</span></strong><span>Template editável com guia de preenchimento</span></div>
+              </a>
+            </div>
+            <div>
+              <div class="mega-col-title">Para empresas B2B</div>
+              <a class="mega-item" href="/auditoria-visibilidade-ia">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128269;</div>
+                <div class="mega-item-text"><strong>Auditoria de Visibilidade em IA + SEO Técnico</strong><span>Diagnóstico completo de como sua marca aparece no Google e nas IAs</span></div>
+              </a>
+              <a class="mega-item" href="/consultoria-b2b-saas">
+                <div class="mega-item-icon" style="background:rgba(106,90,205,.2)">&#128200;</div>
+                <div class="mega-item-text"><strong>Consultoria Contínua para B2B SaaS</strong><span>Parceria recorrente para conteúdo, SEO e GEO/AEO</span></div>
+              </a>
+              <a class="mega-item" href="/desenvolvimento-sites">
+                <div class="mega-item-icon" style="background:rgba(131,111,255,.2)">&#128187;</div>
+                <div class="mega-item-text"><strong>Desenvolvimento de Sites para B2B</strong><span>Site institucional do zero, com alinhamento e entrega completa</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="/cases-de-sucesso">Cases</a></li>
+      <li><a href="/insights/" class="active">Insights</a></li>
+      <li><a href="https://orbitandonomarketing.com.br/insights/" target="_blank">Newsletter</a></li>
+      <li><a href="/contato" class="nav-cta">Contato</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ARTICLE HEADER -->
+<div class="article-header">
+  <a href="/insights/" class="back-link">
+    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Ver todos os artigos
+  </a>
+  <div>
+    <span class="article-cat-badge">GEO · B2B · Estratégia</span>
+  </div>
+  <h1>GEO para B2B: como manter sua empresa relevante nos LLMs com um roteiro de 90 dias</h1>
+  <div class="article-meta-bar">
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span class="author-name">Jacqueline Alves</span>
+    </span>
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      26 de novembro de 2026
+    </span>
+    <span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      15 min de leitura
+    </span>
+  </div>
+  <div class="share-bar">
+    <span class="share-label">Compartilhar:</span>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://orbitandonomarketing.com.br/insights/geo-b2b-roteiro-90-dias-llms" target="_blank" class="share-btn">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://orbitandonomarketing.com.br/insights/geo-b2b-roteiro-90-dias-llms&text=GEO+para+B2B%3A+como+manter+sua+empresa+relevante+nos+LLMs+com+um+roteiro+de+90+dias" target="_blank" class="share-btn">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      X / Twitter
+    </a>
+    <a href="mailto:?subject=Artigo: GEO para B2B, roteiro de 90 dias para aparecer nos LLMs&body=Achei esse artigo interessante: https://orbitandonomarketing.com.br/insights/geo-b2b-roteiro-90-dias-llms" class="share-btn">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      E-mail
+    </a>
+    <button class="share-btn" onclick="copyLink()">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      Copiar link
+    </button>
+  </div>
+</div>
+
+<!-- ARTICLE OUTER: sidebar TOC + content -->
+<div class="article-outer">
+
+  <!-- TABLE OF CONTENTS, sidebar esquerda -->
+  <nav class="toc" aria-label="Índice do artigo">
+    <p class="toc-title">O que você vai entender neste artigo</p>
+    <ol>
+      <li><a href="#comportamento">Como a busca B2B está mudando</a></li>
+      <li><a href="#impacto-b2b">A presença é decidida antes do clique</a></li>
+      <li><a href="#por-que-ciclos">Por que ciclos curtos</a></li>
+      <li><a href="#roteiro-90-dias">O roteiro de 90 dias</a></li>
+      <li><a href="#dez-caracteristicas">As dez características do conteúdo pronto para IA</a></li>
+      <li><a href="#evidencias">Evidência ou moda</a></li>
+      <li><a href="#medir">Como medir sem prometer números</a></li>
+      <li><a href="#consultoria">Presença em IA se mantém em ciclos</a></li>
+      <li><a href="#faq">Perguntas frequentes</a></li>
+    </ol>
+  </nav>
+
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <p>Como uma empresa B2B se mantém relevante nas respostas do ChatGPT, do Gemini e do Modo IA do Google se essas respostas mudam toda semana? A resposta prática é trocar o plano anual de conteúdo por <strong>ciclos curtos de 90 dias: medir como a empresa aparece hoje, corrigir o que impede a IA de encontrá-la e citá-la, testar de novo e decidir o que manter</strong>. Adaptar "em tempo real" significa ter um processo que perceba a mudança em semanas e reaja antes do próximo planejamento. Publicar mais rápido sozinho resolve pouco.</p>
+
+    <p>A urgência está nos dados. Um relatório de 2026 da Similarweb mostrou que pessoas que receberam uma recomendação de marca no ChatGPT tiveram 2,5 vezes mais chance de visitar essa marca do que um concorrente direto em sete dias, e que só 8,8% dessas visitas chegaram por um canal identificado como IA. No Brasil, segundo o Google, 40% das buscas já têm cinco palavras ou mais, e o State of Search Brasil 7, da Hedgehog Digital com a Opinion Box, registrou o uso diário de IA para pesquisa subindo de 29,8% em 2025 para 39,7% em 2026. Ou seja, a influência cresce, e quase não aparece no relatório.</p>
+
+    <p>O roteiro que proponho neste artigo parte de um texto publicado em novembro por Limor Barenholtz, diretora de SEO e AI Search da Similarweb, adaptado para empresas B2B no Brasil, com prompts em português, fontes brasileiras e um orçamento que não exige ferramenta cara. Pega seu café e vem comigo. ☕️</p>
+
+    <div class="tldr">
+      <p class="tldr-title">TL;DR</p>
+      <ul>
+        <li>O comprador B2B pesquisa com perguntas longas, usa IA todos os dias e chega ao site depois de ter montado a lista curta. A influência acontece antes do clique: só 8,8% das visitas geradas por recomendação do ChatGPT chegam identificadas como IA (Similarweb).</li>
+        <li>O problema de quase toda empresa é prioridade. Há muitas táticas de GEO circulando e pouca evidência sobre quais funcionam.</li>
+        <li>O roteiro em ciclos de 90 dias tem cinco etapas: linha de base com 30 a 50 prompts, diagnóstico das lacunas, ordenação por evidência e esforço, execução em dois blocos de 30 dias e reteste.</li>
+        <li>Para B2B, os primeiros 30 dias focam em deixar páginas de preço e integrações acessíveis e em alinhar páginas de comparação às perguntas reais do comprador.</li>
+        <li>No Brasil: prompts em português com contexto local, presença em fontes brasileiras do setor e medição que inclua busca de marca, tráfego direto e a origem declarada pelo lead.</li>
+      </ul>
+    </div>
+
+    <h2 id="comportamento">Como o comportamento de busca B2B está mudando</h2>
+
+    <p>O comprador corporativo continua usando o Google. O State of Search Brasil 7 mostra que só 0,3% dos entrevistados pararam de pesquisar no Google depois de adotar a IA, e 89,3% usaram os dois no último ano. O que mudou foi a forma de perguntar e o momento em que a decisão se forma.</p>
+
+    <p>Segundo o Think with Google, as consultas no Modo IA são de duas a três vezes mais longas que as tradicionais. Em vez de "software de gestão de frota", o gerente de operações pergunta qual sistema atende uma transportadora com 80 caminhões, que precise de roteirização, integração com o ERP e suporte em português. A IA desdobra essa pergunta em várias buscas menores e devolve uma lista curta, com prós e contras de cada opção.</p>
+
+    <table>
+      <thead>
+        <tr><th>Como o comprador B2B pesquisava</th><th>Como pesquisa agora</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Buscas curtas, várias abas abertas</td><td>Uma pergunta longa, com contexto, restrições e orçamento</td></tr>
+        <tr><td>Comparação feita pela própria pessoa, site por site</td><td>Comparação entregue pela IA, com lista curta pronta</td></tr>
+        <tr><td>Primeiro contato com o fornecedor no início da pesquisa</td><td>Primeiro contato com a lista de fornecedores já definida</td></tr>
+        <tr><td>Visita ao site registrada como busca orgânica</td><td>Visita chega como tráfego direto, busca pela marca ou mensagem no WhatsApp</td></tr>
+      </tbody>
+    </table>
+
+    <p>As plataformas também importam. No State of Search Brasil 7, o ChatGPT aparece como a principal IA de pesquisa para 61,6% dos usuários, e o Gemini para 19,6%, embora 59% já tenham testado o Gemini. Somando o Modo IA e o AI Overviews do Google, que aparecem dentro da busca que quase todo mundo continua usando, o monitoramento de uma empresa brasileira precisa cobrir pelo menos ChatGPT, Gemini e os recursos de IA do Google. Acompanhar uma plataforma só dá uma visão parcial do que o comprador vê.</p>
+
+    <p>O dado global mais citado sobre esse comprador vem do relatório de 2025 da 6sense: 94% dos grupos de compra B2B já tinham ranqueado os fornecedores antes do primeiro contato com vendas. E a Gartner encontrou, numa pesquisa divulgada em maio de 2026 com 645 compradores, 45% usando IA generativa numa compra recente, principalmente para pesquisar fornecedores. O que acontece no Brasil está detalhado no artigo sobre <a href="/insights/comprador-b2b-brasil-ia-whatsapp-vendas">o comprador B2B brasileiro que já pesquisou com IA</a>.</p>
+
+    <h2 id="impacto-b2b">O impacto para empresas B2B: a presença é decidida antes do clique</h2>
+
+    <p>Três dados da Similarweb ajudam a entender o que muda para quem vende para empresas.</p>
+
+    <h3>A recomendação gera visita, mas a visita não aparece como IA</h3>
+
+    <p>O relatório de impacto da Similarweb mostrou que ser recomendado no ChatGPT aumenta em 2,5 vezes a chance de visita à marca em sete dias, comparado a um concorrente direto. Só 8,8% dessas visitas vieram de um canal rotulado como IA. O resto chega como tráfego direto, busca pelo nome da marca ou outros canais. Quem mede GEO só pelo tráfego vindo de "chatgpt.com" no analytics está olhando para menos de um décimo do efeito.</p>
+
+    <h3>A home virou a porta de entrada</h3>
+
+    <p>No relatório Generative AI Landscape 2026 da Similarweb (dados de desktop nos EUA, maio de 2026), 58,8% do tráfego vindo de IA chegou à home dos sites. Depois de uma atualização da busca do ChatGPT em 7 de maio, a proporção de visitas que caíam na home subiu de cerca de 25% para quase 60%. Ao mesmo tempo, 65% das URLs citadas pelo ChatGPT estavam dois ou três níveis abaixo da home. Ou seja: a IA cita páginas internas, mas manda o visitante para a página inicial.</p>
+
+    <p>Para uma empresa B2B, isso tem consequência direta. A home precisa dizer em poucos segundos o que a empresa faz, para quem, e onde estão preço, integrações e casos. Uma home institucional cheia de "soluções inovadoras" desperdiça justamente o visitante mais qualificado.</p>
+
+    <h3>Ser encontrado pesa mais do que a página ser bonita</h3>
+
+    <p>Um estudo de pesquisadores da Universidade de Toronto (Chen e Koudas, pré-publicação de outubro de 2026), citado pela Similarweb, analisou o que explica as diferenças de citação entre páginas. Em perguntas sobre internet residencial, a etapa de recuperação (a IA encontrar a página) explicou 32% das diferenças, contra 2,8% das características da própria página. Em software para construção civil, um exemplo mais próximo do B2B, foram 30% contra 10%. Barenholtz resume: <em>"Se a IA encontra a sua página decide a maior parte de se você é citado."</em></p>
+
+    <p>A ressalva honesta: o estudo cobre perguntas comerciais em inglês, em dois mercados. Mas a direção bate com o que o próprio Google diz no guia que analisei no artigo sobre <a href="/insights/geo-busca-agentica-google-brasil">GEO e a nova busca do Google</a>: os recursos de IA buscam conteúdo no índice, e uma página que não é encontrada não entra na resposta, por melhor que esteja escrita.</p>
+
+    <h2 id="por-que-ciclos">Por que "tempo real" significa ciclos curtos</h2>
+
+    <p>A primeira frase do artigo de Barenholtz é um diagnóstico que eu assino: <em>"A otimização para busca com IA tem um problema de priorização."</em> Há dezenas de táticas de GEO circulando, de llms.txt a reescrita de conteúdo em blocos, e poucas foram testadas de forma séria. As táticas se espalham mais rápido do que as provas.</p>
+
+    <p>Os números da pesquisa SEOFOMO 2026, de Aleyda Solis, com 171 profissionais, mostram o tamanho do descompasso. 57% já têm uma estratégia dedicada de busca com IA para todos ou a maioria dos sites que gerenciam, contra 35% um ano antes. Mas 35% não conseguem dizer quanto a busca com IA contribui para a receita. As empresas estão investindo antes de saber medir.</p>
+
+    <p>A resposta de Barenholtz é trabalhar com compromissos curtos e testáveis: <em>"Comprometa-se com os próximos 90 dias em vez dos próximos três anos, e trate cada ação como um teste."</em> Faz sentido por três motivos práticos. As plataformas mudam de comportamento em semanas (a atualização do ChatGPT em maio mudou para onde ia o tráfego de um dia para o outro). As respostas variam entre execuções, então um retrato isolado engana. E um ciclo de 90 dias cabe dentro de um trimestre, o que facilita prestar contas à diretoria.</p>
+
+    <table>
+      <thead>
+        <tr><th>Plano anual de conteúdo</th><th>Roteiro em ciclos de 90 dias</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Pauta definida no início do ano</td><td>Ações reordenadas a cada trimestre, com base em dados</td></tr>
+        <tr><td>Sucesso medido por volume publicado e tráfego</td><td>Sucesso medido por presença nas respostas e impacto no negócio</td></tr>
+        <tr><td>Táticas escolhidas por tendência de mercado</td><td>Táticas ordenadas pelo nível de evidência</td></tr>
+        <tr><td>Revisão só quando os números caem</td><td>Reteste programado para cada ação</td></tr>
+        <tr><td>Responsabilidade difusa entre áreas</td><td>Um responsável e um indicador por ação</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="roteiro-90-dias">O roteiro de 90 dias, adaptado para o Brasil</h2>
+
+    <p>O roteiro tem cinco etapas e cabe num trimestre. Mantenho a estrutura proposta pela Similarweb e adapto o conteúdo para empresas B2B brasileiras. Um ponto importante: segundo a autora, o roteiro de IA é uma camada sobre o roteiro de SEO, com uma única lista de prioridades. Duas listas separadas acabam disputando as mesmas pessoas e o mesmo orçamento.</p>
+
+    <h3>1. Linha de base (dias 1 a 7)</h3>
+    <p>Monte um conjunto de 30 a 50 prompts que representem as perguntas reais do seu comprador, marcados pela etapa da jornada (entender o problema, comparar, decidir). Barenholtz é direta sobre o tamanho: <em>"Prefiro acompanhar 30 prompts que importam do que 300 que só ficam bonitos num painel."</em></p>
+    <p>Para o Brasil, três cuidados. Escreva os prompts em português e com o vocabulário do comprador. Inclua o contexto local que filtra fornecedores: nota fiscal, integração com ERPs usados no país, suporte em português, adequação à LGPD, preço em reais. E tire as perguntas de fontes reais: consultas longas no Search Console, dúvidas que chegam ao WhatsApp e objeções que o time comercial ouve.</p>
+    <p>Como as respostas variam, cada prompt precisa rodar várias vezes. O checklist de Aleyda Solis recomenda de três a cinco execuções em 24 a 72 horas. Barenholtz prefere execuções diárias por quatro semanas, com os sete primeiros dias como mínimo. Registre, para cada resposta: se a empresa aparece, se é recomendada, se há link para o site, se vence a comparação com concorrentes e se a informação está correta.</p>
+
+    <h3>2. Diagnóstico (dias 8 a 10)</h3>
+    <p>Para cada lacuna encontrada, escreva uma hipótese de causa. A empresa não aparece na pergunta sobre integração porque a página de integrações não está indexada? Aparece com preço errado porque o site não publica preço e a IA usou um comparador desatualizado? Perde a comparação porque o concorrente tem casos publicados e a sua empresa não tem? Uma hipótese por lacuna, ligada a uma das dez características que detalho na próxima seção.</p>
+
+    <h3>3. Ordenação (dias 11 a 13)</h3>
+    <p>Cada ação candidata recebe uma classificação de evidência (fazer, fazer só se, desejável, ignorar) e duas notas de 1 a 3, para impacto e esforço. A prioridade é impacto dividido por esforço. Uma exceção proposta pela autora: uma ação de alta evidência e alto esforço começa logo no primeiro bloco, porque vai demorar.</p>
+
+    <h3>4. Sequência (dias 14 e 15)</h3>
+    <p>O ciclo se divide em 15 dias de planejamento, dois blocos de execução de 30 dias e 15 dias de reteste. As ações mais prioritárias vão para o primeiro bloco.</p>
+
+    <h3>5. Responsáveis</h3>
+    <p>Cada ação tem um responsável, um indicador e uma data de reteste. No fim do ciclo, cada ação termina numa decisão: manter, expandir, revisar ou parar.</p>
+
+    <table>
+      <thead>
+        <tr><th>Período</th><th>O que acontece</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Dias 1 a 7</td><td>Linha de base: prompts rodando em ChatGPT, Gemini, Modo IA e Perplexity</td></tr>
+        <tr><td>Dias 8 a 15</td><td>Diagnóstico, ordenação, sequência e definição de responsáveis</td></tr>
+        <tr><td>Dias 16 a 45</td><td>Bloco 1 de execução: ações de maior prioridade</td></tr>
+        <tr><td>Dias 46 a 75</td><td>Bloco 2 de execução</td></tr>
+        <tr><td>Dias 76 a 90</td><td>Reteste com os mesmos prompts e decisão sobre cada ação</td></tr>
+      </tbody>
+    </table>
+
+    <p>Os ciclos seguintes ampliam o que funcionou. Segundo o roteiro da Similarweb, o segundo ciclo expande o que foi mantido e cria uma nova linha de base, o terceiro amplia temas, plataformas ou mercados, e o quarto refaz o conjunto de prompts e revisa a estratégia.</p>
+
+    <h2 id="dez-caracteristicas">As dez características de um conteúdo pronto para a IA</h2>
+
+    <p>Para dar nome às lacunas, a Similarweb usa as dez características de prontidão definidas por Aleyda Solis. Adaptei cada uma com exemplos de empresas B2B no Brasil.</p>
+
+    <table>
+      <thead>
+        <tr><th>Característica</th><th>O que significa</th><th>Exemplo em B2B no Brasil</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Acessível</td><td>A IA consegue rastrear e ler a página</td><td>Página de integrações em HTML, sem depender de login ou de PDF</td></tr>
+        <tr><td>Extraível</td><td>A informação está clara o suficiente para ser citada</td><td>Faixa de preço e prazo de implementação escritos em texto, além de qualquer imagem</td></tr>
+        <tr><td>Útil</td><td>Responde à pergunta real do comprador</td><td>Página que explica quando a solução não serve, além de quando serve</td></tr>
+        <tr><td>Atual</td><td>A informação reflete o momento</td><td>Lista de integrações e preços revisada a cada trimestre</td></tr>
+        <tr><td>Diferenciada</td><td>Diz algo que os concorrentes não dizem</td><td>Dados próprios do setor, casos nacionais com números</td></tr>
+        <tr><td>Reconhecível</td><td>A marca é identificada como entidade</td><td>Nome, categoria e área de atuação iguais em site, LinkedIn e diretórios</td></tr>
+        <tr><td>Consistente</td><td>As fontes não se contradizem</td><td>Preço e funcionalidades iguais no site, nos comparadores e nas apresentações</td></tr>
+        <tr><td>Corroborada</td><td>Outras fontes confirmam o que a empresa diz</td><td>Menções em portais do setor, associações e avaliações de clientes</td></tr>
+        <tr><td>Crível</td><td>A fonte merece confiança</td><td>Autores identificados, especialistas com histórico público</td></tr>
+        <tr><td>Transacionável</td><td>Dá para agir a partir dela</td><td>Agendamento de demonstração simples, contato pelo WhatsApp visível</td></tr>
+      </tbody>
+    </table>
+
+    <p>As três primeiras linhas concentram os problemas mais rápidos de corrigir. Em muitos sites B2B, informação comercial importante vive em PDF enviado pelo comercial, em imagem de banner ou atrás de formulário. Para a IA, isso é o mesmo que não existir.</p>
+
+    <h2 id="evidencias">Separar o que tem evidência do que é moda</h2>
+
+    <p>A etapa de ordenação depende de ser honesto sobre o que tem prova. Barenholtz dá um exemplo com o qual concordo: sobre dados estruturados, a tarefa de busca com IA mais citada na pesquisa SEOFOMO 2025, ela escreve <em>"Gostaria que o valor deles para a visibilidade em IA estivesse provado. Ainda não está."</em> Dados estruturados continuam úteis para resultados ricos no Google, mas não deveriam ser vendidos como atalho para aparecer no ChatGPT.</p>
+
+    <table>
+      <thead>
+        <tr><th>Nível de evidência</th><th>Exemplos para B2B</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Fazer</td><td>Garantir que páginas de preço, integrações e casos estejam indexadas e acessíveis. Alinhar títulos de páginas de comparação às perguntas que o comprador faz. Conquistar menções em fontes do setor.</td></tr>
+        <tr><td>Fazer só se</td><td>Criar páginas de alternativas e comparativos, desde que publiquem os parâmetros usados e não declarem a própria empresa vencedora em todos os cenários.</td></tr>
+        <tr><td>Desejável</td><td>Dados estruturados adicionais, conteúdo em vídeo com transcrição.</td></tr>
+        <tr><td>Ignorar</td><td>Táticas sem evidência, como llms.txt para o Google (o próprio Google diz tratar o arquivo como texto comum) e menções fabricadas.</td></tr>
+      </tbody>
+    </table>
+
+    <p>O roteiro da Similarweb traz recomendações específicas por tipo de empresa. Para software B2B, os primeiros 30 dias focam em corrigir o acesso a páginas de preço e de integrações e em reescrever os títulos das páginas de comparação para refletir as perguntas do comprador. Os primeiros 90 dias incluem publicar comparativos com os parâmetros explícitos e conquistar presença em fontes de avaliação e em publicações. O risco apontado é a página de "alternativas a X" que sempre coloca a própria empresa como vencedora. A IA e o comprador percebem.</p>
+
+    <h3>As fontes brasileiras que corroboram</h3>
+
+    <p>A característica "corroborada" exige presença fora do site, e para empresas brasileiras essas fontes incluem portais e revistas especializadas do setor, associações e entidades setoriais, eventos e as coberturas que ficam publicadas depois, perfis ativos dos especialistas no LinkedIn, diretórios e plataformas de avaliação B2B e, para empresas que também atendem pequenos negócios, o Reclame Aqui. Esse trabalho é lento e não cabe inteiro num ciclo, por isso entra no primeiro bloco mesmo com esforço alto.</p>
+
+    <h2 id="medir">Como medir sem prometer números</h2>
+
+    <p>Uma das frases do artigo de Barenholtz deveria estar em toda proposta de GEO: <em>"Eu não prometeria à diretoria um número de visibilidade para o dia 90."</em> Ela recomenda não definir metas numéricas no primeiro ciclo. O primeiro ciclo existe para criar a linha de base e descobrir o que move o resultado.</p>
+
+    <p>A medição proposta tem três camadas: presença (se e como a empresa aparece nas respostas), prontidão (se o conteúdo tem as dez características) e impacto (o que acontece no negócio). Cada número é rotulado como observado, aproximado ou modelado, para ninguém confundir uma estimativa com um fato. E as páginas alteradas são comparadas com páginas que não foram mexidas, o que separa o efeito da ação de uma mudança geral da plataforma.</p>
+
+    <table>
+      <thead>
+        <tr><th>Camada</th><th>O que medir</th><th>Como fazer no Brasil com orçamento enxuto</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Presença</td><td>Taxa de aparição, de recomendação, de citação com link, comparações vencidas e precisão da informação</td><td>Planilha com os 30 a 50 prompts rodados manualmente ou com ferramenta de monitoramento</td></tr>
+        <tr><td>Prontidão</td><td>Quantas páginas prioritárias cumprem as dez características</td><td>Checklist por página, revisado a cada ciclo</td></tr>
+        <tr><td>Impacto</td><td>Visitas e conversões vindas de IA (como piso), busca pela marca, tráfego direto, origem declarada pelo lead</td><td>GA4, Search Console e um campo "como nos conheceu?" com a opção de IA no formulário e no WhatsApp</td></tr>
+      </tbody>
+    </table>
+
+    <p>A lógica de ler as camadas juntas está detalhada no artigo sobre <a href="/insights/comprador-b2b-ia-medicao-orcamento-2027">como medir a influência da IA e planejar o orçamento de 2027</a>. Lembre do dado da Similarweb: só 8,8% das visitas geradas por recomendação do ChatGPT chegam rotuladas como IA. O tráfego de IA no analytics é o piso do efeito, e a busca pela marca e o tráfego direto ajudam a estimar o resto.</p>
+
+    <h3>Sobre ferramentas</h3>
+
+    <p>O artigo da Similarweb mostra como fazer tudo isso com as ferramentas pagas da empresa, inclusive conectadas a assistentes de IA. Elas economizam tempo e ampliam a escala do monitoramento. Mas o método funciona com uma planilha, execuções manuais disciplinadas e as ferramentas gratuitas do Google. Para muitas empresas B2B brasileiras de médio porte, começar assim no primeiro ciclo é a decisão mais sensata, e a ferramenta entra quando o volume de prompts justificar o custo em dólar.</p>
+
+    <h2 id="consultoria">Presença em IA se mantém em ciclos</h2>
+
+    <p>O argumento central deste artigo é que a presença de uma empresa B2B nas respostas de IA não se resolve com um projeto único. As plataformas mudam, os concorrentes se movem e o comprador pergunta de jeitos novos. O que mantém a empresa relevante é um processo que mede, corrige, testa e decide a cada trimestre.</p>
+
+    <p>A <a href="/consultoria-b2b-saas">Consultoria Contínua para B2B SaaS</a> da Orbitando no Marketing trabalha nesse formato. A cada ciclo, monta ou atualiza a linha de base de prompts em português, diagnostica as lacunas, ordena as ações por evidência e esforço, executa as correções de conteúdo, SEO técnico e presença em fontes do setor, e refaz o teste antes de decidir o próximo passo. A diretoria recebe um relatório que separa o que foi observado do que foi estimado, sem promessas de número que ninguém controla.</p>
+
+    <p>Se a sua empresa ainda não tem uma linha de base, a <a href="/auditoria-visibilidade-ia">Auditoria de Visibilidade em IA + SEO Técnico</a> cobre as primeiras etapas do ciclo e entrega o diagnóstico e as ações priorizadas.</p>
+
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <h2 class="faq-title" id="faq">Perguntas frequentes</h2>
+
+      <details>
+        <summary>O que é GEO para empresas B2B?</summary>
+        <div class="faq-answer">
+          <p>É o trabalho de fazer uma empresa B2B aparecer, ser recomendada e ser descrita corretamente nas respostas de IA, como ChatGPT, Gemini, Perplexity e os recursos de IA do Google. Para B2B, isso envolve deixar acessíveis páginas de preço, integrações e casos, alinhar o conteúdo às perguntas do comprador e conquistar menções em fontes do setor.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Por que trabalhar GEO em ciclos de 90 dias?</summary>
+        <div class="faq-answer">
+          <p>Porque as respostas das IAs mudam com frequência, variam entre execuções e há pouca evidência sobre quais táticas funcionam. Ciclos de 90 dias permitem medir uma linha de base, executar as ações prioritárias, testar de novo e decidir o que manter, expandir, revisar ou parar, dentro de um trimestre.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Quantos prompts monitorar?</summary>
+        <div class="faq-answer">
+          <p>O roteiro da Similarweb recomenda de 30 a 50 prompts que representem as perguntas reais do comprador, marcados pela etapa da jornada. Cada prompt deve rodar várias vezes: de três a cinco execuções em 24 a 72 horas, ou diariamente por algumas semanas, porque as respostas variam.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Como medir o resultado de GEO se o tráfego de IA é pequeno no analytics?</summary>
+        <div class="faq-answer">
+          <p>Segundo a Similarweb, só 8,8% das visitas geradas por recomendação do ChatGPT chegam rotuladas como IA. Use o tráfego de IA como piso e acompanhe junto a busca pela marca, o tráfego direto e a origem declarada pelo lead no formulário e no WhatsApp.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Preciso de ferramenta paga para fazer GEO?</summary>
+        <div class="faq-answer">
+          <p>Não para começar. O ciclo pode ser feito com uma planilha, execuções manuais dos prompts e as ferramentas gratuitas do Google, como Search Console e GA4. Ferramentas de monitoramento passam a compensar quando o número de prompts, plataformas ou mercados cresce.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Quais as primeiras ações de GEO para uma empresa de software B2B?</summary>
+        <div class="faq-answer">
+          <p>Segundo o roteiro da Similarweb, os primeiros 30 dias focam em corrigir o acesso às páginas de preço e de integrações e em ajustar os títulos das páginas de comparação para refletir as perguntas do comprador. Nos 90 dias seguintes, entram comparativos com parâmetros explícitos e presença em fontes de avaliação e publicações do setor.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- SHARE BOTTOM -->
+    <div style="margin-top:2.5rem;padding-top:1.75rem;border-top:1px solid var(--border)">
+      <p style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:.75rem">Compartilhar este artigo</p>
+      <div class="share-bar" style="justify-content:flex-start">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://orbitandonomarketing.com.br/insights/geo-b2b-roteiro-90-dias-llms" target="_blank" class="share-btn">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=https://orbitandonomarketing.com.br/insights/geo-b2b-roteiro-90-dias-llms" target="_blank" class="share-btn">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X / Twitter
+        </a>
+        <a href="mailto:?subject=Artigo: GEO para B2B, roteiro de 90 dias para aparecer nos LLMs&body=https://orbitandonomarketing.com.br/insights/geo-b2b-roteiro-90-dias-llms" class="share-btn">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          E-mail
+        </a>
+        <button class="share-btn" onclick="copyLink()">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          Copiar link
+        </button>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<!-- RELATED ARTICLES -->
+<div class="related-section">
+  <div class="related-inner">
+    <h3 class="related-title">Artigos relacionados</h3>
+    <div class="related-grid">
+      <div class="related-card">
+        <p class="rc-cat">GEO · Busca agêntica</p>
+        <h4><a href="/insights/geo-busca-agentica-google-brasil">GEO: como aparecer na nova busca do Google movida por IA e agentes</a></h4>
+        <a href="/insights/geo-busca-agentica-google-brasil" class="rc-read">Ler artigo</a>
+      </div>
+      <div class="related-card">
+        <p class="rc-cat">GEO · Mensuração</p>
+        <h4><a href="/insights/comprador-b2b-ia-medicao-orcamento-2027">O comprador B2B já decidiu antes de falar com você: como medir a influência da IA e planejar o orçamento de 2027</a></h4>
+        <a href="/insights/comprador-b2b-ia-medicao-orcamento-2027" class="rc-read">Ler artigo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER BAND -->
+<div class="newsletter-band">
+  <div class="newsletter-form-wrap">
+    <div data-reach-form="22c061ca-1ddf-4b0a-a9a9-52e1021274ab"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-name">Orbitando no Marketing</div>
+      <div class="footer-logo-tag">SEO · GEO · AEO</div>
+      <p>Consultoria estratégica de marketing digital para empresas B2B que querem aparecer no Google e nas IAs generativas. Por Jacqueline Alves.</p>
+    </div>
+    <div>
+      <h4>Para profissionais</h4>
+      <ul>
+        <li><a href="/guia-marketing-digital">Guia para Iniciantes</a></li>
+        <li><a href="/modelo-curriculo">Modelo de Currículo</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Para empresas B2B</h4>
+      <ul>
+        <li><a href="/auditoria-visibilidade-ia">Auditoria de Visibilidade em IA</a></li>
+        <li><a href="/consultoria-b2b-saas">Consultoria Contínua B2B SaaS</a></li>
+        <li><a href="/desenvolvimento-sites">Desenvolvimento de Sites</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Me conheça</h4>
+      <ul>
+        <li><a href="/sobre-mim">Sobre mim</a></li>
+        <li><a href="/cases-de-sucesso">Cases de sucesso</a></li>
+      </ul>
+      <h4 style="margin-top:1.25rem">Newsletter</h4>
+      <ul>
+        <li><a href="https://orbitandonomarketing.com.br/insights/" target="_blank">Orbitando no Marketing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Fale comigo</h4>
+      <ul>
+        <li><a href="/contato">Contato</a></li>
+        <li><a href="https://www.linkedin.com/in/jacquelinealvesoliveira" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Orbitando no Marketing. Todos os direitos reservados.</p>
+    <p><a href="/politica-privacidade" style="color:var(--muted);text-decoration:none;transition:color .15s" onmouseover="this.style.color='#836FFF'" onmouseout="this.style.color='var(--muted)'">Política de Privacidade</a></p>
+  </div>
+</footer>
+
+<script>
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
+function toggleMega(e){
+  e.stopPropagation();
+  var m=document.getElementById('megaItem');
+  m.classList.toggle('open');
+}
+document.addEventListener('click',function(){
+  var m=document.getElementById('megaItem');
+  if(m)m.classList.remove('open');
+});
+function copyLink(){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    const btns=document.querySelectorAll('.share-btn');
+    btns.forEach(b=>{if(b.textContent.includes('Copiar')){const orig=b.innerHTML;b.innerHTML='<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Copiado!';setTimeout(()=>{b.innerHTML=orig;},2000);}});
+  });
+}
+</script>
+<script>
+(function(){
+  var MAX_TRIES=3, RETRY_MS=3000, tries=0;
+  function checkAndInit(){
+    if(window.__reachEmbed && typeof window.__reachEmbed.init==='function'){
+      window.__reachEmbed.init();
+    }
+  }
+  function loadReach(){
+    var old=document.querySelector('script[data-reach-script]');
+    if(old) old.parentNode.removeChild(old);
+    var s=document.createElement('script');
+    s.setAttribute('data-reach-script','1');
+    s.src='https://cdn-reach.hostinger.com/js/embed.js?_='+Date.now();
+    s.onload=function(){
+      setTimeout(function(){
+        checkAndInit();
+        var el=document.querySelector('[data-reach-form]');
+        if(el && !el.querySelector('iframe') && tries<MAX_TRIES){
+          tries++;
+          setTimeout(loadReach, RETRY_MS);
+        }
+      }, 800);
+    };
+    s.onerror=function(){
+      if(tries<MAX_TRIES){ tries++; setTimeout(loadReach, RETRY_MS); }
+    };
+    document.body.appendChild(s);
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded', loadReach);
+  } else {
+    loadReach();
+  }
+})();
+</script>
+</body>
+</html>
